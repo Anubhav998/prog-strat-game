@@ -2,9 +2,13 @@ ansible==1.9.1
 behave==1.2.5
 coverage==3.7.1
 Django==1.8.1
+django-appconf==1.0.1
+django-compressor==1.5
 ecdsa==0.13
 enum34==1.0.4
 Fabric==1.10.1
+gitdb==0.6.4
+GitPython==1.0.1
 Jinja2==2.7.3
 MarkupSafe==0.23
 MySQL-python==1.2.5
@@ -15,4 +19,5 @@ pycrypto==2.6.1
 PyYAML==3.11
 selenium==2.45.0
 six==1.9.0
+smmap==0.9.0
 splinter==0.7.2
