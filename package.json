@@ -1,0 +1,22 @@
+{
+  "name": "prog-strat-game",
+  "version": "0.0.0",
+  "description": "Turn Based Progressional Strategy Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "fab test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mc706/prog-strat-game.git"
+  },
+  "author": "mc706",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mc706/prog-strat-game/issues"
+  },
+  "homepage": "https://github.com/mc706/prog-strat-game",
+  "dependencies": {
+    "bower": "^1.4.1"
+  }
+}

@@ -2,6 +2,7 @@ ansible==1.9.1
 behave==1.2.5
 coverage==3.7.1
 Django==1.8.1
+django-angular-scaffold==0.12.1
 django-appconf==1.0.1
 django-compressor==1.5
 ecdsa==0.13

@@ -54,6 +54,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #third party
+    'angular_scaffold',
+
 ) + installed_apps
 
 MIDDLEWARE_CLASSES = (
