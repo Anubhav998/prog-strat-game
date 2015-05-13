@@ -1,0 +1,21 @@
+[run]
+branch = False
+source = .
+omit =
+    .virtualenvs/*
+    progstrat/settings.py
+    progstrat/_version.py
+    progstrat/aws_settings.py
+    progstrat/codeship_settings.py
+    progstrat/wsgi.py
+    fabconfig.py
+    fabfile.py
+    core/*
+    */migrations/*
+    manage.py
+    .idea/*
+    fabenv.py
+    */features/*
+
+[report]
+fail_under=100

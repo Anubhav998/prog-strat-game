@@ -27,8 +27,25 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS = ['localhost']
+
+#environment setup
+ENVIRON = os.environ.get('PARAM1')
+
+try:
+    if ENVIRON == 'aws':
+        from aws_settings import *
+    elif ENVIRON == 'codeship':
+        from codeship_settings import *
+except ImportError as exp:
+    pass
 
 # Application definition
+
+try:
+    from installed_apps import installed_apps
+except ImportError as ex:
+    pass
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -37,7 +54,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-)
+) + installed_apps
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -100,3 +117,29 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR + '/static'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+
+BOWER_COMPONENTS_ROOT = BASE_DIR + '/assets/components/'
+
+STATICFILES_DIRS = (
+    BASE_DIR + '/assets',
+)
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
+
+FIXTURE_DIRS = (
+    os.path.join(BASE_DIR, 'fixtures'),
+)
+
+try:
+    from local_settings import *
+except ImportError as exp:
+    pass
