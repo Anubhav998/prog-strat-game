@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+{% load compress %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <title>Family Hope Center{% block title %}{% endblock title %}</title>
+    {% include 'favicon.html' %}
+
+    {% block styles %}
+    {% endblock styles %}
+
+    {% include "vendor_styles.html" %}
+
+    {% compress css %}
+        <link rel="stylesheet" href="{% static "lib/styles/styles.css" %}">
+    {% endcompress %}
+    {% compress js inline %}
+        <script src="{% static "lib/scripts/analytics.js" %}"></script>
+        <script>
+            ga('set', '&uid', {{ user.id }});
+        </script>
+    {% endcompress %}
+</head>
+<body>
+
+{% block content %}
+
+{% endblock content %}
+
+{% include "vendor_scripts.html" %}
+
+{% include "application_scripts.html" %}
+
+{% block scripts %}
+
+{% endblock scripts %}
+
+</body>
+</html>

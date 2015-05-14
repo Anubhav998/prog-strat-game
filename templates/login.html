@@ -1,0 +1,57 @@
+{% extends "angular_base.html" %}
+
+{% block content %}
+    <div ng-app="fix" layout="column" layout-fill flex>
+        <md-toolbar>
+            <h1 class="md-toolbar-tools">
+                Family Information Exchange
+            </h1>
+        </md-toolbar>
+        <div flex layout-fill layout="column">
+            <div flex hide show-gt-sm></div>
+            <div layout="row" layout-fill flex>
+                <div flex hide show-gt-sm></div>
+                <div flex class="md-whiteframe-z2 login-box">
+                    <md-toolbar class="md-hue-1">
+                        <h2 class="md-toolbar-tools">Login</h2>
+                    </md-toolbar>
+
+                    <md-content class="pad">
+                        {% if errors %}
+                            <div class="md-warn error" layout="row" layout-padding>
+                                <span class="fa fa-warning"></span>
+                                <span>{{ errors }}</span>
+                            </div>
+
+                        {% endif %}
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <md-input-container>
+                                <label for="username">Username</label>
+                                <input type="text" id="username" name="username">
+                            </md-input-container>
+                            <br>
+                            <md-input-container>
+                                <label for="password">Password</label>
+                                <input type="password" id="password" name="password">
+                            </md-input-container>
+                            <br>
+
+                            <div layout="row">
+                                <div flex></div>
+                                <md-button aria-label="Login" class="md-raised md-primary" name="submit">
+                                    Login
+                                </md-button>
+                            </div>
+                        </form>
+                    </md-content>
+                </div>
+                <div flex hide show-gt-sm></div>
+
+            </div>
+            <div flex hide show-gt-sm></div>
+        </div>
+    </div>
+
+
+{% endblock content %}

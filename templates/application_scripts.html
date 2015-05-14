@@ -1,0 +1,32 @@
+{% load staticfiles %}
+{% load compress %}
+
+{% compress js %}
+    <script src="{% static "app/app.js" %}"></script>
+
+    <script src="{% static "app/config/cache.js" %}"></script>
+    <script src="{% static "app/config/csrf.js" %}"></script>
+    <script src="{% static "app/config/limiter.js" %}"></script>
+    <script src="{% static "app/config/logger.js" %}"></script>
+    <script src="{% static "app/config/routes.js" %}"></script>
+    <script src="{% static "app/config/theme.js" %}"></script>
+
+    <script src="{% static "app/controllers/bottomSheetController.js" %}"></script>
+    <script src="{% static "app/controllers/evaluationController.js" %}"></script>
+    <script src="{% static "app/controllers/globalController.js" %}"></script>
+    <script src="{% static "app/controllers/homeController.js" %}"></script>
+    <script src="{% static "app/controllers/notesDialogController.js" %}"></script>
+    <script src="{% static "app/controllers/notificationController.js" %}"></script>
+    <script src="{% static "app/controllers/patientController.js" %}"></script>
+    <script src="{% static "app/controllers/searchController.js" %}"></script>
+    <script src="{% static "app/controllers/settingsController.js" %}"></script>
+    <script src="{% static "app/controllers/sidebarController.js" %}"></script>
+
+    <script src="{% static "app/services/embeddedService.js" %}"></script>
+    <script src="{% static "app/services/evaluationService.js" %}"></script>
+    <script src="{% static "app/services/menuService.js" %}"></script>
+    <script src="{% static "app/services/notificationService.js" %}"></script>
+    <script src="{% static "app/services/patientService.js" %}"></script>
+    <script src="{% static "app/services/searchService.js" %}"></script>
+    <script src="{% static "app/services/settingService.js" %}"></script>
+{% endcompress %}

@@ -25,8 +25,6 @@ SECRET_KEY = '_*(6=9cfcdl+aaa!tqi^9^#lxj3g=gpztx=#gl*w*mq6=2yho0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
 ALLOWED_HOSTS = ['localhost']
 
 #environment setup
@@ -57,6 +55,7 @@ INSTALLED_APPS = (
 
     #third party
     'angular_scaffold',
+    'compressor',
 
 ) + installed_apps
 
