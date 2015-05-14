@@ -5,9 +5,8 @@
 	Website: http://mc706.com
 	From: Philadelphia, Pennsylvania, United States of America
 
-	Developer Eric Elinow
-	Twitter: @eelinow
-	Website: http://codedevl.blogspot.com/
+	Product Manager: Shane McDevitt
+	Twitter: @shane_mcdevitt
 	From: Philadelphia, Pennsylvania, United States of America
 
 /* THANKS */
