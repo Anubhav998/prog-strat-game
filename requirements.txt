@@ -5,6 +5,7 @@ Django==1.8.1
 django-angular-scaffold==0.12.1
 django-appconf==1.0.1
 django-compressor==1.5
+django-reversion==1.8.6
 ecdsa==0.13
 enum34==1.0.4
 Fabric==1.10.1
