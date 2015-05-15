@@ -56,6 +56,12 @@ INSTALLED_APPS = (
     #third party
     'angular_scaffold',
     'compressor',
+    'rest_framework',
+    'rest_framework_extensions',
+    'rest_framework_swagger',
+    'django_behave',
+    'django_extensions',
+    'reversion',
 
 ) + installed_apps
 
@@ -141,6 +147,11 @@ TEMPLATE_DIRS = (
 FIXTURE_DIRS = (
     os.path.join(BASE_DIR, 'fixtures'),
 )
+
+try:
+    from swagger_settings import *
+except ImportError as exp:
+    pass
 
 try:
     from local_settings import *

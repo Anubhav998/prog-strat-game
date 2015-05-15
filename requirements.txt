@@ -4,8 +4,13 @@ coverage==3.7.1
 Django==1.8.1
 django-angular-scaffold==0.12.1
 django-appconf==1.0.1
+django-behave==0.1.4
 django-compressor==1.5
+django-extensions==1.5.5
+django-rest-swagger==0.2.9
 django-reversion==1.8.6
+djangorestframework==3.1.2
+drf-extensions==0.2.7
 ecdsa==0.13
 enum34==1.0.4
 Fabric==1.10.1
