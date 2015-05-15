@@ -1,1 +1,3 @@
-installed_apps = ()
+installed_apps = (
+    'resources',
+)
