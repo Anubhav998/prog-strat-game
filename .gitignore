@@ -138,3 +138,5 @@ vagrant/.vagrant
 assets/components
 
 node_modules
+
+screenshots/

@@ -81,7 +81,9 @@ ROOT_URLCONF = 'progstrat.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -96,6 +98,22 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'progstrat.wsgi.application'
 
+# Django Rest Framework Settings
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'TEST_REQUEST_RENDERER_CLASSES': [
+        'rest_framework.renderers.MultiPartRenderer',
+        'rest_framework.renderers.JSONRenderer',
+    ],
+}
+
+TEST_RUNNER = 'django_behave.runner.DjangoBehaveTestSuiteRunner'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
@@ -138,10 +156,6 @@ BOWER_COMPONENTS_ROOT = BASE_DIR + '/assets/components/'
 
 STATICFILES_DIRS = (
     BASE_DIR + '/assets',
-)
-
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates'),
 )
 
 FIXTURE_DIRS = (
