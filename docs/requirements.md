@@ -16,7 +16,7 @@ Here are a few games this game is drawing inspriation from:
 * Star Craft
 * Civilization
 * Spore
-
+* Dominion
 
 Requirements
 ------------
@@ -33,6 +33,8 @@ amount of territory one owns, +/- a terrain modifier, and multiplied by a certai
 Natural Resource needed for a lot of military purposes
 
 #### Fuel
+Natural Resource needed for certain military purposes and technology.
+
 
 ### Scientific Advancements
 Each Advancement should have 3 levels
@@ -61,3 +63,40 @@ Decreases the acquisition cost of new territory by a %
 #### Hover Technology
 Removes negative fighting bonus on certain types of terrain
 
+#### Explosives Technology
+Significantly increases damage of certain military types.
+
+
+### Territory
+Different terrains have different acquisition costs and benefits, as well as combat advantages and disadvantages.
+
+#### Normal
+No bonuses or modifiers
+
+#### Mountainous
+
+* Higher Acquisition Cost
+* Higher Defence Ratio
+* Usually high in metal deposits 
+
+#### Swamp
+
+* Higher Acquisition Cost
+* Lower Attack Ratio
+* Usually high in fuel deposits
+
+#### Sea
+
+* Lower Acquisition Cost
+* May need naval or amphibious units to acquire or right
+
+#### Desert
+* Lower Acquisition Cost
+* Lower Defense Ratio
+
+#### Forest
+* Higher Aquisition Cost
+* Higher Attack Ratio
+
+
+### Military Units
