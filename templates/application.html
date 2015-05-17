@@ -2,7 +2,7 @@
 
 {% block content %}
     {% verbatim %}
-    <div ng-app="fix" layout="column" ng-controller="GlobalController" layout-fill ng-cloak>
+    <div ng-app="progstrat" layout="column" ng-controller="GlobalController" layout-fill ng-cloak>
         <md-toolbar layout="row">
             <div class="md-toolbar-tools">
                 <md-button ng-click="toggleSideNav('left')" hide-gt-sm class="menuBtn"
@@ -12,21 +12,8 @@
                 </span>
                     <md-tooltip>Toggle Side Navigation</md-tooltip>
                 </md-button>
-                <h1 ng-click="go('')">Family Information Exchange</h1>
+                <h1 ng-click="go('')">Progressional Strategy Game</h1>
 
-                <div flex></div>
-                <div class="search-bar" hide show-gt-sm md-no-float layout="row">
-                    <div layout="row" layout-align="start center">
-                        <span class="fa fa-search"></span>
-
-                        <form novalidate name="headerSearchForm" ng-submit="search(search.text)">
-                            <md-input-container class="mar-left">
-                                <label for="search">Search</label>
-                                <input ng-model="search.text" type="text" id="search" class="white search">
-                            </md-input-container>
-                        </form>
-                    </div>
-                </div>
 
                 <div flex hide show-gt-sm></div>
                 <div ng-hide="true">

@@ -1,7 +1,7 @@
 from datetime import date
 
 import git
-from fabric.api import lcd, local, settings
+from fabric.api import lcd, local
 
 from fabenv import version_file
 from progstrat.installed_apps import installed_apps
@@ -75,7 +75,6 @@ def bump_major():
     local('git add CHANGELOG.md')
     local('git commit -m "updated version to %s.%s.%s"' % (major, minor, patch))
     local('git tag %s.%s.%s -m "Update for release"' % (major, minor, patch))
-
 
 
 def cut(release='patch'):

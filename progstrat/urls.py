@@ -31,7 +31,7 @@ urlpatterns = [
     url(r'^docs/', include('rest_framework_swagger.urls')),
     url(r'^landing/$', base_views.landing, name='landing'),
     url(r'^login/$', base_views.login, name='login'),
-    url(r'^logout/$', base_views.logout, name='logout'),
+    url(r'^logout/$', base_views.logout_user, name='logout'),
     url(r'^$', base_views.home, name='home'),
 
     url(r'^passwd/reset/$', 'django.contrib.auth.views.password_reset'),
