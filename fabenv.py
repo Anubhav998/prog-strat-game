@@ -1,6 +1,6 @@
 import os
 
-setting_folder = 'fix'
+setting_folder = 'progstrat'
 version_file = os.path.join(setting_folder, '_version.py')
 
 try:
