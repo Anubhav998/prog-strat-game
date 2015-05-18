@@ -19,4 +19,8 @@ router.register('arenas', arena_views.ArenaViewSet) \
               'arena-territory',
               parents_query_lookups=['id'])
 router.register('terrain', arena_views.TerrainViewSet)
-router.register('science', science_views.TechnologyViewSet)
+router.register('science', science_views.TechnologyViewSet) \
+    .register(r'resources',
+              science_views.ResourceBenefitViewSet,
+              'science-resources',
+              parents_query_lookups=['id'])

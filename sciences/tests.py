@@ -38,16 +38,28 @@ class TechnologyTestCase(TestCase):
         self.assertEquals(self.resource_benefit.__unicode__(), "test_tech (+100 fuel)")
 
 
-class ResourceAPITestCase(APITestCase):
+class TechnologyAPITestCase(APITestCase):
     fixtures = []
 
     def setUp(self):
         self.username = get_random_string(10)
         self.user = User.objects.create_superuser(username=self.username, email="test@test.com", password="test")
         auth = self.client.login(username=self.username, password='test')
+        self.technology = Technology.objects.create(name='test_tech')
+        self.resource = Resource.objects.create(name='fuel')
         self.assertTrue(auth)
 
-    def test_resource_list(self):
-        url = reverse('resource-list')
+    def test_technology_list(self):
+        url = reverse('technology-list')
         response = self.client.get(url, format='json')
         self.assertEquals(response.status_code, status.HTTP_200_OK)
+
+    def test_technology_resource_benefit_create(self):
+        url = reverse('science-resources-list', args=(self.technology.id,))
+        data = {
+            "resource": self.resource.id,
+            "modifier": "+",
+            "amount": 100
+        }
+        response = self.client.post(url, data, format='json')
+        self.assertEquals(response.status_code, status.HTTP_201_CREATED)
