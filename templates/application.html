@@ -15,6 +15,7 @@
                 <h1 ng-click="go('')">Progressional Strategy Game</h1>
 
 
+
                 <div flex hide show-gt-sm></div>
                 <div ng-hide="true">
                     <md-button aria-label="Messages" ng-click="go('messages')">
@@ -45,52 +46,9 @@
         </md-toolbar>
         <div layout="row" flex>
 
-            <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left"
-                        md-is-locked-open="$mdMedia('gt-sm')">
-                <md-toolbar class="md-tall md-hue-1 sidebar-top">
-                    <div class="md-toolbar-tools " ng-click="go('my_profile')">
-                        <img class="avatar" ng-src="{{ my_profile.thumbnail }}"><span>{{ my_profile.full_name }}</span>
-                    </div>
-                </md-toolbar>
-                <md-content ng-controller="SidebarController">
-                    <md-button class="menu-item" ng-repeat-start="menu in sidebarMenus" ng-click="go(menu.link)"
-                               aria-label="{{ menu.text }}">
-                        <i class="fa" ng-class="menu.icon"></i>
-                        {{ menu.text }}
-                    </md-button>
-                    <md-divider ng-repeat-end></md-divider>
-                </md-content>
-            </md-sidenav>
-
             <md-content layout="column" flex class="content-wrapper md-padding" id="content" ng-view ng-cloak>
 
             </md-content>
-            <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="chat" layout="column"
-                        md-is-locked-open="$mdMedia('gt-md')" ng-show="onPage('messages');">
-                <md-toolbar layout="row" class="md-hue-1">
-                    <h1 class="md-toolbar-tools" layout="row">
-                        <span>Conversations</span>
-
-                        <div flex></div>
-                        <md-button ng-click="toggleSideNav('chat')" aria-label="Hide Chat Side bar" hide-gt-sm>
-                            <i class="fa fa-caret-square-o-right"></i>
-                            <md-tooltip>Hide Sidebar</md-tooltip>
-                        </md-button>
-                    </h1>
-                </md-toolbar>
-                <md-content md-padding layout="column" layout-fill flex>
-                    <md-list>
-                        <md-item ng-repeat-start="thread in threads" ng-click="go('messages', thread.uuid)"
-                                 class="chat-list-item">
-                            <md-item-content layout="column">
-                                <span>{{ thread.display.join(',') }}</span>
-                                <span>{{ thread.unread }} unread messages</span>
-                            </md-item-content>
-                        </md-item>
-                        <md-divider ng-repeat-end></md-divider>
-                    </md-list>
-                </md-content>
-            </md-sidenav>
         </div>
         <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="notifications" layout="column">
             <md-toolbar layout="row">
