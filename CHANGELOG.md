@@ -1,5 +1,15 @@
 #CHANGELOG
 
+##Version 0.0.10 (2015-05-18)
+
+* basic science module
+* updated arenas models and tests
+* fixed readme title
+* added codacy quality checker
+* added sciences app
+* updated coverage badges
+
+
 ##Version 0.0.9 (2015-05-18)
 
 * added code quality documentation
