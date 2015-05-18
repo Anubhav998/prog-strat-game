@@ -1,5 +1,16 @@
 #CHANGELOG
 
+##Version 0.0.7 (2015-05-18)
+
+* ignored signals import
+* code cleanup
+* updated landscape settings
+* updated landscape settings
+* updated landscape settings
+* updated landscape settings
+* added coverage and code quality
+
+
 ##Version 0.0.6 (2015-05-18)
 
 * added territory detail endpoints
