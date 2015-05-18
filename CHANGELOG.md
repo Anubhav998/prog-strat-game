@@ -1,5 +1,11 @@
 #CHANGELOG
 
+##Version 0.0.11 (2015-05-18)
+
+* added edit resource endpoints for technology
+* fixed display over modifier
+
+
 ##Version 0.0.10 (2015-05-18)
 
 * basic science module
