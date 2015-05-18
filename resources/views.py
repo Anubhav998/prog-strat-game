@@ -8,7 +8,7 @@ from resources.serializers import ResourceSerializer
 
 class ResourceViewSet(viewsets.ModelViewSet):
     """
-    API Endpoints for Patient Evaluations
+    API Endpoints for Resources
     """
     queryset = Resource.objects.all()
     permission_classes = [DjangoModelPermissions]
