@@ -13,4 +13,9 @@ router = SimpleRouterWithNesting()
 
 
 router.register('resources', resource_views.ResourceViewSet)
-router.register('arenas', arena_views.ArenaViewSet)
+router.register('arenas', arena_views.ArenaViewSet) \
+    .register(r'territory',
+              arena_views.TerritoryDetailViewSet,
+              'arena-territory',
+              parents_query_lookups=['id'])
+router.register('terrain', arena_views.TerrainViewSet)

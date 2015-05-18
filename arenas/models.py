@@ -1,12 +1,14 @@
 from django.db import models
 
 from core.models import AuditMix
+from resources.models import Resource
+from core.defaults import TERRITORY_ACQUISITION_COST, ARENA_X, ARENA_Y
 
 
 class Arena(AuditMix):
     name = models.CharField(max_length=64)
-    size_x = models.PositiveIntegerField(default=16)
-    size_y = models.PositiveIntegerField(default=16)
+    size_x = models.PositiveIntegerField(default=ARENA_X)
+    size_y = models.PositiveIntegerField(default=ARENA_Y)
 
     def __unicode__(self):
         return self.name
@@ -29,3 +31,22 @@ class Territory(models.Model):
     class Meta:
         unique_together = [('arena', 'position_x', 'position_y',)]
 
+
+class TerritoryDetail(models.Model):
+    territory = models.OneToOneField(Territory)
+    resources = models.ManyToManyField(Resource, through="TerritoryResource", blank=True)
+    cost = models.PositiveIntegerField(default=TERRITORY_ACQUISITION_COST, blank=True)
+    terrain = models.ForeignKey("Terrain", blank=True, null=True)
+
+
+class TerritoryResource(models.Model):
+    territory_detail = models.ForeignKey(TerritoryDetail)
+    resource = models.ForeignKey(Resource)
+    amount = models.IntegerField()
+
+
+class Terrain(models.Model):
+    name = models.CharField(max_length=64)
+
+    def __unicode__(self):
+        return self.name
