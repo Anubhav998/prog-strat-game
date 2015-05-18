@@ -1,5 +1,11 @@
 #CHANGELOG
 
+##Version 0.0.4 (2015-05-17)
+
+* added tests for arenas
+* added arenas code
+
+
 ##Version 0.0.3 (2015-05-17)
 
 * updated test suite
