@@ -22,3 +22,7 @@ pylint:
         - W0613
         - W0704
         - W0232
+
+pyflakes:
+    disable:
+        - F401
