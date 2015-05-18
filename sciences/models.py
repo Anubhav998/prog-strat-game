@@ -20,7 +20,7 @@ class Benefit(models.Model):
     technology = models.ForeignKey(Technology)
     modifier = models.CharField(max_length=1, choices=(
         ('-', '-'),
-        ('+', '-'),
+        ('+', '+'),
         ('*', '*'),
         ('/', '/'),
     ), default="+")
