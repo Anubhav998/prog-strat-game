@@ -28,7 +28,7 @@ class ResourceAPITestCase(APITestCase):
         auth = self.client.login(username=self.username, password='test')
         self.assertTrue(auth)
 
-    def test_patient_evaluations_list(self):
+    def test_resource_list(self):
         url = reverse('resource-list')
         response = self.client.get(url, format='json')
         self.assertEquals(response.status_code, status.HTTP_200_OK)

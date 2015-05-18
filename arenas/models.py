@@ -21,10 +21,10 @@ class Territory(models.Model):
     position_y = models.PositiveIntegerField()
 
     def __unicode__(self):
-        return "{0.arena.name} - ({0.get_position_display})".format(self)
+        return "{0.arena.name} - ({1})".format(self, self.get_position_display())
 
     def get_position_display(self):
-        return "{0.position_x},{0.position_y}"
+        return "{0.position_x},{0.position_y}".format(self)
 
     class Meta:
         unique_together = [('arena', 'position_x', 'position_y',)]
