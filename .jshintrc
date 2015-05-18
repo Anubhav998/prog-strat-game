@@ -5,6 +5,7 @@
     //Browser Globals
     "window",
     "console",
+    "setInterval",
     //tests
     "beforeEach",
     "module",

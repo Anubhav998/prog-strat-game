@@ -1,9 +1,10 @@
 app.controller("GlobalController", [
     "$scope",
     "$rootScope",
+    "$route",
     "$location",
     "$log",
-    function ($scope, $rootScope, $location, $log) {
+    function ($scope, $rootScope, $route, $location, $log) {
         'use strict';
         $log.debug("Global Controller Initialized");
 
@@ -37,12 +38,6 @@ app.controller("GlobalController", [
 
         $scope.reload = function () {
             $route.reload();
-        };
-
-        $scope.onLarge = function (classname) {
-            if ($mdMedia('gt-md')) {
-                return classname;
-            }
         };
 
         $scope.signout = function () {
