@@ -1,4 +1,4 @@
-# prog-strat-gatme
+# prog-strat-game
 A Turn Based, Progressional, Multiplayer, Online Strategy Game
 
 ![codeship](https://codeship.com/projects/ee51a930-dbb4-0132-4b09-428a02316898/status?branch=master)
