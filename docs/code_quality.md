@@ -17,6 +17,8 @@ coverage report -m
 Coverage is also externally reported with coveralls.
 
 [![Coverage Status](https://coveralls.io/repos/mc706/prog-strat-game/badge.svg?branch=HEAD)](https://coveralls.io/r/mc706/prog-strat-game?branch=HEAD)
+
+
 ## Code Quality
 
 This codebase follows a few code quality libraries, including pep8, pylint, flake8. It uses a tool called
@@ -25,6 +27,10 @@ This codebase follows a few code quality libraries, including pep8, pylint, flak
 The build is contingent on `pep8` and `jshint`. However we report externally on [landscape.io](https://landscape.io).
 
 [![Code Health](https://landscape.io/github/mc706/prog-strat-game/master/landscape.svg?style=flat)](https://landscape.io/github/mc706/prog-strat-game/master)
+
+This project also uses [codacy](https://codacy.com)
+
+[![Codacy Badge](https://www.codacy.com/project/badge/f6046e45c8cc436b86273f3edf9d5bef)](https://www.codacy.com/app/mcdevitt-ryan/prog-strat-game)
 
 
 ## Code Complexity

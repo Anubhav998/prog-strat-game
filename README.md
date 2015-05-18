@@ -4,6 +4,7 @@ A Turn Based, Progressional, Multiplayer, Online Strategy Game
 ![codeship](https://codeship.com/projects/ee51a930-dbb4-0132-4b09-428a02316898/status?branch=master)
 [![Code Health](https://landscape.io/github/mc706/prog-strat-game/master/landscape.svg?style=flat)](https://landscape.io/github/mc706/prog-strat-game/master)
 [![Coverage Status](https://coveralls.io/repos/mc706/prog-strat-game/badge.svg?branch=HEAD)](https://coveralls.io/r/mc706/prog-strat-game?branch=HEAD)
+[![Codacy Badge](https://www.codacy.com/project/badge/f6046e45c8cc436b86273f3edf9d5bef)](https://www.codacy.com/app/mcdevitt-ryan/prog-strat-game)
 
 ## Development Setup
 
