@@ -1,5 +1,10 @@
 #CHANGELOG
 
+##Version 0.0.6 (2015-05-18)
+
+* added territory detail endpoints
+
+
 ##Version 0.0.5 (2015-05-17)
 
 * updated readme
