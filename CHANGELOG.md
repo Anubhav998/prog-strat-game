@@ -1,5 +1,10 @@
 #CHANGELOG
 
+##Version 0.0.9 (2015-05-18)
+
+* added code quality documentation
+
+
 ##Version 0.0.8 (2015-05-18)
 
 * added code complexity check to build process
