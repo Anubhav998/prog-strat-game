@@ -1,5 +1,12 @@
 #CHANGELOG
 
+##Version 0.0.12 (2015-05-18)
+
+* restructured assets folder for multiple angular apps
+* disabled pylint invalid name
+* disabled pytlint multiple inheritiance
+
+
 ##Version 0.0.11 (2015-05-18)
 
 * added edit resource endpoints for technology
