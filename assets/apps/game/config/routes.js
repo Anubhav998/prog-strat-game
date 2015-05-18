@@ -3,7 +3,7 @@ app.config(["$routeProvider", function ($routeProvider) {
     $routeProvider.when('/',
         {
             controller: 'HomeController',
-            templateUrl: '/static/app/views/home.html',
+            templateUrl: '/static/apps/game/views/home.html',
             resolve: {}
         })
         .otherwise({redirectTo: '/'});
