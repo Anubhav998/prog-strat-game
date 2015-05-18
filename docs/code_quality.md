@@ -16,8 +16,7 @@ coverage report -m
 
 Coverage is also externally reported with coveralls.
 
-[![Coverage Status](https://coveralls.io/repos/mc706/prog-strat-game/badge.svg)](https://coveralls.io/r/mc706/prog-strat-game)
-
+[![Coverage Status](https://coveralls.io/repos/mc706/prog-strat-game/badge.svg?branch=HEAD)](https://coveralls.io/r/mc706/prog-strat-game?branch=HEAD)
 ## Code Quality
 
 This codebase follows a few code quality libraries, including pep8, pylint, flake8. It uses a tool called
