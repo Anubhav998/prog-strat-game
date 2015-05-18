@@ -9,9 +9,11 @@ requirements:
     - requirements.txt
 ignore-paths:
     - docs
+ignore-patterns:
+    - (^|/)features(/|$)
 
 pylint:
- disable:
-  - C1001
-  - W0612
-  - W0613
+    disable:
+        - C1001
+        - W0612
+        - W0613
