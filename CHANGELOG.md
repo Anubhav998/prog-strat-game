@@ -1,5 +1,10 @@
 #CHANGELOG
 
+##Version 0.0.5 (2015-05-17)
+
+* updated readme
+
+
 ##Version 0.0.4 (2015-05-17)
 
 * added tests for arenas
