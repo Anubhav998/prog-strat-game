@@ -3,4 +3,5 @@ installed_apps = (
     'resources',
     'arenas',
     'sciences',
+    'military',
 )
