@@ -9,9 +9,11 @@ requirements:
     - requirements.txt
 ignore-paths:
     - docs
+    - progstrat
 ignore-patterns:
-    - */features/*
+    - .*/features/.*
     - ^fabenv.py
+    - ^fabfile.py
 
 pylint:
     disable:
