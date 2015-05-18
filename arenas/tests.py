@@ -6,7 +6,7 @@ from rest_framework import status
 from rest_framework.reverse import reverse
 
 from core.defaults import TERRITORY_ACQUISITION_COST, ARENA_X, ARENA_Y
-from arenas.models import Arena, Terrain
+from arenas.models import Arena, Terrain, TerritoryResource
 from resources.models import Resource
 
 
@@ -38,6 +38,20 @@ class ArenaTestCase(TestCase):
     def test_territory_create_territory_detail(self):
         self.territory = self.arena.territory_set.first()
         self.assertEquals(self.territory.territorydetail.cost, TERRITORY_ACQUISITION_COST)
+
+    def test_territory_detail_unicode_method(self):
+        self.territory = self.arena.territory_set.first()
+        self.assertEquals(self.territory.territorydetail.__unicode__(), "test - (0,0) detail")
+
+    def test_territory_detail_resource_unicode_method(self):
+        self.territory = self.arena.territory_set.first()
+        self.detail = self.territory.territorydetail
+        self.territory_resource = TerritoryResource.objects.create(
+            territory_detail=self.detail,
+            resource=Resource.objects.create(name='fuel'),
+            amount=100
+        )
+        self.assertEquals(self.territory_resource.__unicode__(), "test - (0,0) fuel")
 
     def test_terrain_unicode_method(self):
         self.terrain = Terrain.objects.create(name='test')

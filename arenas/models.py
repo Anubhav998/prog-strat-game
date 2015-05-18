@@ -38,11 +38,17 @@ class TerritoryDetail(models.Model):
     cost = models.PositiveIntegerField(default=TERRITORY_ACQUISITION_COST, blank=True)
     terrain = models.ForeignKey("Terrain", blank=True, null=True)
 
+    def __unicode__(self):
+        return "{0.territory} detail".format(self)
+
 
 class TerritoryResource(models.Model):
     territory_detail = models.ForeignKey(TerritoryDetail)
     resource = models.ForeignKey(Resource)
     amount = models.IntegerField()
+
+    def __unicode__(self):
+        return "{0.territory_detail.territory} {0.resource}".format(self)
 
 
 class Terrain(models.Model):
