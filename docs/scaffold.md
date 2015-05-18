@@ -48,7 +48,7 @@ Builds a assets folder structure in the following structure:
     |   + - directives
     |   + - services
     |   + - views
-    |   + - app.js
+    |   + - game_app.js
     + - lib
         + - fonts
         + - scripts

@@ -1,0 +1,21 @@
+{% load staticfiles %}
+{% load compress %}
+
+{% compress js %}
+    <script src="{% static "apps/game/game_app.js" %}"></script>
+
+    <script src="{% static "apps/game/config/cache.js" %}"></script>
+    <script src="{% static "apps/game/config/csrf.js" %}"></script>
+    <script src="{% static "apps/game/config/limiter.js" %}"></script>
+    <script src="{% static "apps/game/config/logger.js" %}"></script>
+    <script src="{% static "apps/game/config/routes.js" %}"></script>
+    <script src="{% static "apps/game/config/theme.js" %}"></script>
+
+    <script src="{% static "apps/game/controllers/globalController.js" %}"></script>
+    <script src="{% static "apps/game/controllers/homeController.js" %}"></script>
+    <script src="{% static "apps/game/controllers/notificationController.js" %}"></script>
+
+    <script src="{% static "apps/game/services/embeddedService.js" %}"></script>
+    <script src="{% static "apps/game/services/notificationService.js" %}"></script>
+
+{% endcompress %}

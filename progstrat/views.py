@@ -15,7 +15,7 @@ def home(request):
     if not request.user.is_authenticated():
         return redirect(reverse('landing'))
     else:
-        return render_to_response('application.html', {'user': request.user}, RequestContext(request))
+        return render_to_response('game_application.html', {'user': request.user}, RequestContext(request))
 
 
 def login(request):

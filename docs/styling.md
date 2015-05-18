@@ -55,7 +55,7 @@ assets/app/
     |       |       + profile.html
     |       |       + friends.html
     |       + - home.html
-    + app.js
+    + game_app.js
 ```
 should translate into this styles structure
 ```

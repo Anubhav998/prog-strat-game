@@ -2,7 +2,7 @@
 
 {% block content %}
     {% verbatim %}
-    <div ng-app="progstrat" layout="column" ng-controller="GlobalController" layout-fill ng-cloak>
+    <div ng-app="progstrat_game" layout="column" ng-controller="GlobalController" layout-fill ng-cloak>
         <md-toolbar layout="row">
             <div class="md-toolbar-tools">
                 <md-button ng-click="toggleSideNav('left')" hide-gt-sm class="menuBtn"
@@ -79,3 +79,7 @@
     </div>
     {% endverbatim %}
 {% endblock content %}
+
+{% block scripts %}
+    {% include "game_application_scripts.html" %}
+{% endblock scripts %}

@@ -1,7 +1,7 @@
 {% extends "angular_base.html" %}
 
 {% block content %}
-    <div ng-app="progstrat" layout="column" layout-fill flex>
+    <div ng-app="progstrat_game" layout="column" layout-fill flex>
         <md-toolbar>
             <h1 class="md-toolbar-tools">
                 Progressional Strategy Game
@@ -55,3 +55,7 @@
 
 
 {% endblock content %}
+
+{% block scripts %}
+    {% include "game_application_scripts.html" %}
+{% endblock scripts %}
