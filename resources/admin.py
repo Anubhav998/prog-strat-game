@@ -1,8 +1,10 @@
 from django.contrib import admin
 
+from reversion import VersionAdmin
+
 from resources.models import Resource
 
 
 @admin.register(Resource)
-class ResourceAdmin(admin.ModelAdmin):
+class ResourceAdmin(VersionAdmin):
     pass
