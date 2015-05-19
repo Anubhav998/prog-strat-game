@@ -1,5 +1,12 @@
 #CHANGELOG
 
+##Version 0.0.15 (2015-05-18)
+
+* added profiles module
+* code cleanup for military serializers
+* code cleanup for military views
+
+
 ##Version 0.0.14 (2015-05-18)
 
 * added migrations
