@@ -15,7 +15,9 @@ class Category(models.Model):
 class Unit(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField(blank=True)
+
     category = models.ForeignKey(Category)
+
     attack = models.IntegerField(default=ATTACK)
     defence = models.IntegerField(default=DEFENCE)
 

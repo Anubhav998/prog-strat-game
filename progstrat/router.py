@@ -4,6 +4,7 @@ from rest_framework.routers import DefaultRouter
 from resources import views as resource_views
 from arenas import views as arena_views
 from sciences import views as science_views
+from military import views as military_views
 
 
 class SimpleRouterWithNesting(NestedRouterMixin, DefaultRouter):
@@ -19,6 +20,8 @@ router.register('arenas', arena_views.ArenaViewSet) \
               'arena-territory',
               parents_query_lookups=['id'])
 router.register('terrain', arena_views.TerrainViewSet)
+router.register('categories', military_views.CategoryViewSet)
+router.register('units', military_views.UnitViewSet)
 router.register('science', science_views.TechnologyViewSet) \
     .register(r'resources',
               science_views.ResourceBenefitViewSet,
