@@ -7,7 +7,6 @@ from reversion import register
 from matches.models import Match
 
 
-@register
 class Profile(models.Model):
     user = models.OneToOneField(User)
 
