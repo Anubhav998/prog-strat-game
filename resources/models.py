@@ -1,6 +1,9 @@
 from django.db import models
 
+from reversion import register
 
+
+@register
 class Resource(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField(blank=True)

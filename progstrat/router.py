@@ -6,6 +6,7 @@ from arenas import views as arena_views
 from sciences import views as science_views
 from military import views as military_views
 from profiles import views as profile_views
+from matches import views as matches_views
 
 
 class SimpleRouterWithNesting(NestedRouterMixin, DefaultRouter):
@@ -29,3 +30,4 @@ router.register('science', science_views.TechnologyViewSet) \
               science_views.ResourceBenefitViewSet,
               'science-resources',
               parents_query_lookups=['id'])
+router.register('matches', matches_views.MatchViewSet)

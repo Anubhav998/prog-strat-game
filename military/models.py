@@ -1,9 +1,12 @@
 from django.db import models
 
+from reversion import register
+
 from core.defaults import ATTACK, DEFENCE
 from resources.models import Cost
 
 
+@register
 class Category(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField(blank=True)
@@ -12,6 +15,7 @@ class Category(models.Model):
         return self.name
 
 
+@register
 class Unit(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField(blank=True)
@@ -25,5 +29,6 @@ class Unit(models.Model):
         return self.name
 
 
+@register
 class UnitCost(Cost):
     unit = models.ForeignKey(Unit, related_name='costs')
