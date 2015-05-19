@@ -1,5 +1,14 @@
 #CHANGELOG
 
+##Version 0.0.13 (2015-05-18)
+
+* military dev completion
+* added cost unicode test
+* updated costs model
+* started military app
+* fixed base route
+
+
 ##Version 0.0.12 (2015-05-18)
 
 * restructured assets folder for multiple angular apps
