@@ -6,12 +6,12 @@ from rest_framework.test import APITestCase
 from rest_framework import status
 from rest_framework.reverse import reverse
 
-from sciences.models import Technology, Benefit, ResourceBenefit
+from sciences.models import Technology, Benefit, ResourceBenefit, TechnologyCost
 from resources.models import Resource
 
 
 class TechnologyTestCase(TestCase):
-    fixtures = []
+    fixtures = ['resources']
 
     def setUp(self):
         self.technology = Technology.objects.create(name="test_tech")
@@ -36,6 +36,14 @@ class TechnologyTestCase(TestCase):
             modifier="+"
         )
         self.assertEquals(self.resource_benefit.__unicode__(), "test_tech (+100 fuel)")
+
+    def test_technology_cost_unicode_method(self):
+        self.cost = TechnologyCost.objects.create(
+            technology=self.technology,
+            resource=Resource.objects.get(pk=3),
+            amount=1000
+        )
+        self.assertEquals(self.cost.__unicode__(), "1000 Manpower")
 
 
 class TechnologyAPITestCase(APITestCase):
