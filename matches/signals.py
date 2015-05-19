@@ -1,7 +1,7 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-from matches.models import Match, GameState, ResourceState
+from matches.models import Match, GameState, ResourceState, Turn
 from resources.models import Resource
 from core.defaults import STARTING
 
@@ -21,6 +21,12 @@ def match_post_save(sender, instance, created, **kwargs):
         GameState.objects.create(
             match=instance,
             player=2
+        )
+        # create first turn object
+        Turn.objects.create(
+            match=instance,
+            number=1,
+            profile=instance.player_1
         )
 
 
