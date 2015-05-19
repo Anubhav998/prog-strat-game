@@ -4,4 +4,5 @@ installed_apps = (
     'arenas',
     'sciences',
     'military',
+    'profiles',
 )

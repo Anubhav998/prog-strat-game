@@ -5,6 +5,7 @@ from resources import views as resource_views
 from arenas import views as arena_views
 from sciences import views as science_views
 from military import views as military_views
+from profiles import views as profile_views
 
 
 class SimpleRouterWithNesting(NestedRouterMixin, DefaultRouter):
@@ -14,6 +15,7 @@ class SimpleRouterWithNesting(NestedRouterMixin, DefaultRouter):
 router = SimpleRouterWithNesting()
 
 router.register('resources', resource_views.ResourceViewSet)
+router.register('profiles', profile_views.ProfileViewSet)
 router.register('arenas', arena_views.ArenaViewSet) \
     .register(r'territory',
               arena_views.TerritoryDetailViewSet,
