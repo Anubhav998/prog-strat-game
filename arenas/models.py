@@ -1,11 +1,11 @@
 from django.db import models
 
-from core.models import AuditMix
-from resources.models import Resource
-from core.defaults import TERRITORY_ACQUISITION_COST, ARENA_X, ARENA_Y
+from core.models import AuditMixin
+from resources.models import Resource, Cost
+from core.defaults import ARENA_X, ARENA_Y
 
 
-class Arena(AuditMix):
+class Arena(AuditMixin):
     name = models.CharField(max_length=64)
     size_x = models.PositiveIntegerField(default=ARENA_X)
     size_y = models.PositiveIntegerField(default=ARENA_Y)
@@ -35,7 +35,6 @@ class Territory(models.Model):
 class TerritoryDetail(models.Model):
     territory = models.OneToOneField(Territory)
     resources = models.ManyToManyField(Resource, through="TerritoryResource", blank=True)
-    cost = models.PositiveIntegerField(default=TERRITORY_ACQUISITION_COST, blank=True)
     terrain = models.ForeignKey("Terrain", blank=True, null=True)
 
     def __unicode__(self):
@@ -49,6 +48,10 @@ class TerritoryResource(models.Model):
 
     def __unicode__(self):
         return "{0.territory_detail.territory} {0.resource}".format(self)
+
+
+class TerritoryCosts(Cost):
+    territory_detail = models.ForeignKey(TerritoryDetail, related_name='costs')
 
 
 class Terrain(models.Model):

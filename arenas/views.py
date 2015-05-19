@@ -51,7 +51,6 @@ class TerritoryDetailViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
         detail = TerritoryDetail.objects.get(territory_id=kwargs.get('pk'))
         if post.get('terrain', False):
             detail.terrain = Terrain.objects.get(pk=post.get('terrain'))
-        detail.cost = post.get('cost', detail.cost)
         if post.get('resources', False):
             detail.resources.clear()
             for resource_value in post.get('resources'):

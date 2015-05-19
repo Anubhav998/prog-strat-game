@@ -1,12 +1,12 @@
 from django.db import models
 
-from resources.models import Resource
+from resources.models import Resource, Cost
 
 
 class Technology(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField(blank=True)
-    dependencies = models.ManyToManyField("self", symmetrical=False, blank=True, null=True)
+    dependencies = models.ManyToManyField("self", symmetrical=False, blank=True)
 
     def __unicode__(self):
         return self.name
@@ -14,6 +14,10 @@ class Technology(models.Model):
     class Meta:
         verbose_name = 'technology'
         verbose_name_plural = 'technologies'
+
+
+class TechnologyCost(Cost):
+    technology = models.ForeignKey(Technology, related_name='costs')
 
 
 class Benefit(models.Model):

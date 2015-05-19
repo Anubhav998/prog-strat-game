@@ -1,16 +1,27 @@
 from rest_framework import serializers
 from rest_framework.reverse import reverse
 
-from arenas.models import Arena, Territory, Terrain, TerritoryDetail
+from arenas.models import Arena, Territory, Terrain, TerritoryDetail, TerritoryCosts
+
+
+class TerritoryCostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TerritoryCosts
+        fields = (
+            'resource',
+            'amount',
+        )
 
 
 class TerritoryDetailSerializer(serializers.ModelSerializer):
+    costs = TerritoryCostSerializer(many=True, read_only=True)
+
     class Meta:
         model = TerritoryDetail
         fields = (
             'id',
             'territoryresource_set',
-            'cost',
+            'costs',
             'terrain',
         )
 

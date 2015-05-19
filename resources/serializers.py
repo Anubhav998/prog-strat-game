@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from resources.models import Resource
+from resources.models import Resource, Cost
 
 
 class ResourceSerializer(serializers.ModelSerializer):
@@ -10,4 +10,13 @@ class ResourceSerializer(serializers.ModelSerializer):
             'id',
             'name',
             'description',
+        )
+
+
+class CostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cost
+        fields = (
+            'resource',
+            'amount',
         )

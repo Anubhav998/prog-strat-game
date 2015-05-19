@@ -11,3 +11,14 @@ class Resource(models.Model):
     class Meta:
         verbose_name = 'resource'
         verbose_name_plural = 'resources'
+
+
+class Cost(models.Model):
+    resource = models.ForeignKey(Resource)
+    amount = models.PositiveIntegerField()
+
+    def __unicode__(self):
+        return "{0.amount} {0.resource}".format(self)
+
+    class Meta:
+        abstract = True

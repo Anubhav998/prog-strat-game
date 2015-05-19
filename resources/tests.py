@@ -20,7 +20,7 @@ class ResourceTestCase(TestCase):
 
 
 class ResourceAPITestCase(APITestCase):
-    fixtures = []
+    fixtures = ['resources']
 
     def setUp(self):
         self.username = get_random_string(10)

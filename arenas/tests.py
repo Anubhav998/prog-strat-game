@@ -5,13 +5,13 @@ from rest_framework.test import APITestCase
 from rest_framework import status
 from rest_framework.reverse import reverse
 
-from core.defaults import TERRITORY_ACQUISITION_COST, ARENA_X, ARENA_Y
+from core.defaults import ARENA_X, ARENA_Y
 from arenas.models import Arena, Terrain, TerritoryResource
 from resources.models import Resource
 
 
 class ArenaTestCase(TestCase):
-    fixtures = []
+    fixtures = ['resources']
 
     def setUp(self):
         self.username = get_random_string(10)
@@ -35,10 +35,6 @@ class ArenaTestCase(TestCase):
         self.territory = self.arena.territory_set.first()
         self.assertEquals(self.territory.get_position_display(), "0,0")
 
-    def test_territory_create_territory_detail(self):
-        self.territory = self.arena.territory_set.first()
-        self.assertEquals(self.territory.territorydetail.cost, TERRITORY_ACQUISITION_COST)
-
     def test_territory_detail_unicode_method(self):
         self.territory = self.arena.territory_set.first()
         self.assertEquals(self.territory.territorydetail.__unicode__(), "test - (0,0) detail")
@@ -59,7 +55,7 @@ class ArenaTestCase(TestCase):
 
 
 class ArenaAPITestCase(APITestCase):
-    fixtures = ['groups']
+    fixtures = ['groups', 'resources']
 
     def setUp(self):
         self.username = get_random_string(10)
@@ -94,7 +90,6 @@ class ArenaAPITestCase(APITestCase):
         territory = self.arena.territory_set.first()
         url = reverse('arena-territory-detail', args=(self.arena.id, territory.id))
         data = {
-            "cost": 400,
             "terrain": self.terrain.id,
             "resources": [
                 {
