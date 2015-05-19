@@ -1,5 +1,7 @@
 from django.contrib import admin
 
+from reversion import VersionAdmin
+
 from sciences.models import Technology, ResourceBenefit, TechnologyCost
 
 
@@ -12,5 +14,5 @@ class TechnologyCostInline(admin.TabularInline):
 
 
 @admin.register(Technology)
-class TechnologyAdmin(admin.ModelAdmin):
+class TechnologyAdmin(VersionAdmin):
     inlines = [ResourceBenefitInline, TechnologyCostInline]
