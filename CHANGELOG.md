@@ -1,5 +1,10 @@
 #CHANGELOG
 
+##Version 0.0.14 (2015-05-18)
+
+* added migrations
+
+
 ##Version 0.0.13 (2015-05-18)
 
 * military dev completion
