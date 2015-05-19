@@ -1,0 +1,27 @@
+[
+  {
+    "fields": {"name": "Purchase"},
+    "model": "matches.action",
+    "pk": 1
+  },
+  {
+    "fields": {"name": "Research"},
+    "model": "matches.action",
+    "pk": 2
+  },
+  {
+    "fields": {"name": "Claim"},
+    "model": "matches.action",
+    "pk": 3
+  },
+  {
+    "fields": {"name": "Invade"},
+    "model": "matches.action",
+    "pk": 4
+  },
+  {
+    "fields": {"name": "Pray"},
+    "model": "matches.action",
+    "pk": 5
+  }
+]
