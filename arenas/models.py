@@ -1,13 +1,10 @@
 from django.db import models
 
-from reversion import register
-
 from core.models import AuditMixin
 from resources.models import Resource, Cost
 from core.defaults import ARENA_X, ARENA_Y
 
 
-@register
 class Arena(AuditMixin):
     name = models.CharField(max_length=64)
     size_x = models.PositiveIntegerField(default=ARENA_X)
@@ -20,7 +17,6 @@ class Arena(AuditMixin):
         return "{0.size_x}x{0.size_y}".format(self)
 
 
-@register
 class Territory(models.Model):
     arena = models.ForeignKey(Arena)
     position_x = models.PositiveIntegerField()
@@ -36,7 +32,6 @@ class Territory(models.Model):
         unique_together = [('arena', 'position_x', 'position_y',)]
 
 
-@register
 class TerritoryDetail(models.Model):
     territory = models.OneToOneField(Territory)
     resources = models.ManyToManyField(Resource, through="TerritoryResource", blank=True)
@@ -46,7 +41,6 @@ class TerritoryDetail(models.Model):
         return "{0.territory} detail".format(self)
 
 
-@register
 class TerritoryResource(models.Model):
     territory_detail = models.ForeignKey(TerritoryDetail)
     resource = models.ForeignKey(Resource)
@@ -56,12 +50,10 @@ class TerritoryResource(models.Model):
         return "{0.territory_detail.territory} {0.resource}".format(self)
 
 
-@register
 class TerritoryCosts(Cost):
     territory_detail = models.ForeignKey(TerritoryDetail, related_name='costs')
 
 
-@register
 class Terrain(models.Model):
     name = models.CharField(max_length=64)
 
