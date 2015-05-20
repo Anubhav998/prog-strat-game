@@ -6,7 +6,7 @@ from rest_framework.test import APITestCase
 from rest_framework import status
 from rest_framework.reverse import reverse
 
-from resources.models import Resource
+from resources.models import Resource, ResourceCost
 
 
 class ResourceTestCase(TestCase):
@@ -17,6 +17,14 @@ class ResourceTestCase(TestCase):
 
     def test_resource_unicode_method(self):
         self.assertEquals(self.resource.__unicode__(), "test")
+
+    def test_resource_cost_unicode_method(self):
+        self.cost = ResourceCost.objects.create(
+            resource=self.resource,
+            dependency=self.resource,
+            amount=1000
+        )
+        self.assertEquals(self.cost.__unicode__(), "1000 test")
 
 
 class ResourceAPITestCase(APITestCase):

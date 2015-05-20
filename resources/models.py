@@ -1,7 +1,5 @@
 from django.db import models
 
-from reversion import register
-
 
 class Resource(models.Model):
     name = models.CharField(max_length=64)
@@ -24,3 +22,12 @@ class Cost(models.Model):
 
     class Meta:
         abstract = True
+
+
+class ResourceCost(models.Model):
+    resource = models.ForeignKey(Resource, related_name='costs')
+    dependency = models.ForeignKey(Resource, related_name='dependency')
+    amount = models.PositiveIntegerField()
+
+    def __unicode__(self):
+        return "{0.amount} {0.resource}".format(self)
