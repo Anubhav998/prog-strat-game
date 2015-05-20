@@ -1,0 +1,50 @@
+[
+  {
+    "fields": {
+      "dependencies": [],
+      "name": "Concrete",
+      "description": "Refining Stone into shaped blocks"
+    },
+    "model": "sciences.technology",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "dependencies": [
+        1
+      ],
+      "name": "High Rises",
+      "description": "More Manpower per Territory"
+    },
+    "model": "sciences.technology",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "technology": 2,
+      "amount": 1000,
+      "resource": 3
+    },
+    "model": "sciences.technologycost",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "technology": 1,
+      "amount": 2000,
+      "resource": 3
+    },
+    "model": "sciences.technologycost",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "resource": 1,
+      "amount": 100,
+      "modifier": "+",
+      "technology": 1
+    },
+    "model": "sciences.resourcebenefit",
+    "pk": 1
+  }
+]
