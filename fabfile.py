@@ -102,7 +102,7 @@ def freeze():
 def quality_check():
     local('pep8 .')
     local('jshint assets')
-    local('xenon . -a A -b A -m A -i core')
+    local('xenon . -a A -m A -i core')
 
 
 def test():
