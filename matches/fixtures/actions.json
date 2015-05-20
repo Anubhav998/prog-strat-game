@@ -23,5 +23,10 @@
     "fields": {"name": "Pray"},
     "model": "matches.action",
     "pk": 5
+  },
+  {
+    "fields": {"name": "Refine"},
+    "model": "matches.action",
+    "pk": 6
   }
 ]
