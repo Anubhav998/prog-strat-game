@@ -11,7 +11,7 @@ def arena_post_save(sender, instance, created, **kwargs):
     """
     When a new arena is created, create all the child territory squares.
     """
-    if created:
+    if created and not kwargs.get('raw', False):
         for x in range(int(instance.size_x)):
             for y in range(int(instance.size_y)):
                 Territory.objects.create(
@@ -26,7 +26,7 @@ def territory_post_save(sender, instance, created, **kwargs):
     """
     When a new territory is created, create the associated territory detail
     """
-    if created or not instance.territorydetail:
+    if created or not instance.territorydetail and not kwargs.get('raw', False):
         TerritoryDetail.objects.create(territory=instance)
 
 
@@ -35,7 +35,7 @@ def territory_detail_post_save(sender, instance, created, **kwargs):
     """
     When a territory detail is created, create a default manpower cost
     """
-    if created or instance.costs.count() == 0:
+    if created or instance.costs.count() == 0 and not kwargs.get('raw', False):
         TerritoryCosts.objects.create(
             territory_detail=instance,
             resource=Resource.objects.get(name='Manpower'),
