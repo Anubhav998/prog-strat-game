@@ -18,7 +18,7 @@ class Profile(models.Model):
 
     def get_win_count(self):
         return self.player_one.filter(completed=True).filter(victor=1).count() + self.player_two.filter(
-            completed=True).filter(victor=2)
+            completed=True).filter(victor=2).count()
 
     def __unicode__(self):
         return self.user.username
