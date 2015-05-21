@@ -31,7 +31,7 @@
   {
     "fields": {
       "technology": 1,
-      "amount": 2000,
+      "amount": 700,
       "resource": 3
     },
     "model": "sciences.technologycost",
