@@ -41,10 +41,10 @@ class TerritoryStateSerializer(serializers.ModelSerializer):
 
 
 class GameStateSerializer(serializers.ModelSerializer):
-    resources = ResourceStateSerializer(many=True, read_only=True)
-    military = MilitaryStateSerializer(many=True, read_only=True)
-    technology = TechnologyStateSerializer(many=True, read_only=True)
-    territory = TerritoryStateSerializer(many=True, read_only=True)
+    resources = ResourceStateSerializer(many=True)
+    military = MilitaryStateSerializer(many=True)
+    technology = TechnologyStateSerializer(many=True)
+    territory = TerritoryStateSerializer(many=True)
 
     class Meta:
         model = GameState
@@ -58,7 +58,7 @@ class GameStateSerializer(serializers.ModelSerializer):
 
 
 class MatchSerializer(serializers.ModelSerializer):
-    states = GameStateSerializer(many=True, read_only=True)
+    uuid = serializers.SerializerMethodField()
 
     class Meta:
         model = Match
@@ -70,5 +70,7 @@ class MatchSerializer(serializers.ModelSerializer):
             'uuid',
             'completed',
             'victor',
-            'get_turn_count',
         )
+
+    def get_uuid(self, obj):
+        return obj.uuid
