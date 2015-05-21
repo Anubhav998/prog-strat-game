@@ -1,5 +1,10 @@
 #CHANGELOG
 
+##Version 0.0.17 (2015-05-21)
+
+* added migration
+
+
 ##Version 0.0.16 (2015-05-21)
 
 * fix-up migration
