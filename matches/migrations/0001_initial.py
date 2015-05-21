@@ -38,7 +38,8 @@ class Migration(migrations.Migration):
                 ('timestamp', models.DateTimeField(auto_now_add=True)),
                 ('completed', models.BooleanField(default=False)),
                 (
-                'victor', models.IntegerField(blank=True, null=True, choices=[(1, b'Player One'), (2, b'Player Two')])),
+                    'victor',
+                    models.IntegerField(blank=True, null=True, choices=[(1, b'Player One'), (2, b'Player Two')])),
                 ('arena', models.ForeignKey(to='arenas.Arena')),
                 ('player_1', models.ForeignKey(related_name='player_one', to='profiles.Profile')),
                 ('player_2', models.ForeignKey(related_name='player_two', to='profiles.Profile')),
@@ -84,7 +85,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 (
-                'player', models.IntegerField(blank=True, null=True, choices=[(1, b'Player One'), (2, b'Player Two')])),
+                    'player',
+                    models.IntegerField(blank=True, null=True, choices=[(1, b'Player One'), (2, b'Player Two')])),
                 ('status', models.CharField(max_length=64, choices=[(b'owned', b'Owned'), (b'valid', b'Valid'),
                                                                     (b'conflict', b'Conflict'), (b'open', b'Open')])),
                 ('state', models.ForeignKey(related_name='territory', to='matches.GameState')),
