@@ -18,9 +18,53 @@
   {
     "fields": {
       "name": "Manpower",
-      "description": "Manpower"
+      "description": "Manpower is the most basic unit in the game. Is produced per territory and is used to create almost everything else. "
     },
     "model": "resources.resource",
     "pk": 3
+  },
+  {
+    "fields": {
+      "name": "Steel",
+      "description": "Strong Metal"
+    },
+    "model": "resources.resource",
+    "pk": 4
+  },
+  {
+    "fields": {
+      "amount": 10,
+      "base": null,
+      "resource": 2
+    },
+    "model": "resources.resourcecost",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "amount": 10,
+      "base": null,
+      "resource": 1
+    },
+    "model": "resources.resourcecost",
+    "pk": 2
+  },
+  {
+    "fields": {
+      "amount": 10,
+      "base": 1,
+      "resource": 4
+    },
+    "model": "resources.resourcecost",
+    "pk": 3
+  },
+  {
+    "fields": {
+      "amount": 10,
+      "base": 2,
+      "resource": 4
+    },
+    "model": "resources.resourcecost",
+    "pk": 4
   }
 ]

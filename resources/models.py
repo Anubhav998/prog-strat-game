@@ -25,9 +25,9 @@ class Cost(models.Model):
 
 
 class ResourceCost(models.Model):
-    resource = models.ForeignKey(Resource, related_name='costs')
-    dependency = models.ForeignKey(Resource, related_name='dependency')
+    base = models.ForeignKey(Resource, related_name='costs', null=True)
+    resource = models.ForeignKey(Resource, related_name='dependency')
     amount = models.PositiveIntegerField()
 
     def __unicode__(self):
-        return "{0.amount} {0.resource}".format(self)
+        return "{0.amount} {0.base}".format(self)

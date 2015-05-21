@@ -7,7 +7,7 @@ from resources.models import Resource, ResourceCost
 
 class ResourceCostInline(admin.TabularInline):
     model = ResourceCost
-    fk_name = 'dependency'
+    fk_name = 'resource'
 
 
 @admin.register(Resource)

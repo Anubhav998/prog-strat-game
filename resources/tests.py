@@ -20,8 +20,8 @@ class ResourceTestCase(TestCase):
 
     def test_resource_cost_unicode_method(self):
         self.cost = ResourceCost.objects.create(
+            base=self.resource,
             resource=self.resource,
-            dependency=self.resource,
             amount=1000
         )
         self.assertEquals(self.cost.__unicode__(), "1000 test")
