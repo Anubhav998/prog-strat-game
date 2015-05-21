@@ -15,12 +15,14 @@ def match_post_save(sender, instance, created, **kwargs):
         # Create Player One Game State Object
         GameState.objects.create(
             match=instance,
-            player=1
+            player=1,
+            profile=instance.player_1
         )
         # create Player Two Game State Object
         GameState.objects.create(
             match=instance,
-            player=2
+            player=2,
+            profile=instance.player_2
         )
         # create first turn object
         Turn.objects.create(

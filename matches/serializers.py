@@ -4,28 +4,37 @@ from matches.models import Match, GameState, ResourceState, MilitaryState, Techn
 
 
 class ResourceStateSerializer(serializers.ModelSerializer):
+    name = serializers.ReadOnlyField(source='resource.name')
+
     class Meta:
         model = ResourceState
         fields = (
             'resource',
+            'name',
             'quantity',
         )
 
 
 class MilitaryStateSerializer(serializers.ModelSerializer):
+    name = serializers.ReadOnlyField(source='unit.name')
+
     class Meta:
         model = MilitaryState
         fields = (
             'unit',
+            'name',
             'quantity',
         )
 
 
 class TechnologyStateSerializer(serializers.ModelSerializer):
+    name = serializers.ReadOnlyField(source='technology.name')
+
     class Meta:
         model = TechnologyState
         fields = (
             'technology',
+            'name',
             'quantity',
         )
 
@@ -41,10 +50,10 @@ class TerritoryStateSerializer(serializers.ModelSerializer):
 
 
 class GameStateSerializer(serializers.ModelSerializer):
-    resources = ResourceStateSerializer(many=True)
-    military = MilitaryStateSerializer(many=True)
-    technology = TechnologyStateSerializer(many=True)
-    territory = TerritoryStateSerializer(many=True)
+    resources = ResourceStateSerializer(many=True, read_only=True)
+    military = MilitaryStateSerializer(many=True, read_only=True)
+    technology = TechnologyStateSerializer(many=True, read_only=True)
+    territory = TerritoryStateSerializer(many=True, read_only=True)
 
     class Meta:
         model = GameState

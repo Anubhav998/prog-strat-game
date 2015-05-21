@@ -34,7 +34,7 @@
   {
     "fields": {
       "amount": 10,
-      "base": null,
+      "base": 4,
       "resource": 2
     },
     "model": "resources.resourcecost",
@@ -43,28 +43,10 @@
   {
     "fields": {
       "amount": 10,
-      "base": null,
+      "base": 4,
       "resource": 1
     },
     "model": "resources.resourcecost",
     "pk": 2
-  },
-  {
-    "fields": {
-      "amount": 10,
-      "base": 1,
-      "resource": 4
-    },
-    "model": "resources.resourcecost",
-    "pk": 3
-  },
-  {
-    "fields": {
-      "amount": 10,
-      "base": 2,
-      "resource": 4
-    },
-    "model": "resources.resourcecost",
-    "pk": 4
   }
 ]
