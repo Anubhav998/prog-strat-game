@@ -1,5 +1,34 @@
 #CHANGELOG
 
+##Version 0.0.16 (2015-05-21)
+
+* fix-up migration
+* added validation
+* added fuel and metal to starting resources
+* updated technology fixture for tests
+* updated resources
+* military fixture
+* updated match serializers
+* disconnected signals for fixtures
+* added technologies fixture
+* added fk_name for django admin
+* updated resources to have refinement
+* updated profiles and tests
+* removed block level complexity check
+* added resource refinement
+* started base turn
+* added actions fixture
+* added arena fixture
+* updated sciences admin
+* updated resources versioning
+* updated profiles versioning
+* updated arena versioning
+* updated matches app
+* added starting defaults
+* registered versions
+* added match app
+
+
 ##Version 0.0.15 (2015-05-18)
 
 * added profiles module
