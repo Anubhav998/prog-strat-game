@@ -12,6 +12,8 @@ DEFENCE = 10
 # Starting Units
 STARTING = {
     "Resources": {
-        "Manpower": 1000
+        "Manpower": 1000,
+        "Fuel": 500,
+        "Metal": 500
     }
 }
