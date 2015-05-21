@@ -1,0 +1,30 @@
+[
+  {
+    "fields": {
+      "name": "Basic",
+      "description": "Most basic types of soldier"
+    },
+    "model": "military.category",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "category": 1,
+      "attack": 10,
+      "defence": 10,
+      "name": "Soldier",
+      "description": "Basic Footsoldier"
+    },
+    "model": "military.unit",
+    "pk": 1
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 3,
+      "unit": 1
+    },
+    "model": "military.unitcost",
+    "pk": 1
+  }
+]
