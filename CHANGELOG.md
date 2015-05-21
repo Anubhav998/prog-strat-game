@@ -1,5 +1,13 @@
 #CHANGELOG
 
+##Version 0.0.18 (2015-05-21)
+
+* added religion endpoint
+* updated pylint settings
+* fix
+* added religion app
+
+
 ##Version 0.0.17 (2015-05-21)
 
 * added migration
