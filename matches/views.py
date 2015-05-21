@@ -89,7 +89,6 @@ class MatchViewSet(viewsets.ViewSet):
         """
         match = Match.objects.get(uuid=uuid)
         turn = match.get_current_turn()
-        print "turn number", turn.number, turn.__dict__, turn.profile.user.username
         data = {
             "turn": turn.number,
             "completed": match.completed,
