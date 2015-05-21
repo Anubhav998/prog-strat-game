@@ -24,6 +24,7 @@ pylint:
         - W0232
         - R0901
         - C0103
+        - R0201
 
 pyflakes:
     disable:
