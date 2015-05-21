@@ -9,7 +9,7 @@ from rest_framework.reverse import reverse
 from rest_framework.test import APITestCase
 
 from matches.models import Match, Turn, Action, GameState, Token, ResourceState, MilitaryState, TechnologyState, \
-    TerritoryState
+    TerritoryState, ReligionState
 from resources.models import Resource
 from military.models import Unit, Category
 from sciences.models import Technology
@@ -143,6 +143,16 @@ class MatchTestCase(TestCase):
             territory=self.territory
         )
         self.assertEquals(self.territory_state.__unicode__(), "Territory State %s" % self.territory_state.id)
+
+    def test_religion_state_unicode_method(self):
+        self.game_state = GameState.objects.get(
+            match=self.match,
+            player=1
+        )
+        self.religion_state = ReligionState.objects.create(
+            state=self.game_state,
+        )
+        self.assertEquals(self.religion_state.__unicode__(), "Faith State %s" % self.religion_state.id)
 
 
 class MatchesAPITestCase(APITestCase):
@@ -296,7 +306,7 @@ class MatchPlayTestCase(TestCase):
                 {
                     "action": "Purchase",
                     "object": "Soldier",
-                    "quantity": 10
+                    "quantity": 9
                 }
             ]
         }
@@ -359,6 +369,32 @@ class MatchPlayTestCase(TestCase):
         player_2_response_5 = self.client2.put(match_url, json.dumps(data_7), format='json')
         self.assertEquals(player_2_response_5.status_code, status.HTTP_202_ACCEPTED)
         data = player_2_response_5.data
-        # print data['resources']
-        # print data['technology']
-        # print data['military']
+        self.assertEquals(data.get('resources')[0].get('quantity'), 400)
+        self.assertEquals(data.get('resources')[1].get('quantity'), 400)
+        self.assertEquals(data.get('resources')[2].get('quantity'), 200)
+        self.assertEquals(data.get('resources')[3].get('quantity'), 10)
+        self.assertEquals(data.get('technology')[0].get('quantity'), 1)
+        self.assertEquals(data.get('military')[0].get('quantity'), 1)
+
+        # player status check
+        player_1_response_7 = self.client1.get(status_url, format='json')
+        self.assertEquals(player_1_response_7.status_code, status.HTTP_200_OK)
+        self.assertEquals(json.loads(player_1_response_7.data)['turn'], 3)
+        player_2_response_6 = self.client2.get(status_url, format='json')
+        self.assertEquals(player_2_response_6.status_code, status.HTTP_200_OK)
+        self.assertEquals(json.loads(player_2_response_6.data)['turn'], 3)
+
+        # player two prays
+        data_8 = {
+            "token": player_1_token,
+            "moves": [
+                {
+                    "action": "Pray",
+                    "object": "Faith",
+                    "quantity": 10
+                }
+            ]
+        }
+        player_1_response_8 = self.client1.put(match_url, json.dumps(data_8), format='json')
+        self.assertEquals(player_1_response_8.status_code, status.HTTP_202_ACCEPTED)
+        data = player_1_response_8.data

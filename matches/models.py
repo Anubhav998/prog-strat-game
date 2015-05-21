@@ -7,6 +7,7 @@ from arenas.models import Arena, Territory
 from resources.models import Resource, ResourceCost
 from military.models import Unit
 from sciences.models import Technology
+from core.defaults import RELIGION_COST
 
 
 class Match(models.Model):
@@ -130,11 +131,21 @@ class GameState(models.Model):
                 technology_state.clean()
                 if commit:
                     technology_state.save()
+            elif move.action.name == "Pray":
+                manpower = Resource.objects.get(name="Manpower")
+                resource_state, c = ResourceState.objects.get_or_create(state=self, resource=manpower)
+                resource_state.quantity -= RELIGION_COST * move.quantity
+                resource_state.clean()
+                if commit:
+                    resource_state.save()
+                religion_state, _ = ReligionState.objects.get_or_create(state=self)
+                religion_state.amount += move.quantity
+                religion_state.clean()
+                if commit:
+                    religion_state.save()
                     # elif move.action.name is "Claim":
                     #     pass
                     # elif move.action.name is "Invade":
-                    #     pass
-                    # elif move.action.name is "Pray":
                     #     pass
         return True
 
@@ -213,6 +224,14 @@ class TerritoryState(models.Model):
 
     class Meta:
         unique_together = ('state', 'territory')
+
+
+class ReligionState(models.Model):
+    state = models.ForeignKey(GameState, related_name='religion')
+    amount = models.IntegerField(default=0)
+
+    def __unicode__(self):
+        return "Faith State {0.id}".format(self)
 
 
 class Token(models.Model):

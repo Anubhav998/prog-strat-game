@@ -64,14 +64,13 @@ class MatchViewSet(viewsets.ViewSet):
         state = GameState.objects.get(match=match, profile=request.user.profile)
         try:
             state.apply_turn(turn, commit=False)
+            state.apply_turn(turn, commit=True)
         except ValidationError:
             for move in turn.moves.all():
                 move.delete()
             return Response(json.dumps({'error': 'invalid turn'}), status=status.HTTP_400_BAD_REQUEST)
-
-        state.apply_turn(turn, commit=True)
         # increment turn
-        opponent = match.player_1 if request.user.profile is match.player_2 else match.player_2
+        opponent = match.player_1 if request.user.profile == match.player_2 else match.player_2
         Turn.objects.create(match=match, profile=opponent, number=turn.number + 1)
         # return the new game state
         serializer = GameStateSerializer(state, context={"request": request})
@@ -90,6 +89,7 @@ class MatchViewSet(viewsets.ViewSet):
         """
         match = Match.objects.get(uuid=uuid)
         turn = match.get_current_turn()
+        print "turn number", turn.number, turn.__dict__, turn.profile.user.username
         data = {
             "turn": turn.number,
             "completed": match.completed,

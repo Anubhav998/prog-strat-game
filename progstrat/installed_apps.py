@@ -6,5 +6,4 @@ installed_apps = (
     'military',
     'profiles',
     'matches',
-    'religion',
 )

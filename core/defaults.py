@@ -17,3 +17,6 @@ STARTING = {
         "Metal": 500
     }
 }
+
+# Religion
+RELIGION_COST = 1
