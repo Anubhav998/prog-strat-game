@@ -1,5 +1,18 @@
 #CHANGELOG
 
+##Version 0.0.23 (2015-05-22)
+
+* added technology dependency checking and resource production
+* removed wrong note
+* added clarification note
+* pylint'd pretty_print util
+* added prettyprint util
+* added starting positions default
+* added arena get_coordinates method
+* added arena normalize method
+* updated technology state to use acquired instead of quantity
+
+
 ##Version 0.0.22 (2015-05-21)
 
 *  updated tests for new fixtures
