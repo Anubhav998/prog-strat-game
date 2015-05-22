@@ -1,6 +1,6 @@
 from django.db import models
 
-from resources.models import Resource, Cost
+from resources.models import Cost
 
 
 class Technology(models.Model):
@@ -38,7 +38,7 @@ class Benefit(models.Model):
 
 
 class ResourceBenefit(Benefit):
-    resource = models.ForeignKey(Resource)
+    resource = models.ForeignKey("resources.Resource")
 
     def __unicode__(self):
         return "{0.technology} ({0.modifier}{0.amount} {0.resource.name})".format(self)

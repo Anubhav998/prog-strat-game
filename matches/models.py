@@ -108,8 +108,7 @@ class GameState(models.Model):
         for move in turn.moves.all():
             if move.action.name == "Refine":
                 resource = Resource.objects.get(name=move.object)
-                costs = ResourceCost.objects.filter(base=resource)
-                self.spend_resources(costs, move.quantity, commit)
+                self.spend_resources(resource.costs.all(), move.quantity, commit)
                 new_resource_state, _ = ResourceState.objects.get_or_create(state=self, resource=resource)
                 new_resource_state.quantity += move.quantity
                 new_resource_state.clean()

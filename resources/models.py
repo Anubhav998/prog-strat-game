@@ -30,4 +30,9 @@ class ResourceCost(models.Model):
     amount = models.PositiveIntegerField()
 
     def __unicode__(self):
-        return "{0.amount} {0.base}".format(self)
+        return "{0.amount} {0.resource}".format(self)
+
+
+class ResourceDependency(models.Model):
+    resource = models.ForeignKey(Resource, related_name='dependencies')
+    technology = models.ForeignKey("sciences.Technology")
