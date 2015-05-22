@@ -7,7 +7,9 @@ TERRITORY_COST = {
     "Manpower": 500
 }
 TERRITORY_PRODUCTION = {
-    "Manpower": 1000
+    "Manpower": 250,
+    "Fuel": 100,
+    "Metal": 100,
 }
 
 # Units

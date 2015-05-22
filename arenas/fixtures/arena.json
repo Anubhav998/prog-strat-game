@@ -1,3514 +1,5314 @@
 [
   {
     "fields": {
-      "date_created": "2015-05-22T02:06:13.601Z",
+      "date_created": "2015-05-22T02:16:05.194Z",
       "size_x": 10,
       "name": "Default",
       "created_by": 1,
       "size_y": 10
     },
     "model": "arenas.arena",
-    "pk": 8
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 0,
-      "position_y": 0
-    },
-    "model": "arenas.territory",
-    "pk": 1101
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 0,
-      "position_y": 1
-    },
-    "model": "arenas.territory",
-    "pk": 1102
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 0,
-      "position_y": 2
-    },
-    "model": "arenas.territory",
-    "pk": 1103
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 0,
-      "position_y": 3
-    },
-    "model": "arenas.territory",
-    "pk": 1104
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 0,
-      "position_y": 4
-    },
-    "model": "arenas.territory",
-    "pk": 1105
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 0,
-      "position_y": 5
-    },
-    "model": "arenas.territory",
-    "pk": 1106
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 0,
-      "position_y": 6
-    },
-    "model": "arenas.territory",
-    "pk": 1107
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 0,
-      "position_y": 7
-    },
-    "model": "arenas.territory",
-    "pk": 1108
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 0,
-      "position_y": 8
-    },
-    "model": "arenas.territory",
-    "pk": 1109
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 0,
-      "position_y": 9
-    },
-    "model": "arenas.territory",
-    "pk": 1110
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 1,
-      "position_y": 0
-    },
-    "model": "arenas.territory",
-    "pk": 1111
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 1,
-      "position_y": 1
-    },
-    "model": "arenas.territory",
-    "pk": 1112
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 1,
-      "position_y": 2
-    },
-    "model": "arenas.territory",
-    "pk": 1113
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 1,
-      "position_y": 3
-    },
-    "model": "arenas.territory",
-    "pk": 1114
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 1,
-      "position_y": 4
-    },
-    "model": "arenas.territory",
-    "pk": 1115
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 1,
-      "position_y": 5
-    },
-    "model": "arenas.territory",
-    "pk": 1116
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 1,
-      "position_y": 6
-    },
-    "model": "arenas.territory",
-    "pk": 1117
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 1,
-      "position_y": 7
-    },
-    "model": "arenas.territory",
-    "pk": 1118
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 1,
-      "position_y": 8
-    },
-    "model": "arenas.territory",
-    "pk": 1119
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 1,
-      "position_y": 9
-    },
-    "model": "arenas.territory",
-    "pk": 1120
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 2,
-      "position_y": 0
-    },
-    "model": "arenas.territory",
-    "pk": 1121
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 2,
-      "position_y": 1
-    },
-    "model": "arenas.territory",
-    "pk": 1122
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 2,
-      "position_y": 2
-    },
-    "model": "arenas.territory",
-    "pk": 1123
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 2,
-      "position_y": 3
-    },
-    "model": "arenas.territory",
-    "pk": 1124
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 2,
-      "position_y": 4
-    },
-    "model": "arenas.territory",
-    "pk": 1125
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 2,
-      "position_y": 5
-    },
-    "model": "arenas.territory",
-    "pk": 1126
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 2,
-      "position_y": 6
-    },
-    "model": "arenas.territory",
-    "pk": 1127
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 2,
-      "position_y": 7
-    },
-    "model": "arenas.territory",
-    "pk": 1128
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 2,
-      "position_y": 8
-    },
-    "model": "arenas.territory",
-    "pk": 1129
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 2,
-      "position_y": 9
-    },
-    "model": "arenas.territory",
-    "pk": 1130
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 3,
-      "position_y": 0
-    },
-    "model": "arenas.territory",
-    "pk": 1131
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 3,
-      "position_y": 1
-    },
-    "model": "arenas.territory",
-    "pk": 1132
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 3,
-      "position_y": 2
-    },
-    "model": "arenas.territory",
-    "pk": 1133
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 3,
-      "position_y": 3
-    },
-    "model": "arenas.territory",
-    "pk": 1134
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 3,
-      "position_y": 4
-    },
-    "model": "arenas.territory",
-    "pk": 1135
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 3,
-      "position_y": 5
-    },
-    "model": "arenas.territory",
-    "pk": 1136
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 3,
-      "position_y": 6
-    },
-    "model": "arenas.territory",
-    "pk": 1137
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 3,
-      "position_y": 7
-    },
-    "model": "arenas.territory",
-    "pk": 1138
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 3,
-      "position_y": 8
-    },
-    "model": "arenas.territory",
-    "pk": 1139
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 3,
-      "position_y": 9
-    },
-    "model": "arenas.territory",
-    "pk": 1140
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 4,
-      "position_y": 0
-    },
-    "model": "arenas.territory",
-    "pk": 1141
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 4,
-      "position_y": 1
-    },
-    "model": "arenas.territory",
-    "pk": 1142
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 4,
-      "position_y": 2
-    },
-    "model": "arenas.territory",
-    "pk": 1143
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 4,
-      "position_y": 3
-    },
-    "model": "arenas.territory",
-    "pk": 1144
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 4,
-      "position_y": 4
-    },
-    "model": "arenas.territory",
-    "pk": 1145
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 4,
-      "position_y": 5
-    },
-    "model": "arenas.territory",
-    "pk": 1146
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 4,
-      "position_y": 6
-    },
-    "model": "arenas.territory",
-    "pk": 1147
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 4,
-      "position_y": 7
-    },
-    "model": "arenas.territory",
-    "pk": 1148
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 4,
-      "position_y": 8
-    },
-    "model": "arenas.territory",
-    "pk": 1149
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 4,
-      "position_y": 9
-    },
-    "model": "arenas.territory",
-    "pk": 1150
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 5,
-      "position_y": 0
-    },
-    "model": "arenas.territory",
-    "pk": 1151
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 5,
-      "position_y": 1
-    },
-    "model": "arenas.territory",
-    "pk": 1152
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 5,
-      "position_y": 2
-    },
-    "model": "arenas.territory",
-    "pk": 1153
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 5,
-      "position_y": 3
-    },
-    "model": "arenas.territory",
-    "pk": 1154
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 5,
-      "position_y": 4
-    },
-    "model": "arenas.territory",
-    "pk": 1155
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 5,
-      "position_y": 5
-    },
-    "model": "arenas.territory",
-    "pk": 1156
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 5,
-      "position_y": 6
-    },
-    "model": "arenas.territory",
-    "pk": 1157
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 5,
-      "position_y": 7
-    },
-    "model": "arenas.territory",
-    "pk": 1158
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 5,
-      "position_y": 8
-    },
-    "model": "arenas.territory",
-    "pk": 1159
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 5,
-      "position_y": 9
-    },
-    "model": "arenas.territory",
-    "pk": 1160
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 6,
-      "position_y": 0
-    },
-    "model": "arenas.territory",
-    "pk": 1161
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 6,
-      "position_y": 1
-    },
-    "model": "arenas.territory",
-    "pk": 1162
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 6,
-      "position_y": 2
-    },
-    "model": "arenas.territory",
-    "pk": 1163
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 6,
-      "position_y": 3
-    },
-    "model": "arenas.territory",
-    "pk": 1164
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 6,
-      "position_y": 4
-    },
-    "model": "arenas.territory",
-    "pk": 1165
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 6,
-      "position_y": 5
-    },
-    "model": "arenas.territory",
-    "pk": 1166
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 6,
-      "position_y": 6
-    },
-    "model": "arenas.territory",
-    "pk": 1167
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 6,
-      "position_y": 7
-    },
-    "model": "arenas.territory",
-    "pk": 1168
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 6,
-      "position_y": 8
-    },
-    "model": "arenas.territory",
-    "pk": 1169
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 6,
-      "position_y": 9
-    },
-    "model": "arenas.territory",
-    "pk": 1170
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 7,
-      "position_y": 0
-    },
-    "model": "arenas.territory",
-    "pk": 1171
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 7,
-      "position_y": 1
-    },
-    "model": "arenas.territory",
-    "pk": 1172
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 7,
-      "position_y": 2
-    },
-    "model": "arenas.territory",
-    "pk": 1173
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 7,
-      "position_y": 3
-    },
-    "model": "arenas.territory",
-    "pk": 1174
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 7,
-      "position_y": 4
-    },
-    "model": "arenas.territory",
-    "pk": 1175
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 7,
-      "position_y": 5
-    },
-    "model": "arenas.territory",
-    "pk": 1176
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 7,
-      "position_y": 6
-    },
-    "model": "arenas.territory",
-    "pk": 1177
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 7,
-      "position_y": 7
-    },
-    "model": "arenas.territory",
-    "pk": 1178
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 7,
-      "position_y": 8
-    },
-    "model": "arenas.territory",
-    "pk": 1179
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 7,
-      "position_y": 9
-    },
-    "model": "arenas.territory",
-    "pk": 1180
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 8,
-      "position_y": 0
-    },
-    "model": "arenas.territory",
-    "pk": 1181
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 8,
-      "position_y": 1
-    },
-    "model": "arenas.territory",
-    "pk": 1182
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 8,
-      "position_y": 2
-    },
-    "model": "arenas.territory",
-    "pk": 1183
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 8,
-      "position_y": 3
-    },
-    "model": "arenas.territory",
-    "pk": 1184
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 8,
-      "position_y": 4
-    },
-    "model": "arenas.territory",
-    "pk": 1185
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 8,
-      "position_y": 5
-    },
-    "model": "arenas.territory",
-    "pk": 1186
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 8,
-      "position_y": 6
-    },
-    "model": "arenas.territory",
-    "pk": 1187
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 8,
-      "position_y": 7
-    },
-    "model": "arenas.territory",
-    "pk": 1188
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 8,
-      "position_y": 8
-    },
-    "model": "arenas.territory",
-    "pk": 1189
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 8,
-      "position_y": 9
-    },
-    "model": "arenas.territory",
-    "pk": 1190
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 9,
-      "position_y": 0
-    },
-    "model": "arenas.territory",
-    "pk": 1191
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 9,
-      "position_y": 1
-    },
-    "model": "arenas.territory",
-    "pk": 1192
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 9,
-      "position_y": 2
-    },
-    "model": "arenas.territory",
-    "pk": 1193
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 9,
-      "position_y": 3
-    },
-    "model": "arenas.territory",
-    "pk": 1194
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 9,
-      "position_y": 4
-    },
-    "model": "arenas.territory",
-    "pk": 1195
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 9,
-      "position_y": 5
-    },
-    "model": "arenas.territory",
-    "pk": 1196
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 9,
-      "position_y": 6
-    },
-    "model": "arenas.territory",
-    "pk": 1197
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 9,
-      "position_y": 7
-    },
-    "model": "arenas.territory",
-    "pk": 1198
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 9,
-      "position_y": 8
-    },
-    "model": "arenas.territory",
-    "pk": 1199
-  },
-  {
-    "fields": {
-      "arena": 8,
-      "position_x": 9,
-      "position_y": 9
-    },
-    "model": "arenas.territory",
-    "pk": 1200
-  },
-  {
-    "fields": {
-      "territory": 1101,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 301
-  },
-  {
-    "fields": {
-      "territory": 1102,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 302
-  },
-  {
-    "fields": {
-      "territory": 1103,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 303
-  },
-  {
-    "fields": {
-      "territory": 1104,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 304
-  },
-  {
-    "fields": {
-      "territory": 1105,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 305
-  },
-  {
-    "fields": {
-      "territory": 1106,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 306
-  },
-  {
-    "fields": {
-      "territory": 1107,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 307
-  },
-  {
-    "fields": {
-      "territory": 1108,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 308
-  },
-  {
-    "fields": {
-      "territory": 1109,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 309
-  },
-  {
-    "fields": {
-      "territory": 1110,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 310
-  },
-  {
-    "fields": {
-      "territory": 1111,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 311
-  },
-  {
-    "fields": {
-      "territory": 1112,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 312
-  },
-  {
-    "fields": {
-      "territory": 1113,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 313
-  },
-  {
-    "fields": {
-      "territory": 1114,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 314
-  },
-  {
-    "fields": {
-      "territory": 1115,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 315
-  },
-  {
-    "fields": {
-      "territory": 1116,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 316
-  },
-  {
-    "fields": {
-      "territory": 1117,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 317
-  },
-  {
-    "fields": {
-      "territory": 1118,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 318
-  },
-  {
-    "fields": {
-      "territory": 1119,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 319
-  },
-  {
-    "fields": {
-      "territory": 1120,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 320
-  },
-  {
-    "fields": {
-      "territory": 1121,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 321
-  },
-  {
-    "fields": {
-      "territory": 1122,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 322
-  },
-  {
-    "fields": {
-      "territory": 1123,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 323
-  },
-  {
-    "fields": {
-      "territory": 1124,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 324
-  },
-  {
-    "fields": {
-      "territory": 1125,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 325
-  },
-  {
-    "fields": {
-      "territory": 1126,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 326
-  },
-  {
-    "fields": {
-      "territory": 1127,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 327
-  },
-  {
-    "fields": {
-      "territory": 1128,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 328
-  },
-  {
-    "fields": {
-      "territory": 1129,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 329
-  },
-  {
-    "fields": {
-      "territory": 1130,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 330
-  },
-  {
-    "fields": {
-      "territory": 1131,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 331
-  },
-  {
-    "fields": {
-      "territory": 1132,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 332
-  },
-  {
-    "fields": {
-      "territory": 1133,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 333
-  },
-  {
-    "fields": {
-      "territory": 1134,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 334
-  },
-  {
-    "fields": {
-      "territory": 1135,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 335
-  },
-  {
-    "fields": {
-      "territory": 1136,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 336
-  },
-  {
-    "fields": {
-      "territory": 1137,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 337
-  },
-  {
-    "fields": {
-      "territory": 1138,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 338
-  },
-  {
-    "fields": {
-      "territory": 1139,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 339
-  },
-  {
-    "fields": {
-      "territory": 1140,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 340
-  },
-  {
-    "fields": {
-      "territory": 1141,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 341
-  },
-  {
-    "fields": {
-      "territory": 1142,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 342
-  },
-  {
-    "fields": {
-      "territory": 1143,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 343
-  },
-  {
-    "fields": {
-      "territory": 1144,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 344
-  },
-  {
-    "fields": {
-      "territory": 1145,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 345
-  },
-  {
-    "fields": {
-      "territory": 1146,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 346
-  },
-  {
-    "fields": {
-      "territory": 1147,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 347
-  },
-  {
-    "fields": {
-      "territory": 1148,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 348
-  },
-  {
-    "fields": {
-      "territory": 1149,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 349
-  },
-  {
-    "fields": {
-      "territory": 1150,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 350
-  },
-  {
-    "fields": {
-      "territory": 1151,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 351
-  },
-  {
-    "fields": {
-      "territory": 1152,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 352
-  },
-  {
-    "fields": {
-      "territory": 1153,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 353
-  },
-  {
-    "fields": {
-      "territory": 1154,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 354
-  },
-  {
-    "fields": {
-      "territory": 1155,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 355
-  },
-  {
-    "fields": {
-      "territory": 1156,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 356
-  },
-  {
-    "fields": {
-      "territory": 1157,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 357
-  },
-  {
-    "fields": {
-      "territory": 1158,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 358
-  },
-  {
-    "fields": {
-      "territory": 1159,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 359
-  },
-  {
-    "fields": {
-      "territory": 1160,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 360
-  },
-  {
-    "fields": {
-      "territory": 1161,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 361
-  },
-  {
-    "fields": {
-      "territory": 1162,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 362
-  },
-  {
-    "fields": {
-      "territory": 1163,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 363
-  },
-  {
-    "fields": {
-      "territory": 1164,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 364
-  },
-  {
-    "fields": {
-      "territory": 1165,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 365
-  },
-  {
-    "fields": {
-      "territory": 1166,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 366
-  },
-  {
-    "fields": {
-      "territory": 1167,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 367
-  },
-  {
-    "fields": {
-      "territory": 1168,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 368
-  },
-  {
-    "fields": {
-      "territory": 1169,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 369
-  },
-  {
-    "fields": {
-      "territory": 1170,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 370
-  },
-  {
-    "fields": {
-      "territory": 1171,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 371
-  },
-  {
-    "fields": {
-      "territory": 1172,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 372
-  },
-  {
-    "fields": {
-      "territory": 1173,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 373
-  },
-  {
-    "fields": {
-      "territory": 1174,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 374
-  },
-  {
-    "fields": {
-      "territory": 1175,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 375
-  },
-  {
-    "fields": {
-      "territory": 1176,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 376
-  },
-  {
-    "fields": {
-      "territory": 1177,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 377
-  },
-  {
-    "fields": {
-      "territory": 1178,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 378
-  },
-  {
-    "fields": {
-      "territory": 1179,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 379
-  },
-  {
-    "fields": {
-      "territory": 1180,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 380
-  },
-  {
-    "fields": {
-      "territory": 1181,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 381
-  },
-  {
-    "fields": {
-      "territory": 1182,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 382
-  },
-  {
-    "fields": {
-      "territory": 1183,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 383
-  },
-  {
-    "fields": {
-      "territory": 1184,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 384
-  },
-  {
-    "fields": {
-      "territory": 1185,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 385
-  },
-  {
-    "fields": {
-      "territory": 1186,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 386
-  },
-  {
-    "fields": {
-      "territory": 1187,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 387
-  },
-  {
-    "fields": {
-      "territory": 1188,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 388
-  },
-  {
-    "fields": {
-      "territory": 1189,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 389
-  },
-  {
-    "fields": {
-      "territory": 1190,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 390
-  },
-  {
-    "fields": {
-      "territory": 1191,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 391
-  },
-  {
-    "fields": {
-      "territory": 1192,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 392
-  },
-  {
-    "fields": {
-      "territory": 1193,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 393
-  },
-  {
-    "fields": {
-      "territory": 1194,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 394
-  },
-  {
-    "fields": {
-      "territory": 1195,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 395
-  },
-  {
-    "fields": {
-      "territory": 1196,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 396
-  },
-  {
-    "fields": {
-      "territory": 1197,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 397
-  },
-  {
-    "fields": {
-      "territory": 1198,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 398
-  },
-  {
-    "fields": {
-      "territory": 1199,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 399
-  },
-  {
-    "fields": {
-      "territory": 1200,
-      "terrain": null
-    },
-    "model": "arenas.territorydetail",
-    "pk": 400
-  },
-  {
-    "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 301
-    },
-    "model": "arenas.territoryresource",
-    "pk": 1
-  },
-  {
-    "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 302
-    },
-    "model": "arenas.territoryresource",
-    "pk": 2
-  },
-  {
-    "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 303
-    },
-    "model": "arenas.territoryresource",
-    "pk": 3
-  },
-  {
-    "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 304
-    },
-    "model": "arenas.territoryresource",
-    "pk": 4
-  },
-  {
-    "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 305
-    },
-    "model": "arenas.territoryresource",
-    "pk": 5
-  },
-  {
-    "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 306
-    },
-    "model": "arenas.territoryresource",
-    "pk": 6
-  },
-  {
-    "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 307
-    },
-    "model": "arenas.territoryresource",
-    "pk": 7
-  },
-  {
-    "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 308
-    },
-    "model": "arenas.territoryresource",
-    "pk": 8
-  },
-  {
-    "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 309
-    },
-    "model": "arenas.territoryresource",
-    "pk": 9
-  },
-  {
-    "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 310
-    },
-    "model": "arenas.territoryresource",
     "pk": 10
   },
   {
     "fields": {
-      "amount": 1000,
+      "arena": 10,
+      "position_x": 0,
+      "position_y": 0
+    },
+    "model": "arenas.territory",
+    "pk": 1301
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 0,
+      "position_y": 1
+    },
+    "model": "arenas.territory",
+    "pk": 1302
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 0,
+      "position_y": 2
+    },
+    "model": "arenas.territory",
+    "pk": 1303
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 0,
+      "position_y": 3
+    },
+    "model": "arenas.territory",
+    "pk": 1304
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 0,
+      "position_y": 4
+    },
+    "model": "arenas.territory",
+    "pk": 1305
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 0,
+      "position_y": 5
+    },
+    "model": "arenas.territory",
+    "pk": 1306
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 0,
+      "position_y": 6
+    },
+    "model": "arenas.territory",
+    "pk": 1307
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 0,
+      "position_y": 7
+    },
+    "model": "arenas.territory",
+    "pk": 1308
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 0,
+      "position_y": 8
+    },
+    "model": "arenas.territory",
+    "pk": 1309
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 0,
+      "position_y": 9
+    },
+    "model": "arenas.territory",
+    "pk": 1310
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 1,
+      "position_y": 0
+    },
+    "model": "arenas.territory",
+    "pk": 1311
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 1,
+      "position_y": 1
+    },
+    "model": "arenas.territory",
+    "pk": 1312
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 1,
+      "position_y": 2
+    },
+    "model": "arenas.territory",
+    "pk": 1313
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 1,
+      "position_y": 3
+    },
+    "model": "arenas.territory",
+    "pk": 1314
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 1,
+      "position_y": 4
+    },
+    "model": "arenas.territory",
+    "pk": 1315
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 1,
+      "position_y": 5
+    },
+    "model": "arenas.territory",
+    "pk": 1316
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 1,
+      "position_y": 6
+    },
+    "model": "arenas.territory",
+    "pk": 1317
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 1,
+      "position_y": 7
+    },
+    "model": "arenas.territory",
+    "pk": 1318
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 1,
+      "position_y": 8
+    },
+    "model": "arenas.territory",
+    "pk": 1319
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 1,
+      "position_y": 9
+    },
+    "model": "arenas.territory",
+    "pk": 1320
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 2,
+      "position_y": 0
+    },
+    "model": "arenas.territory",
+    "pk": 1321
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 2,
+      "position_y": 1
+    },
+    "model": "arenas.territory",
+    "pk": 1322
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 2,
+      "position_y": 2
+    },
+    "model": "arenas.territory",
+    "pk": 1323
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 2,
+      "position_y": 3
+    },
+    "model": "arenas.territory",
+    "pk": 1324
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 2,
+      "position_y": 4
+    },
+    "model": "arenas.territory",
+    "pk": 1325
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 2,
+      "position_y": 5
+    },
+    "model": "arenas.territory",
+    "pk": 1326
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 2,
+      "position_y": 6
+    },
+    "model": "arenas.territory",
+    "pk": 1327
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 2,
+      "position_y": 7
+    },
+    "model": "arenas.territory",
+    "pk": 1328
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 2,
+      "position_y": 8
+    },
+    "model": "arenas.territory",
+    "pk": 1329
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 2,
+      "position_y": 9
+    },
+    "model": "arenas.territory",
+    "pk": 1330
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 3,
+      "position_y": 0
+    },
+    "model": "arenas.territory",
+    "pk": 1331
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 3,
+      "position_y": 1
+    },
+    "model": "arenas.territory",
+    "pk": 1332
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 3,
+      "position_y": 2
+    },
+    "model": "arenas.territory",
+    "pk": 1333
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 3,
+      "position_y": 3
+    },
+    "model": "arenas.territory",
+    "pk": 1334
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 3,
+      "position_y": 4
+    },
+    "model": "arenas.territory",
+    "pk": 1335
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 3,
+      "position_y": 5
+    },
+    "model": "arenas.territory",
+    "pk": 1336
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 3,
+      "position_y": 6
+    },
+    "model": "arenas.territory",
+    "pk": 1337
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 3,
+      "position_y": 7
+    },
+    "model": "arenas.territory",
+    "pk": 1338
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 3,
+      "position_y": 8
+    },
+    "model": "arenas.territory",
+    "pk": 1339
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 3,
+      "position_y": 9
+    },
+    "model": "arenas.territory",
+    "pk": 1340
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 4,
+      "position_y": 0
+    },
+    "model": "arenas.territory",
+    "pk": 1341
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 4,
+      "position_y": 1
+    },
+    "model": "arenas.territory",
+    "pk": 1342
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 4,
+      "position_y": 2
+    },
+    "model": "arenas.territory",
+    "pk": 1343
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 4,
+      "position_y": 3
+    },
+    "model": "arenas.territory",
+    "pk": 1344
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 4,
+      "position_y": 4
+    },
+    "model": "arenas.territory",
+    "pk": 1345
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 4,
+      "position_y": 5
+    },
+    "model": "arenas.territory",
+    "pk": 1346
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 4,
+      "position_y": 6
+    },
+    "model": "arenas.territory",
+    "pk": 1347
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 4,
+      "position_y": 7
+    },
+    "model": "arenas.territory",
+    "pk": 1348
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 4,
+      "position_y": 8
+    },
+    "model": "arenas.territory",
+    "pk": 1349
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 4,
+      "position_y": 9
+    },
+    "model": "arenas.territory",
+    "pk": 1350
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 5,
+      "position_y": 0
+    },
+    "model": "arenas.territory",
+    "pk": 1351
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 5,
+      "position_y": 1
+    },
+    "model": "arenas.territory",
+    "pk": 1352
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 5,
+      "position_y": 2
+    },
+    "model": "arenas.territory",
+    "pk": 1353
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 5,
+      "position_y": 3
+    },
+    "model": "arenas.territory",
+    "pk": 1354
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 5,
+      "position_y": 4
+    },
+    "model": "arenas.territory",
+    "pk": 1355
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 5,
+      "position_y": 5
+    },
+    "model": "arenas.territory",
+    "pk": 1356
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 5,
+      "position_y": 6
+    },
+    "model": "arenas.territory",
+    "pk": 1357
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 5,
+      "position_y": 7
+    },
+    "model": "arenas.territory",
+    "pk": 1358
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 5,
+      "position_y": 8
+    },
+    "model": "arenas.territory",
+    "pk": 1359
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 5,
+      "position_y": 9
+    },
+    "model": "arenas.territory",
+    "pk": 1360
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 6,
+      "position_y": 0
+    },
+    "model": "arenas.territory",
+    "pk": 1361
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 6,
+      "position_y": 1
+    },
+    "model": "arenas.territory",
+    "pk": 1362
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 6,
+      "position_y": 2
+    },
+    "model": "arenas.territory",
+    "pk": 1363
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 6,
+      "position_y": 3
+    },
+    "model": "arenas.territory",
+    "pk": 1364
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 6,
+      "position_y": 4
+    },
+    "model": "arenas.territory",
+    "pk": 1365
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 6,
+      "position_y": 5
+    },
+    "model": "arenas.territory",
+    "pk": 1366
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 6,
+      "position_y": 6
+    },
+    "model": "arenas.territory",
+    "pk": 1367
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 6,
+      "position_y": 7
+    },
+    "model": "arenas.territory",
+    "pk": 1368
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 6,
+      "position_y": 8
+    },
+    "model": "arenas.territory",
+    "pk": 1369
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 6,
+      "position_y": 9
+    },
+    "model": "arenas.territory",
+    "pk": 1370
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 7,
+      "position_y": 0
+    },
+    "model": "arenas.territory",
+    "pk": 1371
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 7,
+      "position_y": 1
+    },
+    "model": "arenas.territory",
+    "pk": 1372
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 7,
+      "position_y": 2
+    },
+    "model": "arenas.territory",
+    "pk": 1373
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 7,
+      "position_y": 3
+    },
+    "model": "arenas.territory",
+    "pk": 1374
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 7,
+      "position_y": 4
+    },
+    "model": "arenas.territory",
+    "pk": 1375
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 7,
+      "position_y": 5
+    },
+    "model": "arenas.territory",
+    "pk": 1376
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 7,
+      "position_y": 6
+    },
+    "model": "arenas.territory",
+    "pk": 1377
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 7,
+      "position_y": 7
+    },
+    "model": "arenas.territory",
+    "pk": 1378
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 7,
+      "position_y": 8
+    },
+    "model": "arenas.territory",
+    "pk": 1379
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 7,
+      "position_y": 9
+    },
+    "model": "arenas.territory",
+    "pk": 1380
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 8,
+      "position_y": 0
+    },
+    "model": "arenas.territory",
+    "pk": 1381
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 8,
+      "position_y": 1
+    },
+    "model": "arenas.territory",
+    "pk": 1382
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 8,
+      "position_y": 2
+    },
+    "model": "arenas.territory",
+    "pk": 1383
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 8,
+      "position_y": 3
+    },
+    "model": "arenas.territory",
+    "pk": 1384
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 8,
+      "position_y": 4
+    },
+    "model": "arenas.territory",
+    "pk": 1385
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 8,
+      "position_y": 5
+    },
+    "model": "arenas.territory",
+    "pk": 1386
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 8,
+      "position_y": 6
+    },
+    "model": "arenas.territory",
+    "pk": 1387
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 8,
+      "position_y": 7
+    },
+    "model": "arenas.territory",
+    "pk": 1388
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 8,
+      "position_y": 8
+    },
+    "model": "arenas.territory",
+    "pk": 1389
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 8,
+      "position_y": 9
+    },
+    "model": "arenas.territory",
+    "pk": 1390
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 9,
+      "position_y": 0
+    },
+    "model": "arenas.territory",
+    "pk": 1391
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 9,
+      "position_y": 1
+    },
+    "model": "arenas.territory",
+    "pk": 1392
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 9,
+      "position_y": 2
+    },
+    "model": "arenas.territory",
+    "pk": 1393
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 9,
+      "position_y": 3
+    },
+    "model": "arenas.territory",
+    "pk": 1394
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 9,
+      "position_y": 4
+    },
+    "model": "arenas.territory",
+    "pk": 1395
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 9,
+      "position_y": 5
+    },
+    "model": "arenas.territory",
+    "pk": 1396
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 9,
+      "position_y": 6
+    },
+    "model": "arenas.territory",
+    "pk": 1397
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 9,
+      "position_y": 7
+    },
+    "model": "arenas.territory",
+    "pk": 1398
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 9,
+      "position_y": 8
+    },
+    "model": "arenas.territory",
+    "pk": 1399
+  },
+  {
+    "fields": {
+      "arena": 10,
+      "position_x": 9,
+      "position_y": 9
+    },
+    "model": "arenas.territory",
+    "pk": 1400
+  },
+  {
+    "fields": {
+      "territory": 1301,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 501
+  },
+  {
+    "fields": {
+      "territory": 1302,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 502
+  },
+  {
+    "fields": {
+      "territory": 1303,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 503
+  },
+  {
+    "fields": {
+      "territory": 1304,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 504
+  },
+  {
+    "fields": {
+      "territory": 1305,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 505
+  },
+  {
+    "fields": {
+      "territory": 1306,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 506
+  },
+  {
+    "fields": {
+      "territory": 1307,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 507
+  },
+  {
+    "fields": {
+      "territory": 1308,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 508
+  },
+  {
+    "fields": {
+      "territory": 1309,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 509
+  },
+  {
+    "fields": {
+      "territory": 1310,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 510
+  },
+  {
+    "fields": {
+      "territory": 1311,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 511
+  },
+  {
+    "fields": {
+      "territory": 1312,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 512
+  },
+  {
+    "fields": {
+      "territory": 1313,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 513
+  },
+  {
+    "fields": {
+      "territory": 1314,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 514
+  },
+  {
+    "fields": {
+      "territory": 1315,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 515
+  },
+  {
+    "fields": {
+      "territory": 1316,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 516
+  },
+  {
+    "fields": {
+      "territory": 1317,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 517
+  },
+  {
+    "fields": {
+      "territory": 1318,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 518
+  },
+  {
+    "fields": {
+      "territory": 1319,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 519
+  },
+  {
+    "fields": {
+      "territory": 1320,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 520
+  },
+  {
+    "fields": {
+      "territory": 1321,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 521
+  },
+  {
+    "fields": {
+      "territory": 1322,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 522
+  },
+  {
+    "fields": {
+      "territory": 1323,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 523
+  },
+  {
+    "fields": {
+      "territory": 1324,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 524
+  },
+  {
+    "fields": {
+      "territory": 1325,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 525
+  },
+  {
+    "fields": {
+      "territory": 1326,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 526
+  },
+  {
+    "fields": {
+      "territory": 1327,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 527
+  },
+  {
+    "fields": {
+      "territory": 1328,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 528
+  },
+  {
+    "fields": {
+      "territory": 1329,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 529
+  },
+  {
+    "fields": {
+      "territory": 1330,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 530
+  },
+  {
+    "fields": {
+      "territory": 1331,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 531
+  },
+  {
+    "fields": {
+      "territory": 1332,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 532
+  },
+  {
+    "fields": {
+      "territory": 1333,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 533
+  },
+  {
+    "fields": {
+      "territory": 1334,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 534
+  },
+  {
+    "fields": {
+      "territory": 1335,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 535
+  },
+  {
+    "fields": {
+      "territory": 1336,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 536
+  },
+  {
+    "fields": {
+      "territory": 1337,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 537
+  },
+  {
+    "fields": {
+      "territory": 1338,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 538
+  },
+  {
+    "fields": {
+      "territory": 1339,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 539
+  },
+  {
+    "fields": {
+      "territory": 1340,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 540
+  },
+  {
+    "fields": {
+      "territory": 1341,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 541
+  },
+  {
+    "fields": {
+      "territory": 1342,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 542
+  },
+  {
+    "fields": {
+      "territory": 1343,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 543
+  },
+  {
+    "fields": {
+      "territory": 1344,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 544
+  },
+  {
+    "fields": {
+      "territory": 1345,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 545
+  },
+  {
+    "fields": {
+      "territory": 1346,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 546
+  },
+  {
+    "fields": {
+      "territory": 1347,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 547
+  },
+  {
+    "fields": {
+      "territory": 1348,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 548
+  },
+  {
+    "fields": {
+      "territory": 1349,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 549
+  },
+  {
+    "fields": {
+      "territory": 1350,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 550
+  },
+  {
+    "fields": {
+      "territory": 1351,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 551
+  },
+  {
+    "fields": {
+      "territory": 1352,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 552
+  },
+  {
+    "fields": {
+      "territory": 1353,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 553
+  },
+  {
+    "fields": {
+      "territory": 1354,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 554
+  },
+  {
+    "fields": {
+      "territory": 1355,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 555
+  },
+  {
+    "fields": {
+      "territory": 1356,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 556
+  },
+  {
+    "fields": {
+      "territory": 1357,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 557
+  },
+  {
+    "fields": {
+      "territory": 1358,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 558
+  },
+  {
+    "fields": {
+      "territory": 1359,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 559
+  },
+  {
+    "fields": {
+      "territory": 1360,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 560
+  },
+  {
+    "fields": {
+      "territory": 1361,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 561
+  },
+  {
+    "fields": {
+      "territory": 1362,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 562
+  },
+  {
+    "fields": {
+      "territory": 1363,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 563
+  },
+  {
+    "fields": {
+      "territory": 1364,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 564
+  },
+  {
+    "fields": {
+      "territory": 1365,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 565
+  },
+  {
+    "fields": {
+      "territory": 1366,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 566
+  },
+  {
+    "fields": {
+      "territory": 1367,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 567
+  },
+  {
+    "fields": {
+      "territory": 1368,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 568
+  },
+  {
+    "fields": {
+      "territory": 1369,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 569
+  },
+  {
+    "fields": {
+      "territory": 1370,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 570
+  },
+  {
+    "fields": {
+      "territory": 1371,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 571
+  },
+  {
+    "fields": {
+      "territory": 1372,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 572
+  },
+  {
+    "fields": {
+      "territory": 1373,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 573
+  },
+  {
+    "fields": {
+      "territory": 1374,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 574
+  },
+  {
+    "fields": {
+      "territory": 1375,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 575
+  },
+  {
+    "fields": {
+      "territory": 1376,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 576
+  },
+  {
+    "fields": {
+      "territory": 1377,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 577
+  },
+  {
+    "fields": {
+      "territory": 1378,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 578
+  },
+  {
+    "fields": {
+      "territory": 1379,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 579
+  },
+  {
+    "fields": {
+      "territory": 1380,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 580
+  },
+  {
+    "fields": {
+      "territory": 1381,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 581
+  },
+  {
+    "fields": {
+      "territory": 1382,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 582
+  },
+  {
+    "fields": {
+      "territory": 1383,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 583
+  },
+  {
+    "fields": {
+      "territory": 1384,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 584
+  },
+  {
+    "fields": {
+      "territory": 1385,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 585
+  },
+  {
+    "fields": {
+      "territory": 1386,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 586
+  },
+  {
+    "fields": {
+      "territory": 1387,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 587
+  },
+  {
+    "fields": {
+      "territory": 1388,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 588
+  },
+  {
+    "fields": {
+      "territory": 1389,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 589
+  },
+  {
+    "fields": {
+      "territory": 1390,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 590
+  },
+  {
+    "fields": {
+      "territory": 1391,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 591
+  },
+  {
+    "fields": {
+      "territory": 1392,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 592
+  },
+  {
+    "fields": {
+      "territory": 1393,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 593
+  },
+  {
+    "fields": {
+      "territory": 1394,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 594
+  },
+  {
+    "fields": {
+      "territory": 1395,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 595
+  },
+  {
+    "fields": {
+      "territory": 1396,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 596
+  },
+  {
+    "fields": {
+      "territory": 1397,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 597
+  },
+  {
+    "fields": {
+      "territory": 1398,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 598
+  },
+  {
+    "fields": {
+      "territory": 1399,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 599
+  },
+  {
+    "fields": {
+      "territory": 1400,
+      "terrain": null
+    },
+    "model": "arenas.territorydetail",
+    "pk": 600
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 501
+    },
+    "model": "arenas.territoryresource",
+    "pk": 401
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 501
+    },
+    "model": "arenas.territoryresource",
+    "pk": 402
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 501
+    },
+    "model": "arenas.territoryresource",
+    "pk": 403
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 502
+    },
+    "model": "arenas.territoryresource",
+    "pk": 404
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 502
+    },
+    "model": "arenas.territoryresource",
+    "pk": 405
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 502
+    },
+    "model": "arenas.territoryresource",
+    "pk": 406
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 503
+    },
+    "model": "arenas.territoryresource",
+    "pk": 407
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 503
+    },
+    "model": "arenas.territoryresource",
+    "pk": 408
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 503
+    },
+    "model": "arenas.territoryresource",
+    "pk": 409
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 504
+    },
+    "model": "arenas.territoryresource",
+    "pk": 410
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 504
+    },
+    "model": "arenas.territoryresource",
+    "pk": 411
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 504
+    },
+    "model": "arenas.territoryresource",
+    "pk": 412
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 505
+    },
+    "model": "arenas.territoryresource",
+    "pk": 413
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 505
+    },
+    "model": "arenas.territoryresource",
+    "pk": 414
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 505
+    },
+    "model": "arenas.territoryresource",
+    "pk": 415
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 506
+    },
+    "model": "arenas.territoryresource",
+    "pk": 416
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 506
+    },
+    "model": "arenas.territoryresource",
+    "pk": 417
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 506
+    },
+    "model": "arenas.territoryresource",
+    "pk": 418
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 507
+    },
+    "model": "arenas.territoryresource",
+    "pk": 419
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 507
+    },
+    "model": "arenas.territoryresource",
+    "pk": 420
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 507
+    },
+    "model": "arenas.territoryresource",
+    "pk": 421
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 508
+    },
+    "model": "arenas.territoryresource",
+    "pk": 422
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 508
+    },
+    "model": "arenas.territoryresource",
+    "pk": 423
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 508
+    },
+    "model": "arenas.territoryresource",
+    "pk": 424
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 509
+    },
+    "model": "arenas.territoryresource",
+    "pk": 425
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 509
+    },
+    "model": "arenas.territoryresource",
+    "pk": 426
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 509
+    },
+    "model": "arenas.territoryresource",
+    "pk": 427
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 510
+    },
+    "model": "arenas.territoryresource",
+    "pk": 428
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 510
+    },
+    "model": "arenas.territoryresource",
+    "pk": 429
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 510
+    },
+    "model": "arenas.territoryresource",
+    "pk": 430
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 511
+    },
+    "model": "arenas.territoryresource",
+    "pk": 431
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 511
+    },
+    "model": "arenas.territoryresource",
+    "pk": 432
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 511
+    },
+    "model": "arenas.territoryresource",
+    "pk": 433
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 512
+    },
+    "model": "arenas.territoryresource",
+    "pk": 434
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 512
+    },
+    "model": "arenas.territoryresource",
+    "pk": 435
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 512
+    },
+    "model": "arenas.territoryresource",
+    "pk": 436
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 513
+    },
+    "model": "arenas.territoryresource",
+    "pk": 437
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 513
+    },
+    "model": "arenas.territoryresource",
+    "pk": 438
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 513
+    },
+    "model": "arenas.territoryresource",
+    "pk": 439
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 514
+    },
+    "model": "arenas.territoryresource",
+    "pk": 440
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 514
+    },
+    "model": "arenas.territoryresource",
+    "pk": 441
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 514
+    },
+    "model": "arenas.territoryresource",
+    "pk": 442
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 515
+    },
+    "model": "arenas.territoryresource",
+    "pk": 443
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 515
+    },
+    "model": "arenas.territoryresource",
+    "pk": 444
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 515
+    },
+    "model": "arenas.territoryresource",
+    "pk": 445
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 516
+    },
+    "model": "arenas.territoryresource",
+    "pk": 446
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 516
+    },
+    "model": "arenas.territoryresource",
+    "pk": 447
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 516
+    },
+    "model": "arenas.territoryresource",
+    "pk": 448
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 517
+    },
+    "model": "arenas.territoryresource",
+    "pk": 449
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 517
+    },
+    "model": "arenas.territoryresource",
+    "pk": 450
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 517
+    },
+    "model": "arenas.territoryresource",
+    "pk": 451
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 518
+    },
+    "model": "arenas.territoryresource",
+    "pk": 452
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 518
+    },
+    "model": "arenas.territoryresource",
+    "pk": 453
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 518
+    },
+    "model": "arenas.territoryresource",
+    "pk": 454
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 519
+    },
+    "model": "arenas.territoryresource",
+    "pk": 455
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 519
+    },
+    "model": "arenas.territoryresource",
+    "pk": 456
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 519
+    },
+    "model": "arenas.territoryresource",
+    "pk": 457
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 520
+    },
+    "model": "arenas.territoryresource",
+    "pk": 458
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 520
+    },
+    "model": "arenas.territoryresource",
+    "pk": 459
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 520
+    },
+    "model": "arenas.territoryresource",
+    "pk": 460
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 521
+    },
+    "model": "arenas.territoryresource",
+    "pk": 461
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 521
+    },
+    "model": "arenas.territoryresource",
+    "pk": 462
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 521
+    },
+    "model": "arenas.territoryresource",
+    "pk": 463
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 522
+    },
+    "model": "arenas.territoryresource",
+    "pk": 464
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 522
+    },
+    "model": "arenas.territoryresource",
+    "pk": 465
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 522
+    },
+    "model": "arenas.territoryresource",
+    "pk": 466
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 523
+    },
+    "model": "arenas.territoryresource",
+    "pk": 467
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 523
+    },
+    "model": "arenas.territoryresource",
+    "pk": 468
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 523
+    },
+    "model": "arenas.territoryresource",
+    "pk": 469
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 524
+    },
+    "model": "arenas.territoryresource",
+    "pk": 470
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 524
+    },
+    "model": "arenas.territoryresource",
+    "pk": 471
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 524
+    },
+    "model": "arenas.territoryresource",
+    "pk": 472
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 525
+    },
+    "model": "arenas.territoryresource",
+    "pk": 473
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 525
+    },
+    "model": "arenas.territoryresource",
+    "pk": 474
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 525
+    },
+    "model": "arenas.territoryresource",
+    "pk": 475
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 526
+    },
+    "model": "arenas.territoryresource",
+    "pk": 476
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 526
+    },
+    "model": "arenas.territoryresource",
+    "pk": 477
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 526
+    },
+    "model": "arenas.territoryresource",
+    "pk": 478
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 527
+    },
+    "model": "arenas.territoryresource",
+    "pk": 479
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 527
+    },
+    "model": "arenas.territoryresource",
+    "pk": 480
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 527
+    },
+    "model": "arenas.territoryresource",
+    "pk": 481
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 528
+    },
+    "model": "arenas.territoryresource",
+    "pk": 482
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 528
+    },
+    "model": "arenas.territoryresource",
+    "pk": 483
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 528
+    },
+    "model": "arenas.territoryresource",
+    "pk": 484
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 529
+    },
+    "model": "arenas.territoryresource",
+    "pk": 485
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 529
+    },
+    "model": "arenas.territoryresource",
+    "pk": 486
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 529
+    },
+    "model": "arenas.territoryresource",
+    "pk": 487
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 530
+    },
+    "model": "arenas.territoryresource",
+    "pk": 488
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 530
+    },
+    "model": "arenas.territoryresource",
+    "pk": 489
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 530
+    },
+    "model": "arenas.territoryresource",
+    "pk": 490
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 531
+    },
+    "model": "arenas.territoryresource",
+    "pk": 491
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 531
+    },
+    "model": "arenas.territoryresource",
+    "pk": 492
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 531
+    },
+    "model": "arenas.territoryresource",
+    "pk": 493
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 532
+    },
+    "model": "arenas.territoryresource",
+    "pk": 494
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 532
+    },
+    "model": "arenas.territoryresource",
+    "pk": 495
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 532
+    },
+    "model": "arenas.territoryresource",
+    "pk": 496
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 533
+    },
+    "model": "arenas.territoryresource",
+    "pk": 497
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 533
+    },
+    "model": "arenas.territoryresource",
+    "pk": 498
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 533
+    },
+    "model": "arenas.territoryresource",
+    "pk": 499
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 534
+    },
+    "model": "arenas.territoryresource",
+    "pk": 500
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 534
+    },
+    "model": "arenas.territoryresource",
+    "pk": 501
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 534
+    },
+    "model": "arenas.territoryresource",
+    "pk": 502
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 535
+    },
+    "model": "arenas.territoryresource",
+    "pk": 503
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 535
+    },
+    "model": "arenas.territoryresource",
+    "pk": 504
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 535
+    },
+    "model": "arenas.territoryresource",
+    "pk": 505
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 536
+    },
+    "model": "arenas.territoryresource",
+    "pk": 506
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 536
+    },
+    "model": "arenas.territoryresource",
+    "pk": 507
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 536
+    },
+    "model": "arenas.territoryresource",
+    "pk": 508
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 537
+    },
+    "model": "arenas.territoryresource",
+    "pk": 509
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 537
+    },
+    "model": "arenas.territoryresource",
+    "pk": 510
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 537
+    },
+    "model": "arenas.territoryresource",
+    "pk": 511
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 538
+    },
+    "model": "arenas.territoryresource",
+    "pk": 512
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 538
+    },
+    "model": "arenas.territoryresource",
+    "pk": 513
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 538
+    },
+    "model": "arenas.territoryresource",
+    "pk": 514
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 539
+    },
+    "model": "arenas.territoryresource",
+    "pk": 515
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 539
+    },
+    "model": "arenas.territoryresource",
+    "pk": 516
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 539
+    },
+    "model": "arenas.territoryresource",
+    "pk": 517
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 540
+    },
+    "model": "arenas.territoryresource",
+    "pk": 518
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 540
+    },
+    "model": "arenas.territoryresource",
+    "pk": 519
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 540
+    },
+    "model": "arenas.territoryresource",
+    "pk": 520
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 541
+    },
+    "model": "arenas.territoryresource",
+    "pk": 521
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 541
+    },
+    "model": "arenas.territoryresource",
+    "pk": 522
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 541
+    },
+    "model": "arenas.territoryresource",
+    "pk": 523
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 542
+    },
+    "model": "arenas.territoryresource",
+    "pk": 524
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 542
+    },
+    "model": "arenas.territoryresource",
+    "pk": 525
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 542
+    },
+    "model": "arenas.territoryresource",
+    "pk": 526
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 543
+    },
+    "model": "arenas.territoryresource",
+    "pk": 527
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 543
+    },
+    "model": "arenas.territoryresource",
+    "pk": 528
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 543
+    },
+    "model": "arenas.territoryresource",
+    "pk": 529
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 544
+    },
+    "model": "arenas.territoryresource",
+    "pk": 530
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 544
+    },
+    "model": "arenas.territoryresource",
+    "pk": 531
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 544
+    },
+    "model": "arenas.territoryresource",
+    "pk": 532
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 545
+    },
+    "model": "arenas.territoryresource",
+    "pk": 533
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 545
+    },
+    "model": "arenas.territoryresource",
+    "pk": 534
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 545
+    },
+    "model": "arenas.territoryresource",
+    "pk": 535
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 546
+    },
+    "model": "arenas.territoryresource",
+    "pk": 536
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 546
+    },
+    "model": "arenas.territoryresource",
+    "pk": 537
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 546
+    },
+    "model": "arenas.territoryresource",
+    "pk": 538
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 547
+    },
+    "model": "arenas.territoryresource",
+    "pk": 539
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 547
+    },
+    "model": "arenas.territoryresource",
+    "pk": 540
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 547
+    },
+    "model": "arenas.territoryresource",
+    "pk": 541
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 548
+    },
+    "model": "arenas.territoryresource",
+    "pk": 542
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 548
+    },
+    "model": "arenas.territoryresource",
+    "pk": 543
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 548
+    },
+    "model": "arenas.territoryresource",
+    "pk": 544
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 549
+    },
+    "model": "arenas.territoryresource",
+    "pk": 545
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 549
+    },
+    "model": "arenas.territoryresource",
+    "pk": 546
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 549
+    },
+    "model": "arenas.territoryresource",
+    "pk": 547
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 550
+    },
+    "model": "arenas.territoryresource",
+    "pk": 548
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 550
+    },
+    "model": "arenas.territoryresource",
+    "pk": 549
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 550
+    },
+    "model": "arenas.territoryresource",
+    "pk": 550
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 551
+    },
+    "model": "arenas.territoryresource",
+    "pk": 551
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 551
+    },
+    "model": "arenas.territoryresource",
+    "pk": 552
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 551
+    },
+    "model": "arenas.territoryresource",
+    "pk": 553
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 552
+    },
+    "model": "arenas.territoryresource",
+    "pk": 554
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 552
+    },
+    "model": "arenas.territoryresource",
+    "pk": 555
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 552
+    },
+    "model": "arenas.territoryresource",
+    "pk": 556
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 553
+    },
+    "model": "arenas.territoryresource",
+    "pk": 557
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 553
+    },
+    "model": "arenas.territoryresource",
+    "pk": 558
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 553
+    },
+    "model": "arenas.territoryresource",
+    "pk": 559
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 554
+    },
+    "model": "arenas.territoryresource",
+    "pk": 560
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 554
+    },
+    "model": "arenas.territoryresource",
+    "pk": 561
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 554
+    },
+    "model": "arenas.territoryresource",
+    "pk": 562
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 555
+    },
+    "model": "arenas.territoryresource",
+    "pk": 563
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 555
+    },
+    "model": "arenas.territoryresource",
+    "pk": 564
+  },
+  {
+    "fields": {
+      "amount": 250,
+      "resource": 3,
+      "territory_detail": 555
+    },
+    "model": "arenas.territoryresource",
+    "pk": 565
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 556
+    },
+    "model": "arenas.territoryresource",
+    "pk": 566
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 556
+    },
+    "model": "arenas.territoryresource",
+    "pk": 567
+  },
+  {
+    "fields": {
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 311
+      "territory_detail": 556
+    },
+    "model": "arenas.territoryresource",
+    "pk": 568
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 557
     },
     "model": "arenas.territoryresource",
-    "pk": 11
+    "pk": 569
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 312
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 557
     },
     "model": "arenas.territoryresource",
-    "pk": 12
+    "pk": 570
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 313
+      "territory_detail": 557
     },
     "model": "arenas.territoryresource",
-    "pk": 13
+    "pk": 571
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 314
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 558
     },
     "model": "arenas.territoryresource",
-    "pk": 14
+    "pk": 572
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 315
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 558
     },
     "model": "arenas.territoryresource",
-    "pk": 15
+    "pk": 573
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 316
+      "territory_detail": 558
     },
     "model": "arenas.territoryresource",
-    "pk": 16
+    "pk": 574
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 317
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 559
     },
     "model": "arenas.territoryresource",
-    "pk": 17
+    "pk": 575
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 318
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 559
     },
     "model": "arenas.territoryresource",
-    "pk": 18
+    "pk": 576
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 319
+      "territory_detail": 559
     },
     "model": "arenas.territoryresource",
-    "pk": 19
+    "pk": 577
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 320
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 560
     },
     "model": "arenas.territoryresource",
-    "pk": 20
+    "pk": 578
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 321
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 560
     },
     "model": "arenas.territoryresource",
-    "pk": 21
+    "pk": 579
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 322
+      "territory_detail": 560
     },
     "model": "arenas.territoryresource",
-    "pk": 22
+    "pk": 580
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 323
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 561
     },
     "model": "arenas.territoryresource",
-    "pk": 23
+    "pk": 581
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 324
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 561
     },
     "model": "arenas.territoryresource",
-    "pk": 24
+    "pk": 582
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 325
+      "territory_detail": 561
     },
     "model": "arenas.territoryresource",
-    "pk": 25
+    "pk": 583
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 326
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 562
     },
     "model": "arenas.territoryresource",
-    "pk": 26
+    "pk": 584
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 327
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 562
     },
     "model": "arenas.territoryresource",
-    "pk": 27
+    "pk": 585
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 328
+      "territory_detail": 562
     },
     "model": "arenas.territoryresource",
-    "pk": 28
+    "pk": 586
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 329
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 563
     },
     "model": "arenas.territoryresource",
-    "pk": 29
+    "pk": 587
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 330
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 563
     },
     "model": "arenas.territoryresource",
-    "pk": 30
+    "pk": 588
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 331
+      "territory_detail": 563
     },
     "model": "arenas.territoryresource",
-    "pk": 31
+    "pk": 589
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 332
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 564
     },
     "model": "arenas.territoryresource",
-    "pk": 32
+    "pk": 590
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 333
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 564
     },
     "model": "arenas.territoryresource",
-    "pk": 33
+    "pk": 591
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 334
+      "territory_detail": 564
     },
     "model": "arenas.territoryresource",
-    "pk": 34
+    "pk": 592
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 335
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 565
     },
     "model": "arenas.territoryresource",
-    "pk": 35
+    "pk": 593
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 336
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 565
     },
     "model": "arenas.territoryresource",
-    "pk": 36
+    "pk": 594
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 337
+      "territory_detail": 565
     },
     "model": "arenas.territoryresource",
-    "pk": 37
+    "pk": 595
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 338
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 566
     },
     "model": "arenas.territoryresource",
-    "pk": 38
+    "pk": 596
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 339
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 566
     },
     "model": "arenas.territoryresource",
-    "pk": 39
+    "pk": 597
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 340
+      "territory_detail": 566
     },
     "model": "arenas.territoryresource",
-    "pk": 40
+    "pk": 598
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 341
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 567
     },
     "model": "arenas.territoryresource",
-    "pk": 41
+    "pk": 599
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 342
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 567
     },
     "model": "arenas.territoryresource",
-    "pk": 42
+    "pk": 600
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 343
+      "territory_detail": 567
     },
     "model": "arenas.territoryresource",
-    "pk": 43
+    "pk": 601
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 344
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 568
     },
     "model": "arenas.territoryresource",
-    "pk": 44
+    "pk": 602
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 345
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 568
     },
     "model": "arenas.territoryresource",
-    "pk": 45
+    "pk": 603
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 346
+      "territory_detail": 568
     },
     "model": "arenas.territoryresource",
-    "pk": 46
+    "pk": 604
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 347
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 569
     },
     "model": "arenas.territoryresource",
-    "pk": 47
+    "pk": 605
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 348
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 569
     },
     "model": "arenas.territoryresource",
-    "pk": 48
+    "pk": 606
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 349
+      "territory_detail": 569
     },
     "model": "arenas.territoryresource",
-    "pk": 49
+    "pk": 607
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 350
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 570
     },
     "model": "arenas.territoryresource",
-    "pk": 50
+    "pk": 608
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 351
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 570
     },
     "model": "arenas.territoryresource",
-    "pk": 51
+    "pk": 609
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 352
+      "territory_detail": 570
     },
     "model": "arenas.territoryresource",
-    "pk": 52
+    "pk": 610
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 353
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 571
     },
     "model": "arenas.territoryresource",
-    "pk": 53
+    "pk": 611
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 354
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 571
     },
     "model": "arenas.territoryresource",
-    "pk": 54
+    "pk": 612
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 355
+      "territory_detail": 571
     },
     "model": "arenas.territoryresource",
-    "pk": 55
+    "pk": 613
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 356
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 572
     },
     "model": "arenas.territoryresource",
-    "pk": 56
+    "pk": 614
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 357
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 572
     },
     "model": "arenas.territoryresource",
-    "pk": 57
+    "pk": 615
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 358
+      "territory_detail": 572
     },
     "model": "arenas.territoryresource",
-    "pk": 58
+    "pk": 616
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 359
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 573
     },
     "model": "arenas.territoryresource",
-    "pk": 59
+    "pk": 617
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 360
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 573
     },
     "model": "arenas.territoryresource",
-    "pk": 60
+    "pk": 618
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 361
+      "territory_detail": 573
     },
     "model": "arenas.territoryresource",
-    "pk": 61
+    "pk": 619
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 362
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 574
     },
     "model": "arenas.territoryresource",
-    "pk": 62
+    "pk": 620
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 363
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 574
     },
     "model": "arenas.territoryresource",
-    "pk": 63
+    "pk": 621
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 364
+      "territory_detail": 574
     },
     "model": "arenas.territoryresource",
-    "pk": 64
+    "pk": 622
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 365
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 575
     },
     "model": "arenas.territoryresource",
-    "pk": 65
+    "pk": 623
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 366
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 575
     },
     "model": "arenas.territoryresource",
-    "pk": 66
+    "pk": 624
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 367
+      "territory_detail": 575
     },
     "model": "arenas.territoryresource",
-    "pk": 67
+    "pk": 625
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 368
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 576
     },
     "model": "arenas.territoryresource",
-    "pk": 68
+    "pk": 626
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 369
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 576
     },
     "model": "arenas.territoryresource",
-    "pk": 69
+    "pk": 627
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 370
+      "territory_detail": 576
     },
     "model": "arenas.territoryresource",
-    "pk": 70
+    "pk": 628
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 371
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 577
     },
     "model": "arenas.territoryresource",
-    "pk": 71
+    "pk": 629
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 372
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 577
     },
     "model": "arenas.territoryresource",
-    "pk": 72
+    "pk": 630
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 373
+      "territory_detail": 577
     },
     "model": "arenas.territoryresource",
-    "pk": 73
+    "pk": 631
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 374
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 578
     },
     "model": "arenas.territoryresource",
-    "pk": 74
+    "pk": 632
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 375
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 578
     },
     "model": "arenas.territoryresource",
-    "pk": 75
+    "pk": 633
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 376
+      "territory_detail": 578
     },
     "model": "arenas.territoryresource",
-    "pk": 76
+    "pk": 634
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 377
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 579
     },
     "model": "arenas.territoryresource",
-    "pk": 77
+    "pk": 635
   },
   {
     "fields": {
-      "amount": 1000,
-      "resource": 3,
-      "territory_detail": 378
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 579
     },
     "model": "arenas.territoryresource",
-    "pk": 78
+    "pk": 636
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 379
+      "territory_detail": 579
+    },
+    "model": "arenas.territoryresource",
+    "pk": 637
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 580
+    },
+    "model": "arenas.territoryresource",
+    "pk": 638
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 580
     },
     "model": "arenas.territoryresource",
-    "pk": 79
+    "pk": 639
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 380
+      "territory_detail": 580
+    },
+    "model": "arenas.territoryresource",
+    "pk": 640
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 581
+    },
+    "model": "arenas.territoryresource",
+    "pk": 641
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 581
     },
     "model": "arenas.territoryresource",
-    "pk": 80
+    "pk": 642
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 381
+      "territory_detail": 581
+    },
+    "model": "arenas.territoryresource",
+    "pk": 643
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 582
     },
     "model": "arenas.territoryresource",
-    "pk": 81
+    "pk": 644
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 582
+    },
+    "model": "arenas.territoryresource",
+    "pk": 645
+  },
+  {
+    "fields": {
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 382
+      "territory_detail": 582
+    },
+    "model": "arenas.territoryresource",
+    "pk": 646
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 583
+    },
+    "model": "arenas.territoryresource",
+    "pk": 647
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 583
     },
     "model": "arenas.territoryresource",
-    "pk": 82
+    "pk": 648
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 383
+      "territory_detail": 583
+    },
+    "model": "arenas.territoryresource",
+    "pk": 649
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 584
+    },
+    "model": "arenas.territoryresource",
+    "pk": 650
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 584
     },
     "model": "arenas.territoryresource",
-    "pk": 83
+    "pk": 651
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 384
+      "territory_detail": 584
+    },
+    "model": "arenas.territoryresource",
+    "pk": 652
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 585
+    },
+    "model": "arenas.territoryresource",
+    "pk": 653
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 585
     },
     "model": "arenas.territoryresource",
-    "pk": 84
+    "pk": 654
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 385
+      "territory_detail": 585
+    },
+    "model": "arenas.territoryresource",
+    "pk": 655
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 586
     },
     "model": "arenas.territoryresource",
-    "pk": 85
+    "pk": 656
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 586
+    },
+    "model": "arenas.territoryresource",
+    "pk": 657
+  },
+  {
+    "fields": {
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 386
+      "territory_detail": 586
+    },
+    "model": "arenas.territoryresource",
+    "pk": 658
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 587
+    },
+    "model": "arenas.territoryresource",
+    "pk": 659
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 587
     },
     "model": "arenas.territoryresource",
-    "pk": 86
+    "pk": 660
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 387
+      "territory_detail": 587
+    },
+    "model": "arenas.territoryresource",
+    "pk": 661
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 588
+    },
+    "model": "arenas.territoryresource",
+    "pk": 662
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 588
     },
     "model": "arenas.territoryresource",
-    "pk": 87
+    "pk": 663
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 388
+      "territory_detail": 588
+    },
+    "model": "arenas.territoryresource",
+    "pk": 664
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 589
+    },
+    "model": "arenas.territoryresource",
+    "pk": 665
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 589
     },
     "model": "arenas.territoryresource",
-    "pk": 88
+    "pk": 666
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 389
+      "territory_detail": 589
+    },
+    "model": "arenas.territoryresource",
+    "pk": 667
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 590
     },
     "model": "arenas.territoryresource",
-    "pk": 89
+    "pk": 668
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 590
+    },
+    "model": "arenas.territoryresource",
+    "pk": 669
+  },
+  {
+    "fields": {
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 390
+      "territory_detail": 590
+    },
+    "model": "arenas.territoryresource",
+    "pk": 670
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 591
+    },
+    "model": "arenas.territoryresource",
+    "pk": 671
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 591
     },
     "model": "arenas.territoryresource",
-    "pk": 90
+    "pk": 672
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 391
+      "territory_detail": 591
+    },
+    "model": "arenas.territoryresource",
+    "pk": 673
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 592
+    },
+    "model": "arenas.territoryresource",
+    "pk": 674
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 592
     },
     "model": "arenas.territoryresource",
-    "pk": 91
+    "pk": 675
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 392
+      "territory_detail": 592
+    },
+    "model": "arenas.territoryresource",
+    "pk": 676
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 593
+    },
+    "model": "arenas.territoryresource",
+    "pk": 677
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 593
     },
     "model": "arenas.territoryresource",
-    "pk": 92
+    "pk": 678
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 393
+      "territory_detail": 593
+    },
+    "model": "arenas.territoryresource",
+    "pk": 679
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 594
     },
     "model": "arenas.territoryresource",
-    "pk": 93
+    "pk": 680
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 594
+    },
+    "model": "arenas.territoryresource",
+    "pk": 681
+  },
+  {
+    "fields": {
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 394
+      "territory_detail": 594
+    },
+    "model": "arenas.territoryresource",
+    "pk": 682
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 595
+    },
+    "model": "arenas.territoryresource",
+    "pk": 683
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 595
     },
     "model": "arenas.territoryresource",
-    "pk": 94
+    "pk": 684
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 395
+      "territory_detail": 595
+    },
+    "model": "arenas.territoryresource",
+    "pk": 685
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 596
+    },
+    "model": "arenas.territoryresource",
+    "pk": 686
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 596
     },
     "model": "arenas.territoryresource",
-    "pk": 95
+    "pk": 687
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 396
+      "territory_detail": 596
+    },
+    "model": "arenas.territoryresource",
+    "pk": 688
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 597
+    },
+    "model": "arenas.territoryresource",
+    "pk": 689
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 597
     },
     "model": "arenas.territoryresource",
-    "pk": 96
+    "pk": 690
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 397
+      "territory_detail": 597
+    },
+    "model": "arenas.territoryresource",
+    "pk": 691
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 598
     },
     "model": "arenas.territoryresource",
-    "pk": 97
+    "pk": 692
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 598
+    },
+    "model": "arenas.territoryresource",
+    "pk": 693
+  },
+  {
+    "fields": {
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 398
+      "territory_detail": 598
+    },
+    "model": "arenas.territoryresource",
+    "pk": 694
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 599
+    },
+    "model": "arenas.territoryresource",
+    "pk": 695
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 599
     },
     "model": "arenas.territoryresource",
-    "pk": 98
+    "pk": 696
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 399
+      "territory_detail": 599
+    },
+    "model": "arenas.territoryresource",
+    "pk": 697
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 2,
+      "territory_detail": 600
+    },
+    "model": "arenas.territoryresource",
+    "pk": 698
+  },
+  {
+    "fields": {
+      "amount": 100,
+      "resource": 1,
+      "territory_detail": 600
     },
     "model": "arenas.territoryresource",
-    "pk": 99
+    "pk": 699
   },
   {
     "fields": {
-      "amount": 1000,
+      "amount": 250,
       "resource": 3,
-      "territory_detail": 400
+      "territory_detail": 600
     },
     "model": "arenas.territoryresource",
-    "pk": 100
+    "pk": 700
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 301
+      "territory_detail": 501
     },
     "model": "arenas.territorycosts",
-    "pk": 101
+    "pk": 301
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 302
+      "territory_detail": 502
     },
     "model": "arenas.territorycosts",
-    "pk": 102
+    "pk": 302
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 303
+      "territory_detail": 503
     },
     "model": "arenas.territorycosts",
-    "pk": 103
+    "pk": 303
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 304
+      "territory_detail": 504
     },
     "model": "arenas.territorycosts",
-    "pk": 104
+    "pk": 304
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 305
+      "territory_detail": 505
     },
     "model": "arenas.territorycosts",
-    "pk": 105
+    "pk": 305
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 306
+      "territory_detail": 506
     },
     "model": "arenas.territorycosts",
-    "pk": 106
+    "pk": 306
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 307
+      "territory_detail": 507
     },
     "model": "arenas.territorycosts",
-    "pk": 107
+    "pk": 307
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 308
+      "territory_detail": 508
     },
     "model": "arenas.territorycosts",
-    "pk": 108
+    "pk": 308
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 309
+      "territory_detail": 509
     },
     "model": "arenas.territorycosts",
-    "pk": 109
+    "pk": 309
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 310
+      "territory_detail": 510
     },
     "model": "arenas.territorycosts",
-    "pk": 110
+    "pk": 310
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 311
+      "territory_detail": 511
     },
     "model": "arenas.territorycosts",
-    "pk": 111
+    "pk": 311
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 312
+      "territory_detail": 512
     },
     "model": "arenas.territorycosts",
-    "pk": 112
+    "pk": 312
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 313
+      "territory_detail": 513
     },
     "model": "arenas.territorycosts",
-    "pk": 113
+    "pk": 313
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 314
+      "territory_detail": 514
     },
     "model": "arenas.territorycosts",
-    "pk": 114
+    "pk": 314
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 315
+      "territory_detail": 515
     },
     "model": "arenas.territorycosts",
-    "pk": 115
+    "pk": 315
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 316
+      "territory_detail": 516
     },
     "model": "arenas.territorycosts",
-    "pk": 116
+    "pk": 316
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 317
+      "territory_detail": 517
     },
     "model": "arenas.territorycosts",
-    "pk": 117
+    "pk": 317
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 318
+      "territory_detail": 518
     },
     "model": "arenas.territorycosts",
-    "pk": 118
+    "pk": 318
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 319
+      "territory_detail": 519
     },
     "model": "arenas.territorycosts",
-    "pk": 119
+    "pk": 319
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 320
+      "territory_detail": 520
     },
     "model": "arenas.territorycosts",
-    "pk": 120
+    "pk": 320
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 321
+      "territory_detail": 521
     },
     "model": "arenas.territorycosts",
-    "pk": 121
+    "pk": 321
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 322
+      "territory_detail": 522
     },
     "model": "arenas.territorycosts",
-    "pk": 122
+    "pk": 322
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 323
+      "territory_detail": 523
     },
     "model": "arenas.territorycosts",
-    "pk": 123
+    "pk": 323
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 324
+      "territory_detail": 524
     },
     "model": "arenas.territorycosts",
-    "pk": 124
+    "pk": 324
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 325
+      "territory_detail": 525
     },
     "model": "arenas.territorycosts",
-    "pk": 125
+    "pk": 325
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 326
+      "territory_detail": 526
     },
     "model": "arenas.territorycosts",
-    "pk": 126
+    "pk": 326
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 327
+      "territory_detail": 527
     },
     "model": "arenas.territorycosts",
-    "pk": 127
+    "pk": 327
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 328
+      "territory_detail": 528
     },
     "model": "arenas.territorycosts",
-    "pk": 128
+    "pk": 328
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 329
+      "territory_detail": 529
     },
     "model": "arenas.territorycosts",
-    "pk": 129
+    "pk": 329
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 330
+      "territory_detail": 530
     },
     "model": "arenas.territorycosts",
-    "pk": 130
+    "pk": 330
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 331
+      "territory_detail": 531
     },
     "model": "arenas.territorycosts",
-    "pk": 131
+    "pk": 331
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 332
+      "territory_detail": 532
     },
     "model": "arenas.territorycosts",
-    "pk": 132
+    "pk": 332
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 333
+      "territory_detail": 533
     },
     "model": "arenas.territorycosts",
-    "pk": 133
+    "pk": 333
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 334
+      "territory_detail": 534
     },
     "model": "arenas.territorycosts",
-    "pk": 134
+    "pk": 334
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 335
+      "territory_detail": 535
     },
     "model": "arenas.territorycosts",
-    "pk": 135
+    "pk": 335
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 336
+      "territory_detail": 536
     },
     "model": "arenas.territorycosts",
-    "pk": 136
+    "pk": 336
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 337
+      "territory_detail": 537
     },
     "model": "arenas.territorycosts",
-    "pk": 137
+    "pk": 337
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 338
+      "territory_detail": 538
     },
     "model": "arenas.territorycosts",
-    "pk": 138
+    "pk": 338
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 339
+      "territory_detail": 539
     },
     "model": "arenas.territorycosts",
-    "pk": 139
+    "pk": 339
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 340
+      "territory_detail": 540
     },
     "model": "arenas.territorycosts",
-    "pk": 140
+    "pk": 340
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 341
+      "territory_detail": 541
     },
     "model": "arenas.territorycosts",
-    "pk": 141
+    "pk": 341
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 342
+      "territory_detail": 542
     },
     "model": "arenas.territorycosts",
-    "pk": 142
+    "pk": 342
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 343
+      "territory_detail": 543
     },
     "model": "arenas.territorycosts",
-    "pk": 143
+    "pk": 343
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 344
+      "territory_detail": 544
     },
     "model": "arenas.territorycosts",
-    "pk": 144
+    "pk": 344
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 345
+      "territory_detail": 545
     },
     "model": "arenas.territorycosts",
-    "pk": 145
+    "pk": 345
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 346
+      "territory_detail": 546
     },
     "model": "arenas.territorycosts",
-    "pk": 146
+    "pk": 346
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 347
+      "territory_detail": 547
     },
     "model": "arenas.territorycosts",
-    "pk": 147
+    "pk": 347
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 348
+      "territory_detail": 548
     },
     "model": "arenas.territorycosts",
-    "pk": 148
+    "pk": 348
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 349
+      "territory_detail": 549
     },
     "model": "arenas.territorycosts",
-    "pk": 149
+    "pk": 349
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 350
+      "territory_detail": 550
     },
     "model": "arenas.territorycosts",
-    "pk": 150
+    "pk": 350
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 351
+      "territory_detail": 551
     },
     "model": "arenas.territorycosts",
-    "pk": 151
+    "pk": 351
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 352
+      "territory_detail": 552
     },
     "model": "arenas.territorycosts",
-    "pk": 152
+    "pk": 352
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 353
+      "territory_detail": 553
     },
     "model": "arenas.territorycosts",
-    "pk": 153
+    "pk": 353
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 354
+      "territory_detail": 554
     },
     "model": "arenas.territorycosts",
-    "pk": 154
+    "pk": 354
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 355
+      "territory_detail": 555
     },
     "model": "arenas.territorycosts",
-    "pk": 155
+    "pk": 355
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 356
+      "territory_detail": 556
     },
     "model": "arenas.territorycosts",
-    "pk": 156
+    "pk": 356
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 357
+      "territory_detail": 557
     },
     "model": "arenas.territorycosts",
-    "pk": 157
+    "pk": 357
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 358
+      "territory_detail": 558
     },
     "model": "arenas.territorycosts",
-    "pk": 158
+    "pk": 358
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 359
+      "territory_detail": 559
     },
     "model": "arenas.territorycosts",
-    "pk": 159
+    "pk": 359
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 360
+      "territory_detail": 560
     },
     "model": "arenas.territorycosts",
-    "pk": 160
+    "pk": 360
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 361
+      "territory_detail": 561
     },
     "model": "arenas.territorycosts",
-    "pk": 161
+    "pk": 361
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 362
+      "territory_detail": 562
     },
     "model": "arenas.territorycosts",
-    "pk": 162
+    "pk": 362
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 363
+      "territory_detail": 563
     },
     "model": "arenas.territorycosts",
-    "pk": 163
+    "pk": 363
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 364
+      "territory_detail": 564
     },
     "model": "arenas.territorycosts",
-    "pk": 164
+    "pk": 364
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 365
+      "territory_detail": 565
     },
     "model": "arenas.territorycosts",
-    "pk": 165
+    "pk": 365
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 366
+      "territory_detail": 566
     },
     "model": "arenas.territorycosts",
-    "pk": 166
+    "pk": 366
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 367
+      "territory_detail": 567
     },
     "model": "arenas.territorycosts",
-    "pk": 167
+    "pk": 367
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 368
+      "territory_detail": 568
     },
     "model": "arenas.territorycosts",
-    "pk": 168
+    "pk": 368
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 369
+      "territory_detail": 569
     },
     "model": "arenas.territorycosts",
-    "pk": 169
+    "pk": 369
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 370
+      "territory_detail": 570
     },
     "model": "arenas.territorycosts",
-    "pk": 170
+    "pk": 370
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 371
+      "territory_detail": 571
     },
     "model": "arenas.territorycosts",
-    "pk": 171
+    "pk": 371
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 372
+      "territory_detail": 572
     },
     "model": "arenas.territorycosts",
-    "pk": 172
+    "pk": 372
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 373
+      "territory_detail": 573
     },
     "model": "arenas.territorycosts",
-    "pk": 173
+    "pk": 373
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 374
+      "territory_detail": 574
     },
     "model": "arenas.territorycosts",
-    "pk": 174
+    "pk": 374
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 375
+      "territory_detail": 575
     },
     "model": "arenas.territorycosts",
-    "pk": 175
+    "pk": 375
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 376
+      "territory_detail": 576
     },
     "model": "arenas.territorycosts",
-    "pk": 176
+    "pk": 376
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 377
+      "territory_detail": 577
     },
     "model": "arenas.territorycosts",
-    "pk": 177
+    "pk": 377
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 378
+      "territory_detail": 578
     },
     "model": "arenas.territorycosts",
-    "pk": 178
+    "pk": 378
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 379
+      "territory_detail": 579
     },
     "model": "arenas.territorycosts",
-    "pk": 179
+    "pk": 379
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 380
+      "territory_detail": 580
     },
     "model": "arenas.territorycosts",
-    "pk": 180
+    "pk": 380
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 381
+      "territory_detail": 581
     },
     "model": "arenas.territorycosts",
-    "pk": 181
+    "pk": 381
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 382
+      "territory_detail": 582
     },
     "model": "arenas.territorycosts",
-    "pk": 182
+    "pk": 382
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 383
+      "territory_detail": 583
     },
     "model": "arenas.territorycosts",
-    "pk": 183
+    "pk": 383
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 384
+      "territory_detail": 584
     },
     "model": "arenas.territorycosts",
-    "pk": 184
+    "pk": 384
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 385
+      "territory_detail": 585
     },
     "model": "arenas.territorycosts",
-    "pk": 185
+    "pk": 385
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 386
+      "territory_detail": 586
     },
     "model": "arenas.territorycosts",
-    "pk": 186
+    "pk": 386
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 387
+      "territory_detail": 587
     },
     "model": "arenas.territorycosts",
-    "pk": 187
+    "pk": 387
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 388
+      "territory_detail": 588
     },
     "model": "arenas.territorycosts",
-    "pk": 188
+    "pk": 388
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 389
+      "territory_detail": 589
     },
     "model": "arenas.territorycosts",
-    "pk": 189
+    "pk": 389
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 390
+      "territory_detail": 590
     },
     "model": "arenas.territorycosts",
-    "pk": 190
+    "pk": 390
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 391
+      "territory_detail": 591
     },
     "model": "arenas.territorycosts",
-    "pk": 191
+    "pk": 391
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 392
+      "territory_detail": 592
     },
     "model": "arenas.territorycosts",
-    "pk": 192
+    "pk": 392
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 393
+      "territory_detail": 593
     },
     "model": "arenas.territorycosts",
-    "pk": 193
+    "pk": 393
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 394
+      "territory_detail": 594
     },
     "model": "arenas.territorycosts",
-    "pk": 194
+    "pk": 394
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 395
+      "territory_detail": 595
     },
     "model": "arenas.territorycosts",
-    "pk": 195
+    "pk": 395
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 396
+      "territory_detail": 596
     },
     "model": "arenas.territorycosts",
-    "pk": 196
+    "pk": 396
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 397
+      "territory_detail": 597
     },
     "model": "arenas.territorycosts",
-    "pk": 197
+    "pk": 397
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 398
+      "territory_detail": 598
     },
     "model": "arenas.territorycosts",
-    "pk": 198
+    "pk": 398
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 399
+      "territory_detail": 599
     },
     "model": "arenas.territorycosts",
-    "pk": 199
+    "pk": 399
   },
   {
     "fields": {
       "amount": 500,
       "resource": 3,
-      "territory_detail": 400
+      "territory_detail": 600
     },
     "model": "arenas.territorycosts",
-    "pk": 200
+    "pk": 400
   },
   {
     "fields": {
