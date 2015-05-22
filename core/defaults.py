@@ -19,6 +19,7 @@ DEFENCE = 10
 # Starting Units
 STARTING = {
     "Resources": {
+        # starting resources are prior to first time income
         "Manpower": 1000,
         "Fuel": 500,
         "Metal": 500
