@@ -33,12 +33,11 @@
   },
   {
     "fields": {
-      "amount": 10,
-      "base": 4,
-      "resource": 2
+      "name": "Titanium",
+      "description": "An even stronger Metal"
     },
-    "model": "resources.resourcecost",
-    "pk": 1
+    "model": "resources.resource",
+    "pk": 5
   },
   {
     "fields": {
@@ -47,6 +46,41 @@
       "resource": 1
     },
     "model": "resources.resourcecost",
-    "pk": 2
+    "pk": 5
+  },
+  {
+    "fields": {
+      "amount": 10,
+      "base": 4,
+      "resource": 2
+    },
+    "model": "resources.resourcecost",
+    "pk": 6
+  },
+  {
+    "fields": {
+      "amount": 5,
+      "base": 5,
+      "resource": 4
+    },
+    "model": "resources.resourcecost",
+    "pk": 7
+  },
+  {
+    "fields": {
+      "amount": 50,
+      "base": 5,
+      "resource": 2
+    },
+    "model": "resources.resourcecost",
+    "pk": 8
+  },
+  {
+    "fields": {
+      "technology": 3,
+      "resource": 5
+    },
+    "model": "resources.resourcedependency",
+    "pk": 1
   }
 ]

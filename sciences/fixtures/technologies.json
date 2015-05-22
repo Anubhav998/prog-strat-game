@@ -21,6 +21,15 @@
   },
   {
     "fields": {
+      "dependencies": [],
+      "name": "Alloys",
+      "description": ""
+    },
+    "model": "sciences.technology",
+    "pk": 3
+  },
+  {
+    "fields": {
       "technology": 2,
       "amount": 1000,
       "resource": 3
@@ -36,6 +45,15 @@
     },
     "model": "sciences.technologycost",
     "pk": 2
+  },
+  {
+    "fields": {
+      "technology": 3,
+      "amount": 3000,
+      "resource": 3
+    },
+    "model": "sciences.technologycost",
+    "pk": 3
   },
   {
     "fields": {

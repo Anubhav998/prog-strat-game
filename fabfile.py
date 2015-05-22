@@ -110,3 +110,15 @@ def test():
     local('coverage run manage.py test %s' % app_list)
     local('coverage report --fail-under=100')
     quality_check()
+
+
+def fixturize():
+    """
+    Saves Fixtures to their respective files
+    :return:
+    """
+    local('python manage.py dumpdata resources > resources/fixtures/resources.json')
+    local('python manage.py dumpdata military > military/fixtures/military.json')
+    local('python manage.py dumpdata arenas > arenas/fixtures/arena.json')
+    local('python manage.py dumpdata sciences > sciences/fixtures/technologies.json')
+    local('python manage.py dumpdata auth.Group > fixtures/groups.json')
