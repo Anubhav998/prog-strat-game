@@ -1,8 +1,8 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-from arenas.models import Arena, Territory, TerritoryDetail, TerritoryCosts
-from core.defaults import TERRITORY_ACQUISITION_COST
+from arenas.models import Arena, Territory, TerritoryDetail, TerritoryCosts, TerritoryResource
+from core.defaults import TERRITORY_COST, TERRITORY_PRODUCTION
 from resources.models import Resource
 
 
@@ -36,8 +36,15 @@ def territory_detail_post_save(sender, instance, created, **kwargs):
     When a territory detail is created, create a default manpower cost
     """
     if created or instance.costs.count() == 0 and not kwargs.get('raw', False):
-        TerritoryCosts.objects.create(
-            territory_detail=instance,
-            resource=Resource.objects.get(name='Manpower'),
-            amount=TERRITORY_ACQUISITION_COST
-        )
+        for resource, amount in TERRITORY_COST.iteritems():
+            TerritoryCosts.objects.create(
+                territory_detail=instance,
+                resource=Resource.objects.get(name=resource),
+                amount=amount
+            )
+        for resource, amount in TERRITORY_PRODUCTION.iteritems():
+            TerritoryResource.objects.create(
+                territory_detail=instance,
+                resource=Resource.objects.get(name=resource),
+                amount=amount
+            )

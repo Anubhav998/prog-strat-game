@@ -42,7 +42,7 @@ class TerritoryDetail(models.Model):
 
 
 class TerritoryResource(models.Model):
-    territory_detail = models.ForeignKey(TerritoryDetail)
+    territory_detail = models.ForeignKey(TerritoryDetail, related_name='produces')
     resource = models.ForeignKey(Resource)
     amount = models.IntegerField()
 

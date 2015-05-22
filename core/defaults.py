@@ -3,7 +3,12 @@ ARENA_X = 16
 ARENA_Y = 16
 
 #Costs
-TERRITORY_ACQUISITION_COST = 500
+TERRITORY_COST = {
+    "Manpower": 500
+}
+TERRITORY_PRODUCTION = {
+    "Manpower": 1000
+}
 
 # Units
 ATTACK = 10
