@@ -1,14 +1,28 @@
 from rest_framework import serializers
 from rest_framework.reverse import reverse
 
-from sciences.models import Technology, ResourceBenefit, TechnologyCost
+from sciences.models import Technology, ResourceBenefit, TechnologyCost, TechnologyDependency
+
+
+class TechnologyDependencySerializer(serializers.ModelSerializer):
+    name = serializers.ReadOnlyField(source='technology.name')
+
+    class Meta:
+        model = TechnologyDependency
+        fields = (
+            'technology',
+            'name',
+        )
 
 
 class TechnologyCostSerializer(serializers.ModelSerializer):
+    name = serializers.ReadOnlyField(source='resource.name')
+
     class Meta:
         model = TechnologyCost
         fields = (
             'resource',
+            'name',
             'amount',
         )
 
@@ -24,7 +38,8 @@ class ResourceBenefitSerializer(serializers.ModelSerializer):
 
 
 class TechnologySerializer(serializers.ModelSerializer):
-    resourcebenefit_set = ResourceBenefitSerializer(many=True, read_only=True)
+    benefits = ResourceBenefitSerializer(many=True, read_only=True)
+    dependencies = TechnologyDependencySerializer(many=True, read_only=True)
     resources_url = serializers.SerializerMethodField()
     costs = TechnologyCostSerializer(many=True, read_only=True)
 
@@ -36,7 +51,7 @@ class TechnologySerializer(serializers.ModelSerializer):
             'description',
             'dependencies',
             'costs',
-            'resourcebenefit_set',
+            'benefits',
             'resources_url',
         )
 

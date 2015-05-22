@@ -1,7 +1,6 @@
 [
   {
     "fields": {
-      "dependencies": [],
       "name": "Concrete",
       "description": "Refining Stone into shaped blocks"
     },
@@ -10,9 +9,6 @@
   },
   {
     "fields": {
-      "dependencies": [
-        1
-      ],
       "name": "High Rises",
       "description": "More Manpower per Territory"
     },
@@ -21,7 +17,6 @@
   },
   {
     "fields": {
-      "dependencies": [],
       "name": "Alloys",
       "description": ""
     },
@@ -54,6 +49,14 @@
     },
     "model": "sciences.technologycost",
     "pk": 3
+  },
+  {
+    "fields": {
+      "base": 2,
+      "technology": 1
+    },
+    "model": "sciences.technologydependency",
+    "pk": 1
   },
   {
     "fields": {

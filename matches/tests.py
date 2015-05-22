@@ -119,18 +119,6 @@ class MatchTestCase(TestCase):
         )
         self.assertEquals(self.technology_state.__unicode__(), "Technology State %s" % self.technology_state.id)
 
-    def test_technology_state_clean_method(self):
-        self.game_state = GameState.objects.get(
-            match=self.match,
-            player=1
-        )
-        self.technology = Technology.objects.create(name='test')
-        self.technology_state = TechnologyState.objects.create(
-            state=self.game_state,
-            technology=self.technology
-        )
-        self.technology_state.quantity -= 10
-        self.assertRaises(ValidationError, self.technology_state.clean)
 
     def test_territory_state_unicode_method(self):
         self.game_state = GameState.objects.get(
@@ -373,7 +361,7 @@ class MatchPlayTestCase(TestCase):
         self.assertEquals(data.get('resources')[1].get('quantity'), 400)
         self.assertEquals(data.get('resources')[2].get('quantity'), 200)
         self.assertEquals(data.get('resources')[3].get('quantity'), 10)
-        self.assertEquals(data.get('technology')[0].get('quantity'), 1)
+        self.assertEquals(data.get('technology')[0].get('acquired'), True)
         self.assertEquals(data.get('military')[0].get('quantity'), 1)
 
         # player status check

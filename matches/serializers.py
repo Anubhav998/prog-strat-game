@@ -36,7 +36,7 @@ class TechnologyStateSerializer(serializers.ModelSerializer):
         fields = (
             'technology',
             'name',
-            'quantity',
+            'acquired',
         )
 
 

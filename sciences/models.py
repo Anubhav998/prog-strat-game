@@ -6,7 +6,6 @@ from resources.models import Cost
 class Technology(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField(blank=True)
-    dependencies = models.ManyToManyField("self", symmetrical=False, blank=True)
 
     def __unicode__(self):
         return self.name
@@ -20,8 +19,13 @@ class TechnologyCost(Cost):
     technology = models.ForeignKey(Technology, related_name='costs')
 
 
-class Benefit(models.Model):
+class TechnologyDependency(models.Model):
+    base = models.ForeignKey(Technology, related_name='dependencies')
     technology = models.ForeignKey(Technology)
+
+
+class Benefit(models.Model):
+    technology = models.ForeignKey(Technology, related_name='benefits')
     modifier = models.CharField(max_length=1, choices=(
         ('-', '-'),
         ('+', '+'),

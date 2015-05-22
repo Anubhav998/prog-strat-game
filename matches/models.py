@@ -91,12 +91,24 @@ class GameState(models.Model):
         :return: True or ValidationError
         """
         for cost in costs:
-            resource_state, c = ResourceState.objects.get_or_create(state=self, resource=cost.resource)
+            resource_state, _ = ResourceState.objects.get_or_create(state=self, resource=cost.resource)
             resource_state.quantity -= cost.amount * quantity
             resource_state.clean()
             if commit:
                 resource_state.save()
         return True
+
+    def check_tech(self, dependencies):
+        """Checks to see if the necessary tech is acquired
+
+        :param dependencies: a list of technology dependency objects
+        :return: Boolean
+        """
+        states = []
+        for dependency in dependencies:
+            technology_state, _ = TechnologyState.objects.get_or_create(state=self, technology=dependency.technology)
+            states.append(technology_state.acquired)
+        return all(states)
 
     def apply_turn(self, turn, commit=False):
         """Applies a turn to the current game state. If validate is false, the changes will actually apply.
@@ -108,6 +120,8 @@ class GameState(models.Model):
         for move in turn.moves.all():
             if move.action.name == "Refine":
                 resource = Resource.objects.get(name=move.object)
+                if not self.check_tech(resource.dependencies.all()):
+                    raise ValidationError('insufficent technology')
                 self.spend_resources(resource.costs.all(), move.quantity, commit)
                 new_resource_state, _ = ResourceState.objects.get_or_create(state=self, resource=resource)
                 new_resource_state.quantity += move.quantity
@@ -116,6 +130,8 @@ class GameState(models.Model):
                     new_resource_state.save()
             elif move.action.name == "Purchase":
                 unit = Unit.objects.get(name=move.object)
+                if not self.check_tech(unit.dependencies.all()):
+                    raise ValidationError('insufficent technology')
                 self.spend_resources(unit.costs.all(), move.quantity, commit)
                 military_state, _ = MilitaryState.objects.get_or_create(state=self, unit=unit)
                 military_state.quantity += move.quantity
@@ -124,10 +140,11 @@ class GameState(models.Model):
                     military_state.save()
             elif move.action.name == "Research":
                 technology = Technology.objects.get(name=move.object)
-                self.spend_resources(technology.costs.all(), move.quantity, commit)
+                if not self.check_tech(technology.dependencies.all()):
+                    raise ValidationError('insufficent technology')
+                self.spend_resources(technology.costs.all(), 1, commit)
                 technology_state, _ = TechnologyState.objects.get_or_create(state=self, technology=technology)
-                technology_state.quantity += move.quantity
-                technology_state.clean()
+                technology_state.acquired = True
                 if commit:
                     technology_state.save()
             elif move.action.name == "Pray":
@@ -190,12 +207,7 @@ class MilitaryState(models.Model):
 class TechnologyState(models.Model):
     state = models.ForeignKey(GameState, related_name='technology')
     technology = models.ForeignKey(Technology)
-    quantity = models.IntegerField(default=0)
-
-    def clean(self):
-        super(TechnologyState, self).clean()
-        if self.quantity < 0:
-            raise ValidationError('Cannot have less than 0 resources')
+    acquired = models.BooleanField(default=False)
 
     def __unicode__(self):
         return 'Technology State {0.id}'.format(self)
