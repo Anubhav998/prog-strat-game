@@ -32,3 +32,9 @@ class Unit(models.Model):
 @register
 class UnitCost(Cost):
     unit = models.ForeignKey(Unit, related_name='costs')
+
+
+@register
+class UnitDependency(models.Model):
+    unit = models.ForeignKey(Unit, related_name='dependencies')
+    technology = models.ForeignKey('sciences.Technology')
