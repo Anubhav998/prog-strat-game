@@ -43,6 +43,9 @@ class Territory(models.Model):
     def get_position_display(self):
         return "{0.position_x},{0.position_y}".format(self)
 
+    def get_coordinates(self):
+        return self.position_x, self.position_y
+
     class Meta:
         unique_together = [('arena', 'position_x', 'position_y',)]
 

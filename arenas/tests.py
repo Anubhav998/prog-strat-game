@@ -37,6 +37,10 @@ class ArenaTestCase(TestCase):
         self.territory = self.arena.territory_set.first()
         self.assertEquals(self.territory.get_position_display(), "0,0")
 
+    def test_territory_get_coordinates_method(self):
+        self.territory = self.arena.territory_set.first()
+        self.assertEquals(self.territory.get_coordinates(), (0, 0))
+
     def test_territory_detail_unicode_method(self):
         self.territory = self.arena.territory_set.first()
         self.assertEquals(self.territory.territorydetail.__unicode__(), "test - (0,0) detail")
