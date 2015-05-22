@@ -2,7 +2,7 @@
 ARENA_X = 16
 ARENA_Y = 16
 
-#Costs
+# Costs
 TERRITORY_COST = {
     "Manpower": 500
 }
@@ -22,6 +22,15 @@ STARTING = {
         "Manpower": 1000,
         "Fuel": 500,
         "Metal": 500
+    },
+    "Positions": {
+        # x, y with negatives being from the opposite side
+        1: [
+            (1, -2),
+        ],
+        2: [
+            (-2, 1),
+        ]
     }
 }
 
