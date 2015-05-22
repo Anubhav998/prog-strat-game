@@ -1,5 +1,10 @@
 #CHANGELOG
 
+##Version 0.0.20 (2015-05-21)
+
+* added resource dependencies and fixed cost relations
+
+
 ##Version 0.0.19 (2015-05-21)
 
 * fixed tests
