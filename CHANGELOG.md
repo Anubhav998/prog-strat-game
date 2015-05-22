@@ -1,5 +1,15 @@
 #CHANGELOG
 
+##Version 0.0.19 (2015-05-21)
+
+* fixed tests
+* updated default arena data
+* added name to territory fields
+* updated arena to have square production
+* added resource production to territory detail admin
+* updated version to 0.0.18
+
+
 ##Version 0.0.18 (2015-05-21)
 
 * added religion endpoint
