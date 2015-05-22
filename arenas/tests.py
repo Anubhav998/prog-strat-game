@@ -64,8 +64,8 @@ class ArenaAPITestCase(APITestCase):
         self.group.user_set.add(self.user)
         self.arena = Arena.objects.create(name="test2", created_by=self.user)
         self.terrain = Terrain.objects.create(name="testTerrain")
-        self.resource1 = Resource.objects.create(name="Metal")
-        self.resource2 = Resource.objects.create(name="Fuel")
+        self.resource1 = Resource.objects.get(name="Metal")
+        self.resource2 = Resource.objects.get(name="Fuel")
         auth = self.client.login(username=self.username, password='test')
         self.assertTrue(auth)
 
