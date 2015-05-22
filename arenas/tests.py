@@ -1,6 +1,8 @@
 from django.test import TestCase
 from django.utils.crypto import get_random_string
 from django.contrib.auth.models import User, Group
+from django.core.exceptions import ValidationError
+
 from rest_framework.test import APITestCase
 from rest_framework import status
 from rest_framework.reverse import reverse
@@ -52,6 +54,72 @@ class ArenaTestCase(TestCase):
     def test_terrain_unicode_method(self):
         self.terrain = Terrain.objects.create(name='test')
         self.assertEquals(self.terrain.__unicode__(), 'test')
+
+
+class ArenaNormalizeTestCase(TestCase):
+    fixtures = ['resources', 'technologies']
+
+    def setUp(self):
+        self.user = User.objects.create(username='test1')
+        self.cases = (
+            (1, 1),  # 0
+            (-1, -1),  # 1
+            (1, -1),  # 2
+            (-1, 1),  # 3
+            (0, 0),  # 4
+            (-2, -1),  # 5
+            (-1, -2),  # 6
+            (5, 4),  # 7
+            (100, -100),  # 8
+        )
+
+    def test_small_normalize_method(self):
+        self.arena = Arena.objects.create(name="small", size_x=5, size_y=5, created_by=self.user)
+        self.assertEquals(self.arena.normalize(self.cases[0]), (1, 1))
+        self.assertEquals(self.arena.normalize(self.cases[1]), (4, 4))
+        self.assertEquals(self.arena.normalize(self.cases[2]), (1, 4))
+        self.assertEquals(self.arena.normalize(self.cases[3]), (4, 1))
+        self.assertEquals(self.arena.normalize(self.cases[4]), (0, 0))
+        self.assertEquals(self.arena.normalize(self.cases[5]), (3, 4))
+        self.assertEquals(self.arena.normalize(self.cases[6]), (4, 3))
+        self.assertRaises(ValidationError, self.arena.normalize, self.cases[7])
+        self.assertRaises(ValidationError, self.arena.normalize, self.cases[8])
+
+    def test_normal_normalize_method(self):
+        self.arena = Arena.objects.create(name='normal', created_by=self.user)
+        self.assertEquals(self.arena.normalize(self.cases[0]), (1, 1))
+        self.assertEquals(self.arena.normalize(self.cases[1]), (15, 15))
+        self.assertEquals(self.arena.normalize(self.cases[2]), (1, 15))
+        self.assertEquals(self.arena.normalize(self.cases[3]), (15, 1))
+        self.assertEquals(self.arena.normalize(self.cases[4]), (0, 0))
+        self.assertEquals(self.arena.normalize(self.cases[5]), (14, 15))
+        self.assertEquals(self.arena.normalize(self.cases[6]), (15, 14))
+        self.assertEquals(self.arena.normalize(self.cases[7]), (5, 4))
+        self.assertRaises(ValidationError, self.arena.normalize, self.cases[8])
+
+    def test_large_normalize_method(self):
+        self.arena = Arena.objects.create(name='large', size_x=25, size_y=25, created_by=self.user)
+        self.assertEquals(self.arena.normalize(self.cases[0]), (1, 1))
+        self.assertEquals(self.arena.normalize(self.cases[1]), (24, 24))
+        self.assertEquals(self.arena.normalize(self.cases[2]), (1, 24))
+        self.assertEquals(self.arena.normalize(self.cases[3]), (24, 1))
+        self.assertEquals(self.arena.normalize(self.cases[4]), (0, 0))
+        self.assertEquals(self.arena.normalize(self.cases[5]), (23, 24))
+        self.assertEquals(self.arena.normalize(self.cases[6]), (24, 23))
+        self.assertEquals(self.arena.normalize(self.cases[7]), (5, 4))
+        self.assertRaises(ValidationError, self.arena.normalize, self.cases[8])
+
+    def test_rectangle_normalize_method(self):
+        self.arena = Arena.objects.create(name='rect', size_x=10, size_y=5, created_by=self.user)
+        self.assertEquals(self.arena.normalize(self.cases[0]), (1, 1))
+        self.assertEquals(self.arena.normalize(self.cases[1]), (9, 4))
+        self.assertEquals(self.arena.normalize(self.cases[2]), (1, 4))
+        self.assertEquals(self.arena.normalize(self.cases[3]), (9, 1))
+        self.assertEquals(self.arena.normalize(self.cases[4]), (0, 0))
+        self.assertEquals(self.arena.normalize(self.cases[5]), (8, 4))
+        self.assertEquals(self.arena.normalize(self.cases[6]), (9, 3))
+        self.assertEquals(self.arena.normalize(self.cases[7]), (5, 4))
+        self.assertRaises(ValidationError, self.arena.normalize, self.cases[8])
 
 
 class ArenaAPITestCase(APITestCase):

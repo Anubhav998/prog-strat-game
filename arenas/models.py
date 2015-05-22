@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 
 from core.models import AuditMixin
 from resources.models import Resource, Cost
@@ -12,6 +13,20 @@ class Arena(AuditMixin):
 
     def __unicode__(self):
         return self.name
+
+    def normalize(self, position):
+        """Method to normalize a coordinate pair to a grid.
+        will return the coordinates, converting negatives to positives
+
+        :param position: tuple of (x, y), allowing negatives
+        :return: x, y
+        """
+        x, y = position
+        x = x if x >= 0 else self.size_x + x
+        y = y if y >= 0 else self.size_y + y
+        if x > (self.size_x - 1) or y > (self.size_y - 1):
+            raise ValidationError('invalid coordinates')
+        return x, y
 
     def get_size_display(self):
         return "{0.size_x}x{0.size_y}".format(self)
