@@ -4,7 +4,7 @@ from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from uuidfield import UUIDField
 
 from arenas.models import Arena, Territory
-from resources.models import Resource, ResourceCost
+from resources.models import Resource
 from military.models import Unit
 from sciences.models import Technology
 from core.defaults import RELIGION_COST
