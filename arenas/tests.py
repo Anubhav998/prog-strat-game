@@ -11,7 +11,7 @@ from resources.models import Resource
 
 
 class ArenaTestCase(TestCase):
-    fixtures = ['resources']
+    fixtures = ['resources', 'technologies']
 
     def setUp(self):
         self.username = get_random_string(10)
@@ -55,7 +55,7 @@ class ArenaTestCase(TestCase):
 
 
 class ArenaAPITestCase(APITestCase):
-    fixtures = ['groups', 'resources']
+    fixtures = ['groups', 'resources', 'technologies']
 
     def setUp(self):
         self.username = get_random_string(10)

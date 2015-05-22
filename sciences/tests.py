@@ -11,7 +11,7 @@ from resources.models import Resource
 
 
 class TechnologyTestCase(TestCase):
-    fixtures = ['resources']
+    fixtures = ['resources', 'technologies']
 
     def setUp(self):
         self.technology = Technology.objects.create(name="test_tech")

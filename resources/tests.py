@@ -28,7 +28,7 @@ class ResourceTestCase(TestCase):
 
 
 class ResourceAPITestCase(APITestCase):
-    fixtures = ['resources']
+    fixtures = ['resources', 'technologies']
 
     def setUp(self):
         self.username = get_random_string(10)
