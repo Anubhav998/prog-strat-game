@@ -1,5 +1,12 @@
 #CHANGELOG
 
+##Version 0.0.22 (2015-05-21)
+
+*  updated tests for new fixtures
+* added fixturize fabric command and updated fixtures
+* added admin resource technology dependency
+
+
 ##Version 0.0.21 (2015-05-21)
 
 * added technology dependencies to military units
