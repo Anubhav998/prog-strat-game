@@ -41,13 +41,20 @@ class TechnologyStateSerializer(serializers.ModelSerializer):
 
 
 class TerritoryStateSerializer(serializers.ModelSerializer):
+    coordinates = serializers.SerializerMethodField()
+
     class Meta:
         model = TerritoryState
         fields = (
             'territory',
+            'coordinates',
             'player',
             'status',
+            'is_base',
         )
+
+    def get_coordinates(self, obj):
+        return str(obj.territory.get_coordinates())
 
 
 class ReligionStateSerializer(serializers.ModelSerializer):

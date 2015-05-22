@@ -119,7 +119,6 @@ class MatchTestCase(TestCase):
         )
         self.assertEquals(self.technology_state.__unicode__(), "Technology State %s" % self.technology_state.id)
 
-
     def test_territory_state_unicode_method(self):
         self.game_state = GameState.objects.get(
             match=self.match,
@@ -250,6 +249,7 @@ class MatchPlayTestCase(TestCase):
         # status check
         status_url = reverse('match-status', args=(self.match.uuid,))
         match_url = reverse('match-detail', args=(self.match.uuid,))
+        state_url = reverse('match-state', args=(self.match.uuid,))
 
         player_1_response_1 = self.client1.get(status_url, format='json')
         self.assertEquals(player_1_response_1.status_code, status.HTTP_200_OK)
@@ -357,10 +357,10 @@ class MatchPlayTestCase(TestCase):
         player_2_response_5 = self.client2.put(match_url, json.dumps(data_7), format='json')
         self.assertEquals(player_2_response_5.status_code, status.HTTP_202_ACCEPTED)
         data = player_2_response_5.data
-        self.assertEquals(data.get('resources')[0].get('quantity'), 400)
-        self.assertEquals(data.get('resources')[1].get('quantity'), 400)
-        self.assertEquals(data.get('resources')[2].get('quantity'), 200)
-        self.assertEquals(data.get('resources')[3].get('quantity'), 10)
+        self.assertEquals(data.get('resources')[0].get('quantity'), 400 + 100)  # fuel + income
+        self.assertEquals(data.get('resources')[1].get('quantity'), 400 + 100)  # metal + income
+        self.assertEquals(data.get('resources')[2].get('quantity'), 200 + 250)  # manpower + income
+        self.assertEquals(data.get('resources')[3].get('quantity'), 10)  # steel
         self.assertEquals(data.get('technology')[0].get('acquired'), True)
         self.assertEquals(data.get('military')[0].get('quantity'), 1)
 
@@ -372,7 +372,7 @@ class MatchPlayTestCase(TestCase):
         self.assertEquals(player_2_response_6.status_code, status.HTTP_200_OK)
         self.assertEquals(json.loads(player_2_response_6.data)['turn'], 3)
 
-        # player two prays
+        # player 1 prays
         data_8 = {
             "token": player_1_token,
             "moves": [
@@ -386,3 +386,153 @@ class MatchPlayTestCase(TestCase):
         player_1_response_8 = self.client1.put(match_url, json.dumps(data_8), format='json')
         self.assertEquals(player_1_response_8.status_code, status.HTTP_202_ACCEPTED)
         data = player_1_response_8.data
+        self.assertEquals(data.get('religion')[0].get('amount'), 10)  # faith
+        self.assertEquals(data.get('military')[0].get('quantity'), 9)  # soldiers
+        self.assertEquals(data.get('resources')[0].get('quantity'), 700)  # fuel
+        self.assertEquals(data.get('resources')[1].get('quantity'), 700)  # metal
+        self.assertEquals(data.get('resources')[2].get('quantity'), 590)  # manpower
+
+        # player status check
+        player_1_response_9 = self.client1.get(status_url, format='json')
+        self.assertEquals(player_1_response_9.status_code, status.HTTP_200_OK)
+        self.assertEquals(json.loads(player_1_response_9.data)['turn'], 4)
+        player_2_response_7 = self.client2.get(status_url, format='json')
+        self.assertEquals(player_2_response_7.status_code, status.HTTP_200_OK)
+        self.assertEquals(json.loads(player_2_response_7.data)['turn'], 4)
+
+        # player 2 tires to purchase without proper technology, but with proper resources
+        data_9 = {
+            "token": player_2_token,
+            "moves": [
+                {
+                    "action": "Refine",
+                    "object": "Titanium",
+                    "quantity": 1
+                }
+            ]
+        }
+        player_2_response_8 = self.client2.put(match_url, json.dumps(data_9), format='json')
+        self.assertEquals(player_2_response_8.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEquals(json.loads(player_2_response_8.data).get('detail'), 'insufficient technology: Alloys')
+
+        # player 2 tries to purchase a tank without proper technology
+        data_10 = {
+            "token": player_2_token,
+            "moves": [
+                {
+                    "action": "Purchase",
+                    "object": "Tank",
+                    "quantity": 1
+                }
+            ]
+        }
+        player_2_response_9 = self.client2.put(match_url, json.dumps(data_10), format='json')
+        self.assertEquals(player_2_response_9.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEquals(json.loads(player_2_response_9.data).get('detail'), 'insufficient technology: Vehicles')
+
+        # player 2 tries to research advanced vehicles without dependency
+        data_11 = {
+            "token": player_2_token,
+            "moves": [
+                {
+                    "action": "Research",
+                    "object": "Advanced Vehicles",
+                    "quantity": 1
+                }
+            ]
+        }
+        player_2_response_10 = self.client2.put(match_url, json.dumps(data_11), format='json')
+        self.assertEquals(player_2_response_10.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEquals(json.loads(player_2_response_10.data).get('detail'), 'insufficient technology: Vehicles')
+
+        # player 2 submits a blank move set
+        data_12 = {
+            "token": player_2_token,
+            "moves": []
+        }
+        player_2_response_11 = self.client2.put(match_url, json.dumps(data_12), format='json')
+        self.assertEquals(player_2_response_11.status_code, status.HTTP_202_ACCEPTED)
+        data = player_2_response_11.data
+        self.assertEquals(data.get('resources')[0].get('quantity'), 500 + 100)  # fuel + income
+        self.assertEquals(data.get('resources')[1].get('quantity'), 500 + 100)  # metal + income
+        self.assertEquals(data.get('resources')[2].get('quantity'), 450 + 250)  # manpower + income
+        self.assertEquals(data.get('resources')[3].get('quantity'), 10)  # steel
+        self.assertEquals(data.get('technology')[0].get('acquired'), True)
+        self.assertEquals(data.get('military')[0].get('quantity'), 1)
+
+        # player status check
+        player_1_response_10 = self.client1.get(status_url, format='json')
+        self.assertEquals(player_1_response_10.status_code, status.HTTP_200_OK)
+        self.assertEquals(json.loads(player_1_response_10.data)['turn'], 5)
+        player_2_response_12 = self.client2.get(status_url, format='json')
+        self.assertEquals(player_2_response_12.status_code, status.HTTP_200_OK)
+        self.assertEquals(json.loads(player_2_response_12.data)['turn'], 5)
+
+        # player 1 comes back to game and checks state
+        player_1_response_11 = self.client1.get(state_url, format='json')
+        data = player_1_response_11.data
+        self.assertEquals(data.get('religion')[0].get('amount'), 10)  # faith
+        self.assertEquals(data.get('military')[0].get('quantity'), 9)  # soldiers
+        self.assertEquals(data.get('resources')[0].get('quantity'), 700)  # fuel
+        self.assertEquals(data.get('resources')[1].get('quantity'), 700)  # metal
+        self.assertEquals(data.get('resources')[2].get('quantity'), 590)  # manpower
+
+        # player 1 tries using invalid resource name
+        data_13 = {
+            "token": player_1_token,
+            "moves": [
+                {
+                    "action": "Refine",
+                    "object": "invalid",
+                    "quantity": 1
+                }
+            ]
+        }
+        player_1_response_12 = self.client1.put(match_url, json.dumps(data_13), format='json')
+        self.assertEquals(player_1_response_12.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEquals(json.loads(player_1_response_12.data).get('detail'), 'invalid resource name: "invalid"')
+
+        # player 1 tries using invalid unit name
+        data_14 = {
+            "token": player_1_token,
+            "moves": [
+                {
+                    "action": "Purchase",
+                    "object": "invalid",
+                    "quantity": 1
+                }
+            ]
+        }
+        player_1_response_13 = self.client1.put(match_url, json.dumps(data_14), format='json')
+        self.assertEquals(player_1_response_13.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEquals(json.loads(player_1_response_13.data).get('detail'), 'invalid unit name: "invalid"')
+
+        # player 1 tries using invalid technology name
+        data_15 = {
+            "token": player_1_token,
+            "moves": [
+                {
+                    "action": "Research",
+                    "object": "invalid",
+                    "quantity": 1
+                }
+            ]
+        }
+        player_1_response_14 = self.client1.put(match_url, json.dumps(data_15), format='json')
+        self.assertEquals(player_1_response_14.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEquals(json.loads(player_1_response_14.data).get('detail'), 'invalid technology name: "invalid"')
+
+        # player 1 tries uses invalid action name
+        data_16 = {
+            "token": player_1_token,
+            "moves": [
+                {
+                    "action": "invalid",
+                    "object": "Soldier",
+                    "quantity": 1
+                }
+            ]
+        }
+        player_1_response_15 = self.client1.put(match_url, json.dumps(data_16), format='json')
+        self.assertEquals(player_1_response_15.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEquals(json.loads(player_1_response_15.data).get('detail'), 'action not found')

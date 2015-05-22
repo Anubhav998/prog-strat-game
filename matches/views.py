@@ -48,30 +48,37 @@ class MatchViewSet(viewsets.ViewSet):
         # check for token
         posted_token = post.get('token', False)
         if not posted_token:
-            return Response(json.dumps({'error': 'user match token missing'}), status=status.HTTP_401_UNAUTHORIZED)
+            return Response(json.dumps({'error': 'user match token missing', 'detail': None}),
+                            status=status.HTTP_401_UNAUTHORIZED)
         turn_token = str(Token.objects.get(match=match, profile=turn.profile))
         if posted_token != turn_token:
-            return Response(json.dumps({'error': 'invalid user match token'}), status=status.HTTP_401_UNAUTHORIZED)
+            return Response(json.dumps({'error': 'invalid user match token', "detail": None}),
+                            status=status.HTTP_401_UNAUTHORIZED)
         # execute moves
         moves = post.get('moves', [])
         for move in moves:
             try:
                 action = Action.objects.get(name=move.get('action'))
             except ObjectDoesNotExist:
-                return Response(json.dumps({'error': 'invalid turn'}), status=status.HTTP_400_BAD_REQUEST)
+                return Response(json.dumps({'error': 'invalid turn', "detail": "action not found"}), status=status.HTTP_400_BAD_REQUEST)
             Move.objects.create(turn=turn, action=action, object=move.get('object'), quantity=move.get('quantity'))
         # update game state
         state = GameState.objects.get(match=match, profile=request.user.profile)
         try:
             state.apply_turn(turn, commit=False)
             state.apply_turn(turn, commit=True)
-        except ValidationError:
+        except ValidationError as ex:
             for move in turn.moves.all():
                 move.delete()
-            return Response(json.dumps({'error': 'invalid turn'}), status=status.HTTP_400_BAD_REQUEST)
+            return Response(json.dumps({'error': 'invalid turn', "detail": str(ex[0])}), status=status.HTTP_400_BAD_REQUEST)
         # increment turn
         opponent = match.player_1 if request.user.profile == match.player_2 else match.player_2
         Turn.objects.create(match=match, profile=opponent, number=turn.number + 1)
+        # produce new resources for next turn
+        player = 1 if match.player_1 == turn.profile else 2
+        state.produce_resources(player=player, commit=True)
+        # sync the territories
+        state.sync_territories()
         # return the new game state
         serializer = GameStateSerializer(state, context={"request": request})
         return Response(serializer.data, status=status.HTTP_202_ACCEPTED)
@@ -93,10 +100,7 @@ class MatchViewSet(viewsets.ViewSet):
             "turn": turn.number,
             "completed": match.completed,
         }
-        if match.player_1 == turn.profile:
-            data['player'] = 1
-        elif match.player_2 == turn.profile:
-            data['player'] = 2
+        data['player'] = 1 if match.player_1 == turn.profile else 2
         if match.player_1 == request.user.profile or match.player_2 == request.user.profile:
             token, _ = Token.objects.get_or_create(
                 match=match,
@@ -118,6 +122,7 @@ class MatchViewSet(viewsets.ViewSet):
         match = Match.objects.get(uuid=uuid)
         if match.player_1 == request.user.profile or match.player_2 == request.user.profile:
             game_state = GameState.objects.get(match=match, profile=request.user.profile)
+            game_state.sync_territories()
             serializer = GameStateSerializer(game_state, context={"request": request})
             return Response(serializer.data, status=status.HTTP_200_OK)
         else:

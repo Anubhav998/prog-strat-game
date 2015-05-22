@@ -1,5 +1,5 @@
 from django.db import models
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError, ObjectDoesNotExist
 
 from uuidfield import UUIDField
 
@@ -102,13 +102,39 @@ class GameState(models.Model):
         """Checks to see if the necessary tech is acquired
 
         :param dependencies: a list of technology dependency objects
-        :return: Boolean
+        :return: Tuple, Boolean, missing
         """
         states = []
+        missing = []
         for dependency in dependencies:
             technology_state, _ = TechnologyState.objects.get_or_create(state=self, technology=dependency.technology)
             states.append(technology_state.acquired)
-        return all(states)
+            if not technology_state.acquired:
+                missing.append(technology_state.technology.name)
+        return all(states), missing
+
+    def sync_territories(self):
+        """Syncs the two game states territory states
+        :return: Boolean
+        """
+        for territory_state in self.territory.all():
+            territory_state.sync()
+
+    def produce_resources(self, player, commit=False):
+        """Loops over territory and produces the turns resources
+
+        :param player: Int - select which player's resources should be generated
+        :param commit: Boolean - if True, will apply changes
+        :return: Boolean
+        """
+        for territory_state in self.territory.filter(player=player):
+            detail = territory_state.territory.territorydetail
+            for product in detail.produces.all():
+                resource_state, _ = ResourceState.objects.get_or_create(state=self, resource=product.resource)
+                resource_state.quantity += product.amount
+                if commit:
+                    resource_state.save()
+        return True
 
     def apply_turn(self, turn, commit=False):
         """Applies a turn to the current game state. If validate is false, the changes will actually apply.
@@ -119,9 +145,13 @@ class GameState(models.Model):
         """
         for move in turn.moves.all():
             if move.action.name == "Refine":
-                resource = Resource.objects.get(name=move.object)
-                if not self.check_tech(resource.dependencies.all()):
-                    raise ValidationError('insufficent technology')
+                try:
+                    resource = Resource.objects.get(name=move.object)
+                except ObjectDoesNotExist:
+                    raise ValidationError('invalid resource name: "{0.object}"'.format(move))
+                tech, missing = self.check_tech(resource.dependencies.all())
+                if not tech:
+                    raise ValidationError('insufficient technology: {0}'.format(",".join(missing)))
                 self.spend_resources(resource.costs.all(), move.quantity, commit)
                 new_resource_state, _ = ResourceState.objects.get_or_create(state=self, resource=resource)
                 new_resource_state.quantity += move.quantity
@@ -129,9 +159,13 @@ class GameState(models.Model):
                 if commit:
                     new_resource_state.save()
             elif move.action.name == "Purchase":
-                unit = Unit.objects.get(name=move.object)
-                if not self.check_tech(unit.dependencies.all()):
-                    raise ValidationError('insufficent technology')
+                try:
+                    unit = Unit.objects.get(name=move.object)
+                except ObjectDoesNotExist:
+                    raise ValidationError('invalid unit name: "{0.object}"'.format(move))
+                tech, missing = self.check_tech(unit.dependencies.all())
+                if not tech:
+                    raise ValidationError('insufficient technology: {0}'.format(",".join(missing)))
                 self.spend_resources(unit.costs.all(), move.quantity, commit)
                 military_state, _ = MilitaryState.objects.get_or_create(state=self, unit=unit)
                 military_state.quantity += move.quantity
@@ -139,9 +173,13 @@ class GameState(models.Model):
                 if commit:
                     military_state.save()
             elif move.action.name == "Research":
-                technology = Technology.objects.get(name=move.object)
-                if not self.check_tech(technology.dependencies.all()):
-                    raise ValidationError('insufficent technology')
+                try:
+                    technology = Technology.objects.get(name=move.object)
+                except ObjectDoesNotExist:
+                    raise ValidationError('invalid technology name: "{0.object}"'.format(move))
+                tech, missing = self.check_tech(technology.dependencies.all())
+                if not tech:
+                    raise ValidationError('insufficient technology: {0}'.format(",".join(missing)))
                 self.spend_resources(technology.costs.all(), 1, commit)
                 technology_state, _ = TechnologyState.objects.get_or_create(state=self, technology=technology)
                 technology_state.acquired = True
@@ -178,7 +216,7 @@ class ResourceState(models.Model):
     def clean(self):
         super(ResourceState, self).clean()
         if self.quantity < 0:
-            raise ValidationError('Cannot have less than 0 resources')
+            raise ValidationError('insufficent {0.resource.name}'.format(self))
 
     def __unicode__(self):
         return 'Resource State {0.id}'.format(self)
@@ -229,9 +267,29 @@ class TerritoryState(models.Model):
         ('conflict', "Conflict"),
         ('open', "Open"),
     ), max_length=64, default="open")
+    is_base = models.BooleanField(default=False)
 
     def __unicode__(self):
         return 'Territory State {0.id}'.format(self)
+
+    def get_other(self):
+        player = 1 if self.player == 2 else 2
+        match = self.state.match
+        other_state = GameState.objects.get(
+            match=match,
+            player=player
+        )
+        other_territory_state, _ = TerritoryState.objects.get_or_create(
+            state=other_state,
+            territory=self.territory
+        )
+        return other_territory_state
+
+    def sync(self):
+        other = self.get_other()
+        if other and other.status != self.status:  # pragma: no cover
+            other.status = self.status
+            other.save()
 
     class Meta:
         unique_together = ('state', 'territory')
