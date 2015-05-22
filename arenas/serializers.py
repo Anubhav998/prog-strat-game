@@ -5,19 +5,25 @@ from arenas.models import Arena, Territory, Terrain, TerritoryDetail, TerritoryC
 
 
 class TerritoryCostSerializer(serializers.ModelSerializer):
+    name = serializers.ReadOnlyField(source='resource.name')
+
     class Meta:
         model = TerritoryCosts
         fields = (
             'resource',
+            'name',
             'amount',
         )
 
 
 class TerritoryResourceSerializer(serializers.ModelSerializer):
+    name = serializers.ReadOnlyField(source='resource.name')
+
     class Meta:
         model = TerritoryResource
         fields = (
             'resource',
+            'name',
             'amount',
         )
 
