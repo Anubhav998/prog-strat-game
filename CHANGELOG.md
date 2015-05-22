@@ -1,5 +1,10 @@
 #CHANGELOG
 
+##Version 0.0.21 (2015-05-21)
+
+* added technology dependencies to military units
+
+
 ##Version 0.0.20 (2015-05-21)
 
 * added resource dependencies and fixed cost relations
