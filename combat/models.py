@@ -66,10 +66,10 @@ class Conflict(models.Model):
 
 
 class AggressorUnit(models.Model):
-    conflict = models.ForeignKey(Conflict)
+    conflict = models.ForeignKey(Conflict, related_name='offence')
     unit = models.ForeignKey('military.Unit')
 
 
 class DefenderUnit(models.Model):
-    conflict = models.ForeignKey(Conflict)
+    conflict = models.ForeignKey(Conflict, related_name='defence')
     unit = models.ForeignKey('military.Unit')
