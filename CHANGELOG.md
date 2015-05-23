@@ -1,5 +1,15 @@
 #CHANGELOG
 
+##Version 0.0.24 (2015-05-22)
+
+* updated combat tests
+* reformated mliitary tests
+* added combat resolution methods
+* added get_power_display method to unit
+* started combat module
+* quality updates
+
+
 ##Version 0.0.23 (2015-05-22)
 
 * added technology dependency checking and resource production
