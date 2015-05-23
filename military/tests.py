@@ -3,6 +3,7 @@ from django.test import TestCase
 from military.models import Category, Unit
 from core.defaults import ATTACK, DEFENCE
 
+
 class MilitaryTestCase(TestCase):
     fixtures = []
 
