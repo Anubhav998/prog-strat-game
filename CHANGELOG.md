@@ -1,5 +1,13 @@
 #CHANGELOG
 
+##Version 0.0.25 (2015-05-23)
+
+* added migration
+* refactor combat and added conflict serializer
+* created combat serializers
+* updated fixturize to take arguements
+
+
 ##Version 0.0.24 (2015-05-22)
 
 * updated combat tests
