@@ -49,7 +49,7 @@ class Conflict(models.Model):
         defender_total_offence = sum([unit.unit.attack for unit in defenders])
         while len(aggressors) > 0 and defender_total_offence > 0:
             unit = aggressors[0]
-            if aggressor_total_offence > unit.unit.defence:
+            if defender_total_offence >= unit.unit.defence:
                 unit.delete()
                 aggressors.pop(0)
                 defender_total_offence -= unit.unit.defence
@@ -57,10 +57,10 @@ class Conflict(models.Model):
                 break
         while len(defenders) > 0 and aggressor_total_offence > 0:
             unit = defenders[0]
-            if aggressor_total_offence > unit.unit.defence:
+            if aggressor_total_offence >= unit.unit.defence:
                 unit.delete()
                 defenders.pop(0)
-                defender_total_offence -= unit.unit.defence
+                aggressor_total_offence -= unit.unit.defence
             else:
                 break
 

@@ -120,3 +120,30 @@ class ResolveTestCase(TestCase):
         self.assertEquals(self.conflict.represent(), "[]v[(10,50)]")
         self.assertTrue(self.conflict.check_complete(2))
         self.assertEquals(self.conflict.victory, False)
+
+    def test_resolve_overwhelming_defence_forces(self):
+        # aggressor
+        AggressorUnit.objects.create(conflict=self.conflict, unit=self.soldier)
+        AggressorUnit.objects.create(conflict=self.conflict, unit=self.soldier)
+        # defender
+        DefenderUnit.objects.create(conflict=self.conflict, unit=self.tank)
+        DefenderUnit.objects.create(conflict=self.conflict, unit=self.tank)
+        DefenderUnit.objects.create(conflict=self.conflict, unit=self.tank)
+        self.assertEquals(self.conflict.represent(), "[(10,10),(10,10)]v[(10,50),(10,50),(10,50)]")
+        self.conflict.resolve()
+        self.assertEquals(self.conflict.represent(), "[]v[(10,50),(10,50),(10,50)]")
+        self.assertTrue(self.conflict.check_complete(2))
+        self.assertEquals(self.conflict.victory, False)
+
+    def test_resolve_defensive_attack_forces(self):
+        # aggressor
+        AggressorUnit.objects.create(conflict=self.conflict, unit=self.tank)
+        AggressorUnit.objects.create(conflict=self.conflict, unit=self.tank)
+        # defender
+        DefenderUnit.objects.create(conflict=self.conflict, unit=self.tank)
+        DefenderUnit.objects.create(conflict=self.conflict, unit=self.tank)
+        DefenderUnit.objects.create(conflict=self.conflict, unit=self.tank)
+        self.assertEquals(self.conflict.represent(), "[(10,50),(10,50)]v[(10,50),(10,50),(10,50)]")
+        self.conflict.resolve()
+        self.assertEquals(self.conflict.represent(), "[(10,50),(10,50)]v[(10,50),(10,50),(10,50)]")
+        self.assertFalse(self.conflict.check_complete(2))
