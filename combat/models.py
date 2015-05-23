@@ -14,14 +14,14 @@ class Conflict(models.Model):
         return "Conflict"
 
     def represent(self):
-        aggressors = sorted(self.aggressorunit_set.all(), key=lambda u: u.unit.defence)
-        defenders = sorted(self.defenderunit_set.all(), key=lambda u: u.unit.defence)
+        aggressors = sorted(self.offence.all(), key=lambda u: u.unit.defence)
+        defenders = sorted(self.defence.all(), key=lambda u: u.unit.defence)
         formatted_aggressors = [unit.unit.get_power_display() for unit in aggressors]
         formatted_defenders = [unit.unit.get_power_display() for unit in defenders]
         return "[%s]v[%s]" % (",".join(formatted_aggressors), ",".join(formatted_defenders))
 
     def check_complete(self, turn):
-        if self.aggressorunit_set.count() == 0:
+        if self.offence.count() == 0:
             self.complete = True
             self.complete_turn = turn
             self.victory = False
@@ -37,14 +37,14 @@ class Conflict(models.Model):
         return False
 
     def get_total_offence(self):
-        return sum([unit.unit.attack for unit in self.aggressorunit_set.all()])
+        return sum([unit.unit.attack for unit in self.offence.all()])
 
     def get_total_defence(self):
-        return sum([unit.unit.defence for unit in self.defenderunit_set.all()])
+        return sum([unit.unit.defence for unit in self.defence.all()])
 
     def resolve(self):
-        aggressors = sorted(self.aggressorunit_set.all(), key=lambda u: u.unit.defence)
-        defenders = sorted(self.defenderunit_set.all(), key=lambda u: u.unit.defence)
+        aggressors = sorted(self.offence.all(), key=lambda u: u.unit.defence)
+        defenders = sorted(self.defence.all(), key=lambda u: u.unit.defence)
         aggressor_total_offence = sum([unit.unit.attack for unit in aggressors])
         defender_total_offence = sum([unit.unit.attack for unit in defenders])
         while len(aggressors) > 0 and defender_total_offence > 0:

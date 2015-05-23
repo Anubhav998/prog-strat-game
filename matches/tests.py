@@ -9,11 +9,12 @@ from rest_framework.reverse import reverse
 from rest_framework.test import APITestCase
 
 from matches.models import Match, Turn, Action, GameState, Token, ResourceState, MilitaryState, TechnologyState, \
-    TerritoryState, ReligionState
+    TerritoryState, ReligionState, ConflictState
 from resources.models import Resource
 from military.models import Unit, Category
 from sciences.models import Technology
 from arenas.models import Arena, Territory
+from combat.models import Conflict
 
 
 class MatchTestCase(TestCase):
@@ -34,6 +35,10 @@ class MatchTestCase(TestCase):
 
     def test_match_get_turn_count_method(self):
         self.assertEquals(self.match.get_turn_count(), 1)
+
+    def test_match_get_player_method(self):
+        self.assertEquals(self.match.get_player(1), self.user1.profile)
+        self.assertEquals(self.match.get_player(2), self.user2.profile)
 
     def test_match_clean_method(self):
         self.invalid_match = Match()
@@ -140,6 +145,23 @@ class MatchTestCase(TestCase):
             state=self.game_state,
         )
         self.assertEquals(self.religion_state.__unicode__(), "Faith State %s" % self.religion_state.id)
+
+    def test_conflict_state_unicode_method(self):
+        self.game_state = GameState.objects.get(
+            match=self.match,
+            player=1
+        )
+        self.conflict = Conflict.objects.create(
+            territory=self.arena.territory_set.first(),
+            aggressor=self.user1.profile,
+            defender=self.user2.profile,
+            start_turn=1
+        )
+        self.conflict_state = ConflictState.objects.create(
+            state=self.game_state,
+            conflict=self.conflict
+        )
+        self.assertEquals(self.conflict_state.__unicode__(), "Conflict State %s" % self.conflict_state.id)
 
 
 class MatchesAPITestCase(APITestCase):

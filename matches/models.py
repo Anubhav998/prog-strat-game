@@ -33,6 +33,16 @@ class Match(models.Model):
         """Returns the current turn object"""
         return self.turns.latest('number')
 
+    def get_player(self, number):
+        """Returns the profile of player with number number
+
+        :param number: Int, 1 or 2
+        :return: profile
+        """
+        num = int(number)
+        assert (num in [1, 2])
+        return self.player_1 if num == 1 else self.player_2
+
     def clean(self):
         super(Match, self).clean()
         if self.player_1 is self.player_2:
@@ -301,6 +311,14 @@ class ReligionState(models.Model):
 
     def __unicode__(self):
         return "Faith State {0.id}".format(self)
+
+
+class ConflictState(models.Model):
+    state = models.ForeignKey(GameState, related_name='conflicts')
+    conflict = models.ForeignKey("combat.Conflict")
+
+    def __unicode__(self):
+        return "Conflict State {0.id}".format(self)
 
 
 class Token(models.Model):

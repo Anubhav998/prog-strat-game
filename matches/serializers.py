@@ -1,7 +1,8 @@
 from rest_framework import serializers
 
 from matches.models import Match, GameState, ResourceState, MilitaryState, TechnologyState, TerritoryState, \
-    ReligionState
+    ReligionState, ConflictState
+from combat.serializers import ConflictSerializer
 
 
 class ResourceStateSerializer(serializers.ModelSerializer):
@@ -65,12 +66,23 @@ class ReligionStateSerializer(serializers.ModelSerializer):
         )
 
 
+class ConflictStateSerializer(serializers.ModelSerializer):
+    conflict = ConflictSerializer(read_only=True)
+
+    class Meta:
+        model = ConflictState
+        fields = (
+            'conflict',
+        )
+
+
 class GameStateSerializer(serializers.ModelSerializer):
     resources = ResourceStateSerializer(many=True, read_only=True)
     military = MilitaryStateSerializer(many=True, read_only=True)
     technology = TechnologyStateSerializer(many=True, read_only=True)
     territory = TerritoryStateSerializer(many=True, read_only=True)
     religion = ReligionStateSerializer(many=True, read_only=True)
+    conflicts = ConflictStateSerializer(many=True, read_only=True)
 
     class Meta:
         model = GameState
@@ -81,6 +93,7 @@ class GameStateSerializer(serializers.ModelSerializer):
             'technology',
             'territory',
             'religion',
+            'conflicts',
         )
 
 
