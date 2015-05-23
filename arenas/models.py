@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 
 from core.models import AuditMixin
 from resources.models import Resource, Cost
-from core.defaults import ARENA_X, ARENA_Y
+from core.defaults import ARENA_X, ARENA_Y, TERRITORY_ACQUISITION
 
 
 class Arena(AuditMixin):
@@ -54,6 +54,7 @@ class TerritoryDetail(models.Model):
     territory = models.OneToOneField(Territory)
     resources = models.ManyToManyField(Resource, through="TerritoryResource", blank=True)
     terrain = models.ForeignKey("Terrain", blank=True, null=True)
+    acquisition = models.IntegerField(default=TERRITORY_ACQUISITION)
 
     def __unicode__(self):
         return "{0.territory} detail".format(self)
