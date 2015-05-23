@@ -112,13 +112,25 @@ def test():
     quality_check()
 
 
-def fixturize():
+def fixturize(app="All"):
     """
     Saves Fixtures to their respective files
     :return:
     """
-    local('python manage.py dumpdata resources > resources/fixtures/resources.json')
-    local('python manage.py dumpdata military > military/fixtures/military.json')
-    local('python manage.py dumpdata arenas > arenas/fixtures/arena.json')
-    local('python manage.py dumpdata sciences > sciences/fixtures/technologies.json')
-    local('python manage.py dumpdata auth.Group > fixtures/groups.json')
+
+    if app == "All":
+        local('python manage.py dumpdata resources > resources/fixtures/resources.json')
+        local('python manage.py dumpdata military > military/fixtures/military.json')
+        local('python manage.py dumpdata arenas > arenas/fixtures/arena.json')
+        local('python manage.py dumpdata sciences > sciences/fixtures/technologies.json')
+        local('python manage.py dumpdata auth.Group > fixtures/groups.json')
+    elif app == "resource":
+        local('python manage.py dumpdata resources > resources/fixtures/resources.json')
+    elif app == "military":
+        local('python manage.py dumpdata military > military/fixtures/military.json')
+    elif app == "arena":
+        local('python manage.py dumpdata arenas > arenas/fixtures/arena.json')
+    elif app == "sciences":
+        local('python manage.py dumpdata sciences > sciences/fixtures/technologies.json')
+    elif app == "groups":
+        local('python manage.py dumpdata auth.Group > fixtures/groups.json')
