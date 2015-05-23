@@ -28,6 +28,9 @@ class Unit(models.Model):
     def __unicode__(self):
         return self.name
 
+    def get_power_display(self):
+        return "({0.attack},{0.defence})".format(self)
+
 
 @register
 class UnitCost(Cost):

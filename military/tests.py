@@ -1,7 +1,7 @@
 from django.test import TestCase
 
 from military.models import Category, Unit
-
+from core.defaults import ATTACK, DEFENCE
 
 class MilitaryTestCase(TestCase):
     fixtures = []
@@ -15,3 +15,6 @@ class MilitaryTestCase(TestCase):
 
     def test_category_unicode_method(self):
         self.assertEquals(self.category.__unicode__(), "testCat")
+
+    def test_unit_get_power_display_method(self):
+        self.assertEquals(self.unit.get_power_display(), "({0},{1})".format(ATTACK, DEFENCE))
