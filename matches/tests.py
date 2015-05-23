@@ -268,11 +268,12 @@ class MatchPlayTestCase(TestCase):
         )
 
     def test_game_play(self):
-        # status check
+        # define urls
         status_url = reverse('match-status', args=(self.match.uuid,))
         match_url = reverse('match-detail', args=(self.match.uuid,))
         state_url = reverse('match-state', args=(self.match.uuid,))
 
+        # player status check
         player_1_response_1 = self.client1.get(status_url, format='json')
         self.assertEquals(player_1_response_1.status_code, status.HTTP_200_OK)
         self.assertEquals(json.loads(player_1_response_1.data)['turn'], 1)
@@ -281,16 +282,19 @@ class MatchPlayTestCase(TestCase):
         self.assertEquals(player_2_response_1.status_code, status.HTTP_200_OK)
         self.assertEquals(json.loads(player_2_response_1.data)['turn'], 1)
         player_2_token = json.loads(player_2_response_1.data)['token']
+
         # different user tokens
         self.assertNotEqual(
             json.loads(player_1_response_1.data)['token'],
             json.loads(player_2_response_1.data)['token']
         )
+
         # player one put without token fails
         data_1 = {"moves": []}
         player_1_response_2 = self.client1.put(match_url, json.dumps(data_1), format='json')
         self.assertEquals(player_1_response_2.status_code, status.HTTP_401_UNAUTHORIZED)
         self.assertEquals(json.loads(player_1_response_2.data)['error'], "user match token missing")
+
         # player 2 update fails
         data_2 = {
             "token": player_2_token,
@@ -299,6 +303,7 @@ class MatchPlayTestCase(TestCase):
         player_2_response_2 = self.client2.put(match_url, json.dumps(data_2), format=json)
         self.assertEquals(player_2_response_2.status_code, status.HTTP_401_UNAUTHORIZED)
         self.assertEquals(json.loads(player_2_response_2.data)['error'], "invalid user match token")
+
         # player 1 puts invalid moves update
         data_3 = {
             "token": player_1_token,
@@ -309,6 +314,7 @@ class MatchPlayTestCase(TestCase):
         player_1_response_3 = self.client1.put(match_url, json.dumps(data_3), format='json')
         self.assertEquals(player_1_response_3.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEquals(json.loads(player_1_response_3.data)['error'], 'invalid turn')
+
         # player 1 puts valid move
         data_4 = {
             "token": player_1_token,
