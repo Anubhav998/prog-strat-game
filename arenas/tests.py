@@ -126,6 +126,32 @@ class ArenaNormalizeTestCase(TestCase):
         self.assertRaises(ValidationError, self.arena.normalize, self.cases[8])
 
 
+class ArenaCoordinateTestCase(TestCase):
+    fixtures = ['resources', 'technologies']
+
+    def setUp(self):
+        self.username = get_random_string(10)
+        self.user = User.objects.create_superuser(username=self.username, email="test@test.com", password="test")
+        self.arena = Arena.objects.create(name="test", created_by=self.user)
+
+    def test_valid_coordinates(self):
+        output = self.arena.get_by_coordinates("(1,1)")
+        territory = self.arena.territory_set.get(position_x=1, position_y=1)
+        self.assertEquals(output, territory)
+        output = self.arena.get_by_coordinates("2,2")
+        territory = self.arena.territory_set.get(position_x=2, position_y=2)
+        self.assertEquals(output, territory)
+        output = self.arena.get_by_coordinates("( 2, 2 ) ")
+        territory = self.arena.territory_set.get(position_x=2, position_y=2)
+        self.assertEquals(output, territory)
+
+    def test_invalid_input(self):
+        self.assertRaises(ValidationError, self.arena.get_by_coordinates, '')
+
+    def test_invalid_coordinates(self):
+        self.assertRaises(ValidationError, self.arena.get_by_coordinates, "(50, 50)")
+
+
 class ArenaAPITestCase(APITestCase):
     fixtures = ['groups', 'resources', 'technologies']
 

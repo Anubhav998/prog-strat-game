@@ -1,7 +1,10 @@
+import re
+
 from django.db import models
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError, ObjectDoesNotExist
 
 from core.models import AuditMixin
+from core.matchers import COORDINATE_PAIR
 from resources.models import Resource, Cost
 from core.defaults import ARENA_X, ARENA_Y, TERRITORY_ACQUISITION
 
@@ -30,6 +33,21 @@ class Arena(AuditMixin):
 
     def get_size_display(self):
         return "{0.size_x}x{0.size_y}".format(self)
+
+    def get_by_coordinates(self, coordinates):
+        """ Takes a string and returns the territory
+        :param coordinates: a string of (x, y) of a territory
+        :return: Territory Object
+        """
+        matches = re.match(COORDINATE_PAIR, coordinates)
+        if not matches:
+            raise ValidationError('no pairs found')
+        x, y = matches.groups()
+        try:
+            territory = self.territory_set.get(position_x=x, position_y=y)
+        except ObjectDoesNotExist:
+            raise ValidationError('no territory found')
+        return territory
 
 
 class Territory(models.Model):
