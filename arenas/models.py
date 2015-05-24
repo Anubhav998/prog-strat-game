@@ -41,12 +41,12 @@ class Arena(AuditMixin):
         """
         matches = re.match(COORDINATE_PAIR, coordinates)
         if not matches:
-            raise ValidationError('no pairs found')
+            raise ValidationError('invalid coordinate string')
         x, y = matches.groups()
         try:
             territory = self.territory_set.get(position_x=x, position_y=y)
         except ObjectDoesNotExist:
-            raise ValidationError('no territory found')
+            raise ValidationError('no territory found at coordinates')
         return territory
 
 
