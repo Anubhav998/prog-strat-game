@@ -49,6 +49,11 @@ class Arena(AuditMixin):
             raise ValidationError('no territory found at coordinates')
         return territory
 
+    def check_coordinate(self, coordinate):
+        """Takes a tuple of x,y and returns if it is on the arena"""
+        x, y = coordinate
+        return 0 <= x < self.size_x and 0 <= y < self.size_y
+
 
 class Territory(models.Model):
     arena = models.ForeignKey(Arena)
@@ -63,6 +68,17 @@ class Territory(models.Model):
 
     def get_coordinates(self):
         return self.position_x, self.position_y
+
+    def get_delta(self, delta):
+        """Takes a move pair and returns coordinates"""
+        dx, dy = delta
+        return self.position_x + dx, self.position_y + dy
+
+    def get_valid_moves(self):
+        """Return 4 adjacent squares"""
+        deltas = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+        return [self.get_delta(delta) for delta in deltas if self.arena.check_coordinate(self.get_delta(delta))]
+
 
     class Meta:
         unique_together = [('arena', 'position_x', 'position_y',)]

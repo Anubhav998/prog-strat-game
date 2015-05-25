@@ -151,6 +151,31 @@ class ArenaCoordinateTestCase(TestCase):
     def test_invalid_coordinates(self):
         self.assertRaises(ValidationError, self.arena.get_by_coordinates, "(50, 50)")
 
+    def test_check_coordinate_method(self):
+        self.assertEquals(self.arena.check_coordinate((0, 0)), True)
+        self.assertEquals(self.arena.check_coordinate((-1, 0)), False)
+        self.assertEquals(self.arena.check_coordinate((5, -1)), False)
+        self.assertEquals(self.arena.check_coordinate((5, 5)), True)
+        self.assertEquals(self.arena.check_coordinate((16, 16)), False)
+
+    def test_get_delta_method(self):
+        territory = self.arena.territory_set.get(position_x=2, position_y=2)
+        self.assertEquals(territory.get_delta((-1, -1)), (1, 1))
+        self.assertEquals(territory.get_delta((1, -1)), (3, 1))
+
+    def test_get_valid_moves_method(self):
+        territory = self.arena.territory_set.get(position_x=2, position_y=2)
+        output = territory.get_valid_moves()
+        self.assertTrue((1, 2) in output)
+        self.assertTrue((3, 2) in output)
+        self.assertTrue((2, 1) in output)
+        self.assertTrue((2, 3) in output)
+        territory = self.arena.territory_set.get(position_x=0, position_y=0)
+        output = territory.get_valid_moves()
+        self.assertTrue((1, 0) in output)
+        self.assertTrue((0, 1) in output)
+        self.assertEquals(len(output), 2)
+
 
 class ArenaAPITestCase(APITestCase):
     fixtures = ['groups', 'resources', 'technologies']
