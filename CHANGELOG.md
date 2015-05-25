@@ -1,5 +1,18 @@
 #CHANGELOG
 
+##Version 0.0.26 (2015-05-25)
+
+* added invade action
+* updated tests for coverage
+* updated tests for coverage
+* allowed tuples for get_by_coordinates method
+* added helper methods to territory
+* updated error messages
+* added coordinate pair regex match
+* added get_by_coordinates
+* updated tests layout
+
+
 ##Version 0.0.25 (2015-05-23)
 
 * added migration
