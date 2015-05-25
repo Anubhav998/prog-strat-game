@@ -53,6 +53,12 @@ class MatchTestCase(TestCase):
     def test_turn_unicode_method(self):
         self.assertEquals(self.match.get_current_turn().__unicode__(), "user1.vs.user2 Turn 1")
 
+    def test_turn_get_player_number_method(self):
+        self.assertEquals(self.match.get_current_turn().get_player_number(), 1)
+
+    def test_turn_get_opponent_number_method(self):
+        self.assertEquals(self.match.get_current_turn().get_opponent_number(), 2)
+
     def test_action_unicode_method(self):
         self.action = Action.objects.create(name='test')
         self.assertEquals(self.action.__unicode__(), 'test')
@@ -487,6 +493,7 @@ class MatchPlayTestCase(TestCase):
         self.assertEquals(data.get('resources')[3].get('quantity'), 10)  # steel
         self.assertEquals(data.get('technology')[0].get('acquired'), True)
         self.assertEquals(data.get('military')[0].get('quantity'), 1)
+        self.assertEquals(data.get('conflicts'), [])
 
         # player status check
         player_1_response_10 = self.client1.get(status_url, format='json')
@@ -564,3 +571,68 @@ class MatchPlayTestCase(TestCase):
         player_1_response_15 = self.client1.put(match_url, json.dumps(data_16), format='json')
         self.assertEquals(player_1_response_15.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertEquals(json.loads(player_1_response_15.data).get('detail'), 'action not found')
+
+        # player 1 invades invalid square
+        data_17 = {
+            "token": player_1_token,
+            "moves": [
+                {
+                    "action": "Invade",
+                    "object": "(3,3)",
+                    "detail": "Solider",
+                    "quantity": 6
+                }
+            ]
+        }
+        player_1_response_16 = self.client1.put(match_url, json.dumps(data_17), format='json')
+        self.assertEquals(player_1_response_16.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEquals(json.loads(player_1_response_16.data).get('detail'), 'invalid invasion coordinate: (3,3)')
+
+        # player 1 invades with insufficient units
+        data_18 = {
+            "token": player_1_token,
+            "moves": [
+                {
+                    "action": "Invade",
+                    "object": "(0,3)",
+                    "detail": "Soldier",
+                    "quantity": 12
+                }
+            ]
+        }
+        player_1_response_17 = self.client1.put(match_url, json.dumps(data_18), format='json')
+        self.assertEquals(player_1_response_17.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEquals(json.loads(player_1_response_17.data).get('detail'), 'insufficient Soldier units')
+
+        # player 1 invades with  units with invalid name
+        data_19 = {
+            "token": player_1_token,
+            "moves": [
+                {
+                    "action": "Invade",
+                    "object": "(0,3)",
+                    "detail": "invalid",
+                    "quantity": 12
+                }
+            ]
+        }
+        player_1_response_18 = self.client1.put(match_url, json.dumps(data_19), format='json')
+        self.assertEquals(player_1_response_18.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEquals(json.loads(player_1_response_18.data).get('detail'), 'invalid unit name: "invalid"')
+
+        # player 1 invades with successfully
+        data_20 = {
+            "token": player_1_token,
+            "moves": [
+                {
+                    "action": "Invade",
+                    "object": "(0,3)",
+                    "detail": "Soldier",
+                    "quantity": 5
+                }
+            ]
+        }
+        player_1_response_19 = self.client1.put(match_url, json.dumps(data_20), format='json')
+        self.assertEquals(player_1_response_19.status_code, status.HTTP_202_ACCEPTED)
+        data = player_1_response_19.data
+        self.assertEquals(len(data.get('conflicts')), 1)

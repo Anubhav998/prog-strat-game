@@ -60,8 +60,15 @@ class MatchViewSet(viewsets.ViewSet):
             try:
                 action = Action.objects.get(name=move.get('action'))
             except ObjectDoesNotExist:
-                return Response(json.dumps({'error': 'invalid turn', "detail": "action not found"}), status=status.HTTP_400_BAD_REQUEST)
-            Move.objects.create(turn=turn, action=action, object=move.get('object'), quantity=move.get('quantity'))
+                return Response(json.dumps({'error': 'invalid turn', "detail": "action not found"}),
+                                status=status.HTTP_400_BAD_REQUEST)
+            Move.objects.create(
+                turn=turn,
+                action=action,
+                object=move.get('object'),
+                quantity=move.get('quantity'),
+                detail=move.get('detail', None)
+            )
         # update game state
         state = GameState.objects.get(match=match, profile=request.user.profile)
         try:
@@ -70,13 +77,15 @@ class MatchViewSet(viewsets.ViewSet):
         except ValidationError as ex:
             for move in turn.moves.all():
                 move.delete()
-            return Response(json.dumps({'error': 'invalid turn', "detail": str(ex[0])}), status=status.HTTP_400_BAD_REQUEST)
+            return Response(json.dumps({'error': 'invalid turn', "detail": str(ex[0])}),
+                            status=status.HTTP_400_BAD_REQUEST)
         # increment turn
         opponent = match.player_1 if request.user.profile == match.player_2 else match.player_2
         Turn.objects.create(match=match, profile=opponent, number=turn.number + 1)
+        # resolve non invasive conflicts
+
         # produce new resources for next turn
-        player = 1 if match.player_1 == turn.profile else 2
-        state.produce_resources(player=player, commit=True)
+        state.produce_resources(player=turn.get_player_number(), commit=True)
         # sync the territories
         state.sync_territories()
         # return the new game state

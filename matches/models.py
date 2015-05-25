@@ -8,6 +8,7 @@ from resources.models import Resource
 from military.models import Unit
 from sciences.models import Technology
 from core.defaults import RELIGION_COST
+from combat.models import Conflict, AggressorUnit, DefenderUnit
 
 
 class Match(models.Model):
@@ -63,6 +64,12 @@ class Turn(models.Model):
     def __unicode__(self):
         return "{0.match} Turn {0.number}".format(self)
 
+    def get_player_number(self):
+        return 1 if self.profile == self.match.player_1 else 2
+
+    def get_opponent_number(self):
+        return 2 if self.profile == self.match.player_1 else 1
+
     class Meta:
         unique_together = ('match', 'number',)
 
@@ -78,6 +85,7 @@ class Move(models.Model):
     turn = models.ForeignKey(Turn, related_name='moves')
     action = models.ForeignKey(Action)
     object = models.CharField(max_length=64, default="")
+    detail = models.CharField(max_length=64, blank=True, null=True)
     quantity = models.IntegerField(default=0)
 
 
@@ -146,6 +154,26 @@ class GameState(models.Model):
                     resource_state.save()
         return True
 
+    def validate_invasion(self, player, territory):
+        """Checks to see if territory is in the list of valid moves
+
+        :param territory: Territory in question
+        :param player: player in question
+        :return: Boolean
+        """
+        current_territory = [ts.territory for ts in self.territory.filter(player=player)]
+        valid_coordinates = []
+        for t in current_territory:
+            valid_coordinates += t.get_valid_moves()
+        valid_moves = [territory.arena.get_by_coordinates(coord) for coord in set(valid_coordinates)]
+        return territory in valid_moves
+
+    def resolve_conflicts(self, commit=True):
+        """Run resolve on all non aggressor conflicts
+        :return: True
+        """
+        pass  # pragma: no cover
+
     def apply_turn(self, turn, commit=False):
         """Applies a turn to the current game state. If validate is false, the changes will actually apply.
 
@@ -207,10 +235,53 @@ class GameState(models.Model):
                 religion_state.clean()
                 if commit:
                     religion_state.save()
-                    # elif move.action.name is "Claim":
-                    #     pass
-                    # elif move.action.name is "Invade":
-                    #     pass
+            elif move.action.name == "Invade":
+                # get territory in question
+                territory = self.match.arena.get_by_coordinates(move.object)
+                # validate move
+                if not self.validate_invasion(turn.get_player_number(), territory):
+                    raise ValidationError('invalid invasion coordinate: {0.object}'.format(move))
+                # check if territory is occupied
+                territory_state, _ = TerritoryState.objects.get_or_create(
+                    state=self,
+                    territory=territory,
+                )
+                if territory_state.status == "owned" and territory_state.player != turn.get_player_number():  # pragma: no cover
+                    defender = self.match.get_player(turn.get_opponent_number())
+                else:
+                    defender = None
+                try:
+                    conflict_state = ConflictState.objects.get(
+                        state=self,
+                        conflict__territory=territory
+                    )
+                except ObjectDoesNotExist:
+                    conflict = Conflict.objects.create(
+                        territory=territory,
+                        aggressor=turn.profile,
+                        defender=defender,
+                        start_turn=turn.number
+                    )
+                    conflict_state = ConflictState.objects.create(
+                        state=self,
+                        conflict=conflict
+                    )
+                try:
+                    unit = Unit.objects.get(name=move.detail)
+                except ObjectDoesNotExist:
+                    raise ValidationError('invalid unit name: "{0.detail}"'.format(move))
+                military_state, _ = MilitaryState.objects.get_or_create(state=self, unit=unit)
+                military_state.quantity -= move.quantity
+                military_state.clean()
+                if commit:
+                    military_state.save()
+                for i in range(move.quantity):
+                    a = AggressorUnit()
+                    a.conflict = conflict_state.conflict
+                    a.unit = unit
+                    if commit:
+                        a.save()
+
         return True
 
     class Meta:
@@ -226,7 +297,7 @@ class ResourceState(models.Model):
     def clean(self):
         super(ResourceState, self).clean()
         if self.quantity < 0:
-            raise ValidationError('insufficent {0.resource.name}'.format(self))
+            raise ValidationError('insufficient {0.resource.name}'.format(self))
 
     def __unicode__(self):
         return 'Resource State {0.id}'.format(self)
@@ -243,7 +314,7 @@ class MilitaryState(models.Model):
     def clean(self):
         super(MilitaryState, self).clean()
         if self.quantity < 0:
-            raise ValidationError('Cannot have less than 0 units')
+            raise ValidationError('insufficient {0.unit.name} units'.format(self))
 
     def __unicode__(self):
         return 'Military State {0.id}'.format(self)
