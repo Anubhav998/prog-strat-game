@@ -153,6 +153,7 @@ class ArenaCoordinateTestCase(TestCase):
 
     def test_invalid_input(self):
         self.assertRaises(ValidationError, self.arena.get_by_coordinates, '')
+        self.assertRaises(ValidationError, self.arena.get_by_coordinates, u'(1, b)')
 
     def test_invalid_coordinates(self):
         self.assertRaises(ValidationError, self.arena.get_by_coordinates, "(50, 50)")

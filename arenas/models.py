@@ -87,7 +87,6 @@ class Territory(models.Model):
         deltas = [(1, 0), (-1, 0), (0, 1), (0, -1)]
         return [self.get_delta(delta) for delta in deltas if self.arena.check_coordinate(self.get_delta(delta))]
 
-
     class Meta:
         unique_together = [('arena', 'position_x', 'position_y',)]
 
