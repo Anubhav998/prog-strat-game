@@ -144,6 +144,9 @@ class ArenaCoordinateTestCase(TestCase):
         output = self.arena.get_by_coordinates("( 2, 2 ) ")
         territory = self.arena.territory_set.get(position_x=2, position_y=2)
         self.assertEquals(output, territory)
+        output = self.arena.get_by_coordinates((2, 2))
+        territory = self.arena.territory_set.get(position_x=2, position_y=2)
+        self.assertEquals(output, territory)
 
     def test_invalid_input(self):
         self.assertRaises(ValidationError, self.arena.get_by_coordinates, '')

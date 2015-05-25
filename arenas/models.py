@@ -35,14 +35,22 @@ class Arena(AuditMixin):
         return "{0.size_x}x{0.size_y}".format(self)
 
     def get_by_coordinates(self, coordinates):
-        """ Takes a string and returns the territory
+        """ Takes a string or a tuple and returns the territory
         :param coordinates: a string of (x, y) of a territory
         :return: Territory Object
         """
-        matches = re.match(COORDINATE_PAIR, coordinates)
-        if not matches:
-            raise ValidationError('invalid coordinate string')
-        x, y = matches.groups()
+        if type(coordinates) is tuple:
+            x, y = coordinates
+        elif type(coordinates) is str:
+            matches = re.match(COORDINATE_PAIR, coordinates)
+            if not matches:
+                raise ValidationError('invalid coordinate string')
+            x, y = matches.groups()
+        else:
+            matches = re.match(COORDINATE_PAIR, coordinates)
+            if not matches:
+                raise ValidationError('invalid coordinate string')
+            x, y = matches.groups()
         try:
             territory = self.territory_set.get(position_x=x, position_y=y)
         except ObjectDoesNotExist:
